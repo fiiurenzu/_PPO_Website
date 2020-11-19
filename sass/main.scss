@@ -1,0 +1,11 @@
+@import "./utils/variables.scss";
+
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/base.scss";
+
+@import "./layout/navbar.scss";
+@import "./layout/index.scss";
+@import "./layout/project-home";
+@import "./layout/project-details";
+@import "./layout/footer";

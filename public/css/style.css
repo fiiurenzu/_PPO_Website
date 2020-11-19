@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+@font-face {
+  font-family: "sangneuf";
+  src: url("/public/fonts/sangneuf_mono-regular.otf");
+  src: url("/public/fonts/sangneuf_mono-regular.eot");
+  src: url("/public/fonts/sangneuf_mono-regular.woff");
+  src: url("/public/fonts/sangneuf_mono-regular.woff2");
+  font-style: normal;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: helvetica;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+footer {
+  font-size: 1.3rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container__left {
+  border-right: 1px solid black;
+}
+
+.container__right--fixed {
+  height: 99%;
+}
+
+nav {
+  position: sticky;
+  top: 5px;
+  z-index: 1;
+  background-color: white;
+}
+
+.navbar__left {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 28.5px;
+  position: sticky;
+  top: 5px;
+  z-index: 3;
+  background-color: white;
+  display: flex;
+}
+.navbar__left .navbar__item,
+.navbar__left .navbar__cta {
+  padding: 5px 10px;
+}
+
+.navbar__cta {
+  width: 60px;
+}
+
+.navbar__item {
+  border-left: 1px solid black;
+}
+
+.return__home:hover {
+  font-size: 0;
+}
+.return__home:hover:after {
+  content: attr(data-hover);
+  font-size: 1.6rem;
+}
+
+.navbar__right {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 28.5px;
+  position: sticky;
+  top: 5px;
+  z-index: 3;
+  background-color: white;
+}
+.navbar__right .navbar__item {
+  padding: 5px 10px;
+  border-right: none;
+  border-left: none;
+}
+
+.index {
+  border-bottom: 1px solid black;
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+  grid-template-areas: ". name-client category";
+}
+.index .index__name {
+  padding: 5px 10px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  grid-area: name-client;
+}
+.index .index__category {
+  padding: 5px 10px;
+  grid-area: category;
+}
+
+.grid__project {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+  grid-template-rows: auto auto auto 15vh auto;
+  grid-template-areas: ". title title" ". city year" ". . ." ". . ." "arrow intro .";
+  border-bottom: 1px solid black;
+  padding-top: 5px;
+}
+
+.title {
+  grid-area: title;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+.city {
+  grid-area: city;
+  padding-left: 10px;
+  font-family: sangneuf;
+  line-height: 1.3rem;
+}
+
+.year {
+  grid-area: year;
+  padding-left: 10px;
+  font-family: sangneuf;
+}
+
+.arrow {
+  grid-area: arrow;
+  justify-self: end;
+}
+
+.intro {
+  grid-area: intro;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.image__project {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.grid__details {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+}
+
+.container__details__left,
+.container__details__right {
+  padding: 5px 10px;
+}
+
+footer {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  background-color: white;
+  z-index: 2;
+}
+
+.footer_container {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: grid;
+  grid-template-columns: 60px auto auto auto auto;
+}
+
+.footer__item {
+  border-right: 1px solid black;
+  padding: 5px 10px;
+}
+.footer__item:last-child {
+  border-right: none;
+}
+
+/*# sourceMappingURL=style.css.map */

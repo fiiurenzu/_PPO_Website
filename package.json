@@ -1,0 +1,11 @@
+{
+  "name": "panamapapersoffice",
+  "version": "1.0.0",
+  "description": "website portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "PPO",
+  "license": "ISC"
+}

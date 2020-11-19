@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  position: relative;
+  margin-left: $marg;
+  margin-right: $marg;
+  padding-top: $pad-T-B;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container__left {
+  border-right: $border;
+}
+
+//container__fixed
+.container__right--fixed {
+  height: 99%;
+}

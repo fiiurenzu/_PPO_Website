@@ -1,0 +1,45 @@
+.grid__project {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+  grid-template-rows: auto auto auto 15vh auto;
+  grid-template-areas:
+    ". title title"
+    ". city year"
+    ". . ."
+    ". . ."
+    "arrow intro .";
+  border-bottom: $border;
+  padding-top: $pad-T-B;
+}
+
+.title {
+  grid-area: title;
+  text-transform: uppercase;
+  padding-left: $pad-L-R;
+}
+.city {
+  grid-area: city;
+  padding-left: $pad-L-R;
+  font-family: $mono;
+  line-height: $line-height;
+}
+
+.year {
+  grid-area: year;
+  padding-left: $pad-L-R;
+  font-family: $mono;
+}
+.arrow {
+  grid-area: arrow;
+  justify-self: end;
+}
+.intro {
+  grid-area: intro;
+  padding-bottom: $pad-T-B;
+  padding-left: $pad-L-R;
+}
+
+.image__project {
+  display: flex;
+  border-bottom: $border;
+}

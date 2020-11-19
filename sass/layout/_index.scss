@@ -1,0 +1,17 @@
+.index {
+  border-bottom: $border;
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+  grid-template-areas: ". name-client category";
+
+  .index__name {
+    padding: $pad-T-B $pad-L-R;
+    border-right: $border;
+    border-left: $border;
+    grid-area: name-client;
+  }
+  .index__category {
+    padding: $pad-T-B $pad-L-R;
+    grid-area: category;
+  }
+}

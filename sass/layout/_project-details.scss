@@ -1,0 +1,8 @@
+.grid__details {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr;
+}
+.container__details__left,
+.container__details__right {
+  padding: $pad-T-B $pad-L-R;
+}
