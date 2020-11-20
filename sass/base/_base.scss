@@ -17,5 +17,8 @@ html {
 
 //container__fixed
 .container__right--fixed {
+  position: fixed;
+  left: 50%;
   height: 99%;
+  margin-right: $marg;
 }

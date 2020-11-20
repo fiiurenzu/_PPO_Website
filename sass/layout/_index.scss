@@ -1,3 +1,4 @@
+// index project
 .index {
   border-bottom: $border;
   display: grid;
@@ -13,5 +14,46 @@
   .index__category {
     padding: $pad-T-B $pad-L-R;
     grid-area: category;
+  }
+}
+
+// previous next project
+.container__previous__next {
+  @extend .index;
+  border-top: $border;
+  position: fixed;
+  bottom: 0;
+  .wrapper__previous {
+    @extend .index__name;
+    &:hover {
+      background-color: $four;
+      -webkit-animation: random 7s infinite;
+      animation: random 7s infinite;
+    }
+  }
+  .wrapper__next {
+    @extend .index__category;
+    &:hover {
+      background-color: $four;
+      -webkit-animation: random 7s infinite;
+      animation: random 7s infinite;
+    }
+  }
+}
+@keyframes random {
+  15% {
+    background-color: red;
+  }
+  30% {
+    background-color: yellow;
+  }
+  45% {
+    background-color: rgb(255, 153, 0);
+  }
+  60% {
+    background-color: rgb(255, 0, 242);
+  }
+  75% {
+    background-color: rgb(128, 0, 247);
   }
 }

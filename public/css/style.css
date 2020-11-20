@@ -62,7 +62,10 @@ html {
 }
 
 .container__right--fixed {
+  position: fixed;
+  left: 50%;
   height: 99%;
+  margin-right: 10px;
 }
 
 nav {
@@ -118,23 +121,56 @@ nav {
   border-left: none;
 }
 
-.index {
+.index, .container__previous__next {
   border-bottom: 1px solid black;
   display: grid;
   grid-template-columns: 60px 1fr 1fr;
   grid-template-areas: ". name-client category";
 }
-.index .index__name {
+.index .index__name, .container__previous__next .index__name, .container__previous__next .wrapper__previous {
   padding: 5px 10px;
   border-right: 1px solid black;
   border-left: 1px solid black;
   grid-area: name-client;
 }
-.index .index__category {
+.index .index__category, .container__previous__next .index__category, .container__previous__next .wrapper__next {
   padding: 5px 10px;
   grid-area: category;
 }
 
+.container__previous__next {
+  border-top: 1px solid black;
+  position: fixed;
+  bottom: 0;
+}
+.container__previous__next .wrapper__previous:hover {
+  background-color: #c5c5c5;
+  -webkit-animation: random 7s infinite;
+  animation: random 7s infinite;
+}
+.container__previous__next .wrapper__next:hover {
+  background-color: #c5c5c5;
+  -webkit-animation: random 7s infinite;
+  animation: random 7s infinite;
+}
+
+@keyframes random {
+  15% {
+    background-color: red;
+  }
+  30% {
+    background-color: yellow;
+  }
+  45% {
+    background-color: #ff9900;
+  }
+  60% {
+    background-color: #ff00f2;
+  }
+  75% {
+    background-color: #8000f7;
+  }
+}
 .grid__project {
   display: grid;
   grid-template-columns: 60px 1fr 1fr;
@@ -194,7 +230,6 @@ footer {
   margin-right: 10px;
   margin-bottom: 5px;
   background-color: white;
-  z-index: 2;
 }
 
 .footer_container {
