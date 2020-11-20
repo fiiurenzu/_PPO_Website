@@ -1,29 +1,26 @@
+// navbar home //
 nav {
-  position: sticky;
-  top: 5px;
-  z-index: 1;
-  background-color: $second;
-}
-.navbar__left {
-  border-top: $border;
-  border-bottom: $border;
-  height: 28.5px;
   position: sticky;
   top: 5px;
   z-index: 3;
   background-color: $second;
-  display: flex;
+  margin-left: $marg;
+  margin-right: $marg;
+}
+.navbar__grid {
+  border-top: $border;
+  border-bottom: $border;
+  height: 28.5px;
+  display: grid;
+  grid-template-columns: 60px 1fr 50%;
 
-  .navbar__item,
-  .navbar__cta {
+  .navbar__item__grid,
+  .navbar__cta__grid {
     padding: $pad-T-B $pad-L-R;
   }
 }
-.navbar__cta {
-  width: 60px;
-}
 
-.navbar__item {
+.navbar__item__grid {
   border-left: $border;
 }
 
@@ -38,18 +35,4 @@ nav {
   }
 }
 
-.navbar__right {
-  border-top: $border;
-  border-bottom: $border;
-  height: 28.5px; //a voir pk//
-  position: sticky;
-  top: 5px;
-  z-index: 3;
-  background-color: $second;
-
-  .navbar__item {
-    padding: $pad-T-B $pad-L-R;
-    border-right: none;
-    border-left: none;
-  }
-}
+// navbar project page //

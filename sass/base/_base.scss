@@ -1,16 +1,20 @@
 html {
   scroll-behavior: smooth;
 }
-
+/**
 .container {
   position: relative;
   margin-left: $marg;
   margin-right: $marg;
   padding-top: $pad-T-B;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  width: auto;
 }
-
+.container__left,
+.container__right {
+  width: auto;
+}
 .container__left {
   border-right: $border;
 }
@@ -22,3 +26,29 @@ html {
   height: 99%;
   margin-right: $marg;
 }
+**/
+.container__grid {
+  position: relative;
+  margin-left: $marg;
+  margin-right: $marg;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container__flex__left {
+  display: flex;
+  flex-direction: column;
+}
+.container__flex__right {
+  display: flex;
+  flex-direction: column;
+  border-left: $border;
+}
+
+/**
+// media queries //
+@media screen and (max-width: 999px) {
+  .container {
+    display: block;
+  }
+}
+**/

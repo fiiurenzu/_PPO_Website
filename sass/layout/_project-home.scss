@@ -1,6 +1,6 @@
-.grid__project {
+.text__grid {
   display: grid;
-  grid-template-columns: 60px 1fr 1fr;
+  grid-template-columns: 60px repeat(2, 1fr);
   grid-template-rows: auto auto auto 15vh auto;
   grid-template-areas:
     ". title title"
@@ -12,21 +12,22 @@
   padding-top: $pad-T-B;
 }
 
+.text__item {
+  padding-left: $pad-L-R;
+}
+
 .title {
   grid-area: title;
   text-transform: uppercase;
-  padding-left: $pad-L-R;
 }
 .city {
   grid-area: city;
-  padding-left: $pad-L-R;
   font-family: $mono;
   line-height: $line-height;
 }
 
 .year {
   grid-area: year;
-  padding-left: $pad-L-R;
   font-family: $mono;
 }
 .arrow {
@@ -35,11 +36,9 @@
 }
 .intro {
   grid-area: intro;
-  padding-bottom: $pad-T-B;
-  padding-left: $pad-L-R;
+  padding-bottom: calc(2 *#{$pad-T-B});
 }
 
 .image__project {
   display: flex;
-  border-bottom: $border;
 }
