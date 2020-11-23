@@ -44,6 +44,15 @@ html {
   border-left: $border;
 }
 
+// ! Fixed //
+.container__flex__right--fixed {
+  height: 100vh;
+  border-left: $border;
+  position: fixed;
+  left: 50%;
+  margin-right: $marg;
+}
+
 /**
 // media queries //
 @media screen and (max-width: 999px) {

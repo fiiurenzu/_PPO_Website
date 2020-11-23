@@ -1,15 +1,15 @@
-footer {
+.footer__home {
   margin-left: $marg;
   margin-right: $marg;
   margin-bottom: 5px;
   background-color: $second;
 }
 
-.footer_container {
+.footer__container {
   border-top: $border;
   border-bottom: $border;
   display: grid;
-  grid-template-columns: 60px auto auto auto auto;
+  grid-template-columns: 60px repeat(4, auto);
 }
 
 .footer__item {
@@ -18,4 +18,13 @@ footer {
   &:last-child {
     border-right: none;
   }
+}
+
+//! footer project fixed //
+.footer__project {
+  margin-bottom: 5px;
+  background-color: $second;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

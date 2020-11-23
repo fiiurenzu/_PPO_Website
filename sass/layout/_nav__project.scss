@@ -1,27 +1,28 @@
-// ! index //
-.index__container__grid {
+// ! navigationbar beetween projects //
+.nav__projects__grid {
   border-top: $border;
   border-bottom: $border;
   display: grid;
   grid-template-columns: 60px repeat(2, 1fr);
   grid-template-areas: ". name-client category";
 }
-.index__top {
-  margin-top: 4px;
-}
-.index__item {
+
+.nav__projects__item {
   padding: $pad-T-B $pad-L-R;
 }
-.name {
+
+#previous {
   border-right: $border;
   border-left: $border;
   grid-area: name-client;
 }
-.category {
+#next {
   grid-area: category;
 }
 
-//! index__project//
-.index__project {
-  border-top: none;
+.nav__projects__item--hover {
+  &:hover {
+    background-color: $four;
+    display: block;
+  }
 }

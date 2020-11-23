@@ -7,6 +7,7 @@ nav {
   margin-left: $marg;
   margin-right: $marg;
 }
+
 .navbar__grid {
   border-top: $border;
   border-bottom: $border;
@@ -28,6 +29,7 @@ nav {
 .return__home {
   &:hover {
     font-size: 0;
+    background-color: $four;
     &:after {
       content: attr(data-hover);
       font-size: $body;
@@ -36,3 +38,8 @@ nav {
 }
 
 // navbar project page //
+.navbar__project__right {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: calc(#{$marg}/ 2);
+}

@@ -1,8 +1,23 @@
-.grid__details {
-  display: grid;
-  grid-template-columns: 60px 1fr 1fr;
-}
-.container__details__left,
-.container__details__right {
+.details__container__grid {
   padding: $pad-T-B $pad-L-R;
+  display: grid;
+  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-areas: ". gridlist gridtext";
+}
+
+.details__item__list {
+  grid-area: gridlist;
+}
+.details__item__text {
+  grid-area: gridtext;
+  padding-left: $pad-L-R;
+}
+
+.details__item__list > li {
+  border-bottom: $border;
+  padding-top: $pad-T-B;
+  padding-bottom: $pad-T-B;
+  &:hover {
+    background-color: $four;
+  }
 }
