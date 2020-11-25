@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 ul,
@@ -16,6 +18,7 @@ a {
 }
 
 img {
+  box-sizing: border-box;
   display: block;
 }
 
@@ -44,36 +47,14 @@ footer {
   font-size: 1.3rem;
 }
 
+.figure__item__image {
+  font-size: 1.3rem;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/**
-.container {
-  position: relative;
-  margin-left: $marg;
-  margin-right: $marg;
-  padding-top: $pad-T-B;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: auto;
-}
-.container__left,
-.container__right {
-  width: auto;
-}
-.container__left {
-  border-right: $border;
-}
-
-//container__fixed
-.container__right--fixed {
-  position: fixed;
-  left: 50%;
-  height: 99%;
-  margin-right: $marg;
-}
-**/
 .container__grid {
   position: relative;
   margin-left: 10px;
@@ -101,14 +82,6 @@ html {
   margin-right: 10px;
 }
 
-/**
-// media queries //
-@media screen and (max-width: 999px) {
-  .container {
-    display: block;
-  }
-}
-**/
 nav {
   position: sticky;
   top: 5px;
@@ -136,7 +109,7 @@ nav {
 
 .return__home:hover {
   font-size: 0;
-  background-color: #33ff00;
+  background-color: #7801ff;
 }
 .return__home:hover:after {
   content: attr(data-hover);
@@ -201,8 +174,13 @@ nav {
   grid-area: category;
 }
 
-.nav__projects__item--hover:hover {
+.nav__projects__grid :nth-child(2):hover {
   background-color: #33ff00;
+  display: block;
+}
+
+.nav__projects__grid :nth-child(3):hover {
+  background-color: #7801ff;
   display: block;
 }
 
@@ -263,6 +241,7 @@ nav {
 .details__item__text {
   grid-area: gridtext;
   padding-left: 10px;
+  font-size: 1.4rem;
 }
 
 .details__item__list > li {
@@ -270,8 +249,50 @@ nav {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.details__item__list > li:hover {
+
+.details__item__list :nth-child(even):hover {
+  background-color: #7801ff;
+}
+
+.details__item__list > li:nth-child(odd):hover {
   background-color: #33ff00;
+}
+
+.scroller {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: center;
+}
+
+.cadre {
+  height: calc(100% - 10px);
+  margin-top: calc(10px/ 2);
+  margin-bottom: calc(10px/ 2);
+  box-sizing: border-box;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #ececec;
+  position: relative;
+}
+
+.figure__item__image {
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  background-color: white;
+  border-top: 1px solid black;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+section > img {
+  max-height: 100%;
 }
 
 .footer__home {

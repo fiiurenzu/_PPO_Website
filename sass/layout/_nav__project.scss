@@ -20,9 +20,15 @@
   grid-area: category;
 }
 
-.nav__projects__item--hover {
+.nav__projects__grid :nth-child(2) {
   &:hover {
     background-color: $four;
+    display: block;
+  }
+}
+.nav__projects__grid :nth-child(3) {
+  &:hover {
+    background-color: $third;
     display: block;
   }
 }

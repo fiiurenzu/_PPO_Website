@@ -10,14 +10,27 @@
     <!-- main container grid 2col -->
     <main class="container__grid">
       <!-- ! container__left -->
-      <div class="container__flex__left">
-        <section class="images__container">
-          <div class="images__item">
-            <img class="image__project" src="/public/img/timur/timur_00.jpg" alt="timur image" />
-            <img class="image__project" src="/public/img/timur/timur_01.jpg" alt="timur image" />
-            <img class="image__project" id="font__timur" src="/public/img/timur/timur_02.jpg" alt="timur image" />
-          </div>
-        </section>
+      <div class="container__flex__left--project">
+        <!-- container scroll-snap images-->
+        <article class="scroller">
+          <!-- Section 1 -->
+          <section class="cadre" id="timur_exhibition">
+            <img src="/public/img/timur/timur_06.jpg" alt="" />
+            <span class="figure__item__image">Poster_Exhibition_Take me I Love you.pdf</span>
+          </section>
+
+          <!-- Section 2 -->
+          <section class="cadre" id="altar01">
+            <img src="/public/img/timur/timur_07.jpg" alt="" />
+            <span class="figure__item__image">View_Exhibition_Take me I Love you.jpg</span>
+          </section>
+
+          <!--Section 3 -->
+          <section class="cadre">
+            <img src="/public/img/timur/timur_08.jpg" alt="" />
+            <span class="figure__item__image">Poster_Exhibition_Take me I Love you.pdf</span>
+          </section>
+        </article>
       </div>
 
       <!-- ! container__right -->
@@ -58,16 +71,17 @@
           <!-- detail project : services + text -->
           <section class="details__container__grid">
             <ul class="details__item__list">
-              <li>Altar NO.1 : Undivided Ground_Inventory</li>
-              <li>Altar NO.2 : Faith In Pattern_Inventory</li>
-              <li>Altar NO.3 : Pray To Scale_Inventory</li>
-              <li>Altar NO.4 : Purpose From Difference_Inventory</li>
-              <li><a href="#font__timur">Font : Take Me I Love You</a></li>
-              <li>New Peace Animation</li>
+              <li class="list__services"><a href="#timur_exhibition">Take Me I Love You @Von Ammon Co</a></li>
+              <li class="list__services"><a href="#altar01">Altar NO.1 : Undivided Ground_Inventory</a></li>
+              <li class="list__services"><a href="#">Altar NO.2 : Faith In Pattern_Inventory</a></li>
+              <li class="list__services"><a href="#">Altar NO.3 : Pray To Scale_Inventory</a></li>
+              <li class="list__services"><a href="#">Altar NO.4 : Purpose From Difference_Inventory</a></li>
+              <li class="list__services"><a href="#font__timur">Font : Take me I love you</a></li>
+              <li class="list__services"><a href="#">New Peace Animation - Opening</a></li>
             </ul>
 
             <div class="details__item__text">
-              <p>
+              <p class="details__item__text--lowerfont">
                 Our mission was to work on an unseen series of pieces presented for the occasion by the artist. Under
                 Timur’s creative direction, we have worked to define, develop & enrich the visual grammar and graphic
                 line of “EDGELIT”, a collection of 4 sculptures/ installations mixing numerous printing and fab technics

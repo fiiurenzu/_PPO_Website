@@ -1,9 +1,11 @@
 @import "./utils/variables.scss";
 
+//base//
 @import "./base/reset";
 @import "./base/typography";
 @import "./base/base.scss";
 
+// Layout //
 @import "./layout/navbar.scss";
 @import "./layout/index.scss";
 @import "./layout/nav__project";

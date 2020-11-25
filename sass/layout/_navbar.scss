@@ -29,7 +29,7 @@ nav {
 .return__home {
   &:hover {
     font-size: 0;
-    background-color: $four;
+    background-color: $third;
     &:after {
       content: attr(data-hover);
       font-size: $body;

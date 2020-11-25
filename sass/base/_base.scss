@@ -1,32 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
-/**
-.container {
-  position: relative;
-  margin-left: $marg;
-  margin-right: $marg;
-  padding-top: $pad-T-B;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: auto;
-}
-.container__left,
-.container__right {
-  width: auto;
-}
-.container__left {
-  border-right: $border;
-}
 
-//container__fixed
-.container__right--fixed {
-  position: fixed;
-  left: 50%;
-  height: 99%;
-  margin-right: $marg;
-}
-**/
 .container__grid {
   position: relative;
   margin-left: $marg;
@@ -52,12 +27,3 @@ html {
   left: 50%;
   margin-right: $marg;
 }
-
-/**
-// media queries //
-@media screen and (max-width: 999px) {
-  .container {
-    display: block;
-  }
-}
-**/
