@@ -7,6 +7,7 @@
   font-style: normal;
 }
 
+// ! base docucment //
 html {
   font-size: 62.5%;
 }
@@ -24,6 +25,38 @@ footer {
   font-size: $font-footer;
 }
 
+// ! container intro project + home//
+.city,
+.year {
+  font-family: $mono;
+}
+.city {
+  line-height: $line-height--index;
+}
+
+// ! legende image project //
 .figure__item__image {
   font-size: $font-footer;
+}
+
+// ! text project //
+// text presentation projet //
+.text__wrapper__info {
+  font-size: $text;
+  line-height: $line-height--index;
+}
+
+// liste images //
+.list__images {
+  font-size: $body;
+  line-height: $line-height--text;
+}
+
+// ! texte dans le dropdown //
+summary {
+  font-size: $body;
+}
+
+.list__services {
+  font-size: $text;
 }

@@ -8,18 +8,19 @@
 .details__item__list {
   grid-area: gridlist;
 }
+
 .details__item__text {
   grid-area: gridtext;
   padding-left: $pad-L-R;
-  font-size: 1.4rem; // TODO rem a changer en variable position le font size dans le fichier typo//
 }
+
 .details__item__list > li {
   border-bottom: $border;
   padding-top: $pad-T-B;
   padding-bottom: $pad-T-B;
 }
 
-// css pour changer la couleur de fond pair impair en hover sur la liste//
+// changer la couleur de fond pair impair en hover sur la liste//
 
 .details__item__list :nth-child(even) {
   &:hover {
@@ -32,7 +33,7 @@
   }
 }
 
-//TODO creer un components pour ce css//
+//carrousel scroller snap images//
 
 .scroller {
   height: 100vh;
@@ -69,4 +70,33 @@
 
 section > img {
   max-height: 100%;
+}
+
+// List services summary  //
+summary {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-top: 5px;
+  border-top: $border;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+summary:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: 0;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+
+details[open] summary:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
 }

@@ -47,8 +47,35 @@ footer {
   font-size: 1.3rem;
 }
 
+.city,
+.year {
+  font-family: sangneuf;
+}
+
+.city {
+  line-height: 1.6rem;
+}
+
 .figure__item__image {
   font-size: 1.3rem;
+}
+
+.text__wrapper__info {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.list__images {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+
+summary {
+  font-size: 1.6rem;
+}
+
+.list__services {
+  font-size: 1.4rem;
 }
 
 html {
@@ -204,13 +231,10 @@ nav {
 
 .city {
   grid-area: city;
-  font-family: sangneuf;
-  line-height: 1.3rem;
 }
 
 .year {
   grid-area: year;
-  font-family: sangneuf;
 }
 
 .arrow {
@@ -241,7 +265,6 @@ nav {
 .details__item__text {
   grid-area: gridtext;
   padding-left: 10px;
-  font-size: 1.4rem;
 }
 
 .details__item__list > li {
@@ -293,6 +316,34 @@ nav {
 
 section > img {
   max-height: 100%;
+}
+
+summary {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-top: 5px;
+  border-top: 1px solid black;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+summary:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: 0;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+
+details[open] summary:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
 }
 
 .footer__home {
