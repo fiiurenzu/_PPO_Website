@@ -1,0 +1,77 @@
+// intro projet + title //
+.m-introprojectBlock {
+  display: grid;
+  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-rows: auto auto auto 15vh auto;
+  grid-template-areas:
+    ". title title"
+    ". city year"
+    ". . ."
+    ". . ."
+    "arrow intro .";
+  border-bottom: $border;
+  padding-top: $pad-T-B;
+}
+
+.a-projectBlock__item {
+  padding-left: $pad-L-R;
+}
+
+._projectTitle {
+  grid-area: title;
+  text-transform: uppercase;
+}
+
+._projectCity {
+  grid-area: city;
+}
+
+._projectYear {
+  grid-area: year;
+}
+
+.arrow {
+  grid-area: arrow;
+  justify-self: end;
+}
+
+._projectIntro {
+  grid-area: intro;
+  padding-bottom: calc(2 *#{$pad-T-B});
+}
+
+// Details projet + services //
+.o-detailsProject {
+  padding: $pad-T-B $pad-L-R;
+  display: grid;
+  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-areas: ". gridlist gridtext";
+}
+
+.m-detailsProject__list {
+  grid-area: gridlist;
+}
+
+.m-detailsProject__list > li {
+  border-bottom: $border;
+  padding-top: $pad-T-B;
+  padding-bottom: $pad-T-B;
+}
+
+.m-detailsProject__text {
+  grid-area: gridtext;
+  padding-left: $pad-L-R;
+}
+
+// change la couleur de fond pair impair en hover sur la liste//
+
+.m-detailsProject__list :nth-child(even) {
+  &:hover {
+    background-color: $third;
+  }
+}
+.m-detailsProject__list > li:nth-child(odd) {
+  &:hover {
+    background-color: $four;
+  }
+}

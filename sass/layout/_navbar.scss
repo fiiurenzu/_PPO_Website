@@ -4,29 +4,27 @@ nav {
   top: 5px;
   z-index: 3;
   background-color: $second;
-  margin-left: $marg;
-  margin-right: $marg;
+  margin-top: calc(#{$marg}/ 2);
 }
 
-.navbar__grid {
+.m-navbarBlock {
   border-top: $border;
   border-bottom: $border;
   height: 28.5px;
   display: grid;
   grid-template-columns: 60px 1fr 50%;
 
-  .navbar__item__grid,
-  .navbar__cta__grid {
+  .a-navbar__item {
     padding: $pad-T-B $pad-L-R;
   }
 }
 
-.navbar__item__grid {
+._logo {
   border-left: $border;
 }
 
 // change content on hover //
-.return__home {
+._returnHome {
   &:hover {
     font-size: 0;
     background-color: $third;
@@ -35,11 +33,4 @@ nav {
       font-size: $body;
     }
   }
-}
-
-// navbar project page //
-.navbar__project__right {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: calc(#{$marg}/ 2);
 }

@@ -1,27 +1,41 @@
-// ! index //
-.index__container__grid {
+//  index container //
+.m-indexBlock {
   border-top: $border;
   border-bottom: $border;
   display: grid;
   grid-template-columns: 60px repeat(2, 1fr);
   grid-template-areas: ". name-client category";
+  background-color: $second;
 }
-.index__top {
-  margin-top: 4px;
+._indexTop {
+  border-top: none;
 }
-.index__item {
+
+.a-indexBlock__item {
   padding: $pad-T-B $pad-L-R;
 }
-.name {
+._indexName {
   border-right: $border;
   border-left: $border;
   grid-area: name-client;
 }
-.category {
+._indexCategory {
   grid-area: category;
 }
 
-//! index__project//
+// index home page top border/
+._indexTop__home {
+  border-top: $border;
+  margin-top: calc(#{$marg}/ 2);
+}
+
+._indexName {
+  border-right: none;
+  border-left: $border;
+  grid-area: name-client;
+}
+
+// index sub container sans top border //
 .index__project {
   border-top: none;
 }

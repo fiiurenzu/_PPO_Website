@@ -1,0 +1,32 @@
+//! slogan studio  //
+
+.o-descriptionBlock {
+  border-bottom: $border;
+}
+
+.m-descriptionBlock {
+  border-bottom: $border;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: ". about";
+}
+
+.a-descriptionBlock__item {
+  padding: $pad-T-B $pad-L-R;
+}
+
+.-about {
+  border-left: $border;
+  grid-area: about;
+}
+
+.a-textDescription__item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: ". text-area";
+}
+
+.-text {
+  grid-area: text-area;
+  padding: calc(#{$pad-T-B}* 2) $pad-L-R;
+}

@@ -1,0 +1,35 @@
+// ! button previous next //
+.m-navigationButtons {
+  border-top: $border;
+  border-bottom: $border;
+  display: grid;
+  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-areas: ". name-client category";
+}
+
+.a-navigationButtons {
+  padding: $pad-T-B $pad-L-R;
+}
+
+#previous {
+  border-right: $border;
+  border-left: $border;
+  grid-area: name-client;
+}
+#next {
+  grid-area: category;
+}
+
+// ! on hover //
+.m-navigationButtons :nth-child(2) {
+  &:hover {
+    background-color: $four;
+    display: block;
+  }
+}
+.m-navigationButtons :nth-child(3) {
+  &:hover {
+    background-color: $third;
+    display: block;
+  }
+}

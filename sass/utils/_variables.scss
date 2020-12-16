@@ -15,15 +15,20 @@ $pad-T-B: 5px;
 $marg: 10px;
 
 //fonts//
-// family //
+/****** family ******/
 $sans-serif: helvetica;
-$mono: sangneuf;
+$mono: sangNeuf-mono;
 
 // sizes //
 $line-height--index: 1.6rem;
-$line-height--text: 1.8rem;
+$line-height--text: 2rem;
 $body: 1.6rem;
 $text: 1.4rem;
 $title: 5rem;
 $font-footer: 1.3rem;
 $emoji: 1.5rem;
+
+// BREAKPOINTS //
+$mediaMaxWidth: 1260px;
+$mediaBp1Width: 960px;
+$mediaMinWidth: 480px;

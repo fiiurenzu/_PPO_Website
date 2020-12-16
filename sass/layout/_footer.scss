@@ -1,30 +1,22 @@
-.footer__home {
-  margin-left: $marg;
-  margin-right: $marg;
-  margin-bottom: 5px;
+.o-footerBlock {
+  margin-bottom: calc(#{$marg}/ 2);
   background-color: $second;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.footer__container {
+.m-footerBlock {
   border-top: $border;
   border-bottom: $border;
   display: grid;
   grid-template-columns: 60px repeat(4, auto);
 }
 
-.footer__item {
+.a-footerBlock__item {
   border-right: $border;
   padding: $pad-T-B $pad-L-R;
   &:last-child {
     border-right: none;
   }
-}
-
-//! footer project fixed //
-.footer__project {
-  margin-bottom: 5px;
-  background-color: $second;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }

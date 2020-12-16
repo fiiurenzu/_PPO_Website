@@ -1,14 +1,27 @@
+// utils //
 @import "./utils/variables.scss";
 
 // base //
-@import "./base/reset";
+@import "./base/_font";
 @import "./base/typography";
 @import "./base/base.scss";
 
+// Components //
+@import "./components/_summary";
+@import "./components/carousel-project";
+@import "./components/carousel-home";
+@import "./components/button-previous-next";
+
 // Layout //
+@import "./layout/descriptionBlock";
+@import "./layout/referencesBlock";
+@import "./layout/_contactBlock";
+@import "./layout/_exhibitionBlock";
+
+@import "./layout/index";
 @import "./layout/navbar.scss";
-@import "./layout/index.scss";
-@import "./layout/nav__project";
-@import "./layout/project-home";
-@import "./layout/project-details";
+@import "./layout/projectBlock";
 @import "./layout/footer";
+
+// pages //
+@import "./pages/page-split";

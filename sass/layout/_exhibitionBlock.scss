@@ -1,0 +1,100 @@
+// Editorial features &  Exhibition  //
+
+.o-featuresExhibition__grid {
+  display: grid;
+  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-areas: " . features exhibition";
+}
+
+// Features //
+.o-features {
+  grid-area: features;
+}
+
+.m-features {
+  width: 100%;
+  padding: calc(#{$pad-T-B}* 2) $pad-L-R;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+.m-features:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: $pad-L-R;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+
+.o-features[open] .m-features:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+
+.a-features {
+  padding-top: $pad-T-B;
+  padding-right: $pad-L-R;
+  padding-left: $pad-L-R;
+  li {
+    padding-top: 0.7rem;
+  }
+}
+.a-featuresBlock {
+  display: grid;
+  grid-template-columns: 60px 20px 1fr;
+  grid-template-areas: "date . contributions";
+  border-bottom: $border;
+}
+.a-featuresDate {
+  grid-area: date;
+}
+
+.a-featuresContributions {
+  grid-area: contributions;
+}
+
+// Exhibition//
+.o-exhibition {
+  grid-area: exhibition;
+}
+
+.m-exhibition {
+  width: 100%;
+  padding: calc(#{$pad-T-B}* 2) $pad-L-R;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+.m-exhibition:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: $pad-L-R;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+
+.o-exhibition[open] .m-exhibition:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+
+.a-exhibition {
+  padding-top: $pad-T-B;
+  padding-right: $pad-L-R;
+  padding-left: $pad-L-R;
+  li {
+    padding-top: 0.7rem;
+  }
+}

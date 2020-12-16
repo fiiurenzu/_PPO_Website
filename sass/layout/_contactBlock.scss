@@ -1,0 +1,49 @@
+//! contact studio  //
+
+.o-contactBlock {
+  border-bottom: $border;
+}
+
+.m-contactBlock {
+  border-bottom: $border;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: ". contact";
+}
+
+.a-contactBlock__item {
+  padding: $pad-T-B $pad-L-R;
+}
+
+.-contact {
+  border-left: $border;
+  grid-area: contact;
+}
+
+.a-textContact__item {
+  display: grid;
+  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    ". adress ."
+    ". inquiries application ";
+}
+
+#ppoAdress {
+  grid-area: adress;
+  padding: calc(#{$pad-T-B}* 2) $pad-L-R;
+}
+#inquiries {
+  grid-area: inquiries;
+  padding-bottom: calc(#{$pad-T-B}* 2);
+  a:hover {
+    color: $third;
+  }
+}
+#application {
+  grid-area: application;
+  padding-bottom: calc(#{$pad-T-B}* 2);
+  a:hover {
+    color: $four;
+  }
+}

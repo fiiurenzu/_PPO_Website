@@ -8,25 +8,35 @@
   </head>
   <body>
     <!-- main container grid 2col -->
-    <main class="container__grid">
+    <main class="o-gridContainer">
       <!-- ! container__left -->
-      <div class="container__flex__left--project">
+      <div class="o-gridContainer _containerLeft">
         <!-- container scroll-snap images-->
-        <article class="scroller">
+        <article class="m-scrollerImage _scrollProject">
           <!-- Section 1 -->
-          <section class="cadre" id="timur_exhibition">
-            <img src="/public/img/timur/timur_06.jpg" alt="" />
+          <section class="a-scrollerImage__item" id="timur_exhibition">
+            <video
+              muted
+              controls
+              autoplay
+              loop
+              preload="auto"
+              width="100%"
+              height="auto"
+              src="/public/img/timur/Composition 1.mp4"
+            ></video>
+            <!-- changer nom de la class-->
             <span class="figure__item__image">Poster_Exhibition_Take me I Love you.pdf</span>
           </section>
 
           <!-- Section 2 -->
-          <section class="cadre" id="altar01">
+          <section class="a-scrollerImage__item" id="altar01">
             <img src="/public/img/timur/timur_07.jpg" alt="" />
             <span class="figure__item__image">View_Exhibition_Take me I Love you.jpg</span>
           </section>
 
           <!--Section 3 -->
-          <section class="cadre">
+          <section class="a-scrollerImage__item">
             <img src="/public/img/timur/timur_08.jpg" alt="" />
             <span class="figure__item__image">Poster_Exhibition_Take me I Love you.pdf</span>
           </section>
@@ -34,55 +44,70 @@
       </div>
 
       <!-- ! container__right -->
-      <div class="container__flex__right--fixed">
+      <div class="o-gridContainer _containerRight _containerFixed__right">
         <!-- navbar -->
-        <nav class="navbar__project__right">
-          <ul class="navbar__grid">
-            <a href="index.html"><li class="navbar__cta__grid return__home" data-hover="Back">PPO</li></a>
-            <li class="navbar__item__grid">Panama Papers.Office</li>
+        <nav class="o-navbarBlock">
+          <ul class="m-navbarBlock">
+            <a href="index.html"><li class="a-navbar__item _cta _returnHome" data-hover="Back">PPO</li></a>
+            <li class="a-navbar__item _logo">Panama Papers.Office</li>
           </ul>
         </nav>
 
         <!-- project -->
-        <article class="project__container">
-          <!-- index project -->
-          <div class="index__container__grid index__project">
-            <div class="index__item empty"></div>
-            <div class="index__item name">Timur Si Qin</div>
-            <div class="index__item category">Exhibition</div>
+        <article class="o-projectBlock">
+          <!-- index Top -->
+          <div class="m-indexBlock _indexTop">
+            <div class="a-indexBlock__item _indexEmpty"></div>
+            <div class="a-indexBlock__item _indexName">Timur Si Qin</div>
+            <div class="a-indexBlock__item _indexCategory">Exhibition</div>
           </div>
 
           <!-- intro project -->
-          <section class="text__grid">
-            <h1 class="text__item title">
+          <section class="m-introprojectBlock">
+            <h1 class="a-projectBlock__item _projectTitle">
               <a href="/newpeace.html">Take me i love you</a>
             </h1>
-            <div class="text__item city">
+            <div class="a-projectBlock__item _projectCity">
               Washington, DC <br />
               United-States
             </div>
-            <div class="text__item year">2020</div>
+            <div class="a-projectBlock__item _projectYear">2020</div>
             <span class="arrow">&rarr;</span>
-            <p class="text__item intro">
+            <p class="a-projectBlock__item _projectIntro">
               Art direction, typeface development & design consulting Concept & creative direction : Timur Si-Qin
             </p>
           </section>
 
           <!-- detail project : services + text -->
-          <section class="details__container__grid">
-            <ul class="details__item__list">
-              <li class="list__images"><a href="#timur_exhibition">Take Me I Love You @Von Ammon Co</a></li>
-              <li class="list__images"><a href="#altar01">Altar NO.1 : Undivided Ground_Inventory</a></li>
-              <li class="list__images"><a href="#">Altar NO.2 : Faith In Pattern_Inventory</a></li>
-              <li class="list__images"><a href="#">Altar NO.3 : Pray To Scale_Inventory</a></li>
-              <li class="list__images"><a href="#">Altar NO.4 : Purpose From Difference_Inventory</a></li>
-              <li class="list__images"><a href="#font__timur">Font : Take me I love you</a></li>
-              <li class="list__images"><a href="#">New Peace Animation - Opening</a></li>
+          <section class="o-detailsProject">
+            <!-- List Left-->
+            <ul class="m-detailsProject__list">
+              <li class="a-detailsProject__item _listImages">
+                <a href="#timur_exhibition">Take Me I Love You @Von Ammon Co</a>
+              </li>
+
+              <li class="a-detailsProject__item _listImages">
+                <a href="#altar01">Altar NO.1 : Undivided Ground_Inventory</a>
+              </li>
+
+              <li class="a-detailsProject__item _listImages">
+                <a href="#">Altar NO.2 : Faith In Pattern_Inventory</a>
+              </li>
+
+              <li class="a-detailsProject__item _listImages"><a href="#">Altar NO.3 : Pray To Scale_Inventory</a></li>
+
+              <li class="a-detailsProject__item _listImages">
+                <a href="#">Altar NO.4 : Purpose From Difference_Inventory</a>
+              </li>
+              <li class="a-detailsProject__item _listImages"><a href="#font__timur">Font : Take me I love you</a></li>
+
+              <li class="a-detailsProject__item _listImages"><a href="#">New Peace Animation - Opening</a></li>
             </ul>
 
-            <div class="details__item__text">
-              <div class="details__item__text--lowerfont">
-                <p class="text__wrapper__info">
+            <!-- Text right -->
+            <div class="m-detailsProject__text _projectText">
+              <div class="a-detailsProject__text _textLowerfont">
+                <p class="a-detailProject__text">
                   Our mission was to work on an unseen series of pieces presented for the occasion by the artist. Under
                   Timur’s creative direction, we have worked to define, develop & enrich the visual grammar and graphic
                   line of “EDGELIT”, a collection of 4 sculptures/ installations mixing numerous printing and fab
@@ -94,9 +119,9 @@
                   time, we assisted the artist designing and displaying the graphic elements on the 4 sculptures.
                 </p>
               </div>
-              <details>
-                <summary>List services</summary>
-                <ul class="list__services">
+              <details class="o-listServices">
+                <summary class="m-listServices">List services</summary>
+                <ul class="a-listServices">
                   <li>4 x Logotype for each pieces</li>
                   <li>Font design : Take me i love you</li>
                   <li>Video opening animation</li>
@@ -107,29 +132,25 @@
           </section>
 
           <!-- Previous et next project button -->
-          <section class="previous__next">
-            <div class="nav__projects__grid">
-              <div class="nav__projects__item empty"></div>
-              <a class="nav__projects__item--hover" href="#">
-                <div class="nav__projects__item" id="previous">Previous Project</div></a
-              >
-              <a class="nav__projects__item--hover" href="#">
-                <div class="nav__projects__item" id="next">Next Project</div></a
-              >
+          <section class="o-navigationButtons">
+            <div class="m-navigationButtons">
+              <div class="a-navigationButtons _navEmpty"></div>
+              <a class="a-navigationButtons _buttonHover" id="previous" href="#">Previous Project</a>
+              <a class="a-navigationButtons _buttonHover" id="next" href="#">Next Project</a>
             </div>
           </section>
         </article>
 
         <!-- footer -->
-        <footer class="footer__project">
-          <ul class="footer__container">
-            <li class="footer__item">
+        <footer class="o-footerBlock">
+          <ul class="m-footerBlock">
+            <li class="a-footerBlock__item">
               <a href="#">PPO</a>
             </li>
-            <li class="footer__item">
+            <li class="a-footerBlock__item">
               <a href="contact@panamapapersoffice.com">contact@panamapapersoffice.com</a>
             </li>
-            <li class="footer__item">
+            <li class="a-footerBlock__item">
               <a href="https://www.instagram.com/ppoffice.paris/">instagram</a>
             </li>
           </ul>

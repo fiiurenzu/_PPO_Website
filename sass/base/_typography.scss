@@ -1,13 +1,12 @@
 @font-face {
-  font-family: "sangneuf";
-  src: url("/public/fonts/sangneuf_mono-regular.otf");
-  src: url("/public/fonts/sangneuf_mono-regular.eot");
-  src: url("/public/fonts/sangneuf_mono-regular.woff");
-  src: url("/public/fonts/sangneuf_mono-regular.woff2");
-  font-style: normal;
+  font-family: "sangNeuf-mono";
+  src: url("/public/fonts/SangNeufSansMono-Regular.otf") format(otf);
+  src: url("/public/fonts/SangNeufSansMono-Regular.eot") format(eot);
+  src: url("/public/fonts/SangNeufSansMono-Regular.woff") format(woff);
+  src: url("/public/fonts/SangNeufSansMono-Regular.woff2") format(woff2);
 }
 
-// ! base docucment //
+// ! BASE DOCUMENT //
 html {
   font-size: 62.5%;
 }
@@ -25,21 +24,45 @@ footer {
   font-size: $font-footer;
 }
 
-// ! container intro project + home//
-.city,
-.year {
-  font-family: $mono;
+// ! HOME //
+
+// About //
+.a-textDescription__item {
+  line-height: $line-height--text;
 }
-.city {
+
+//referencesBlock//
+.a-textReferences__item {
+  line-height: $line-height--text;
+}
+
+//_contactBlock//
+.a-textContact__item {
+  line-height: $line-height--text;
+}
+
+//_features & exhibition//
+.a-features,
+.a-exhibition {
+  font-size: $font-footer;
   line-height: $line-height--index;
 }
 
-// ! legende image project //
+// ! PROJECT //
+// projectBlock//
+// informations project//
+._projectCity,
+._projectYear {
+  font-family: $mono;
+  line-height: $line-height--index;
+}
+
+// legende image project //
 .figure__item__image {
   font-size: $font-footer;
 }
 
-// ! text project //
+// text project //
 // text presentation projet //
 .text__wrapper__info {
   font-size: $text;
@@ -52,7 +75,7 @@ footer {
   line-height: $line-height--text;
 }
 
-// ! texte dans le dropdown //
+// texte dans le dropdown //
 summary {
   font-size: $body;
 }
