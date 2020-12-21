@@ -15,12 +15,24 @@ body {
   font-family: helvetica;
 }
 
-h1 {
-  font-size: 5rem;
+._projectTitle {
+  font-size: 4rem;
+}
+@media (min-width: 1024px) {
+  ._projectTitle {
+    font-size: 5rem;
+  }
 }
 
-footer {
-  font-size: 1.3rem;
+._projectCity,
+._projectYear {
+  font-family: "sangneuf", "Courier New", Courier, monospace;
+  line-height: 1.6rem;
+}
+
+._projectIntro {
+  line-height: 2rem;
+  font-size: 1.6rem;
 }
 
 .a-textDescription__item {
@@ -41,21 +53,6 @@ footer {
   line-height: 1.6rem;
 }
 
-._projectIntro {
-  line-height: 2rem;
-  font-size: 1.6rem;
-}
-
-._projectCity,
-._projectYear {
-  font-family: "sangneuf", "Courier New", Courier, monospace;
-  line-height: 1.6rem;
-}
-
-.figure__item__image {
-  font-size: 1.3rem;
-}
-
 .a-detailProject__text {
   font-size: 1.6rem;
   line-height: 2rem;
@@ -72,6 +69,14 @@ summary {
 
 .list__services {
   font-size: 1.4rem;
+}
+
+.o-footerBlock {
+  font-size: 1.3rem;
+}
+
+.figure__item__image {
+  font-size: 1.3rem;
 }
 
 * {
@@ -479,11 +484,16 @@ section > img {
 }
 
 nav {
-  position: sticky;
-  top: 5px;
-  z-index: 3;
-  background-color: white;
+  position: relative;
   margin-top: calc(10px/ 2);
+}
+@media (min-width: 1024px) {
+  nav {
+    position: sticky;
+    top: 5px;
+    z-index: 3;
+    background-color: white;
+  }
 }
 
 .m-navbarBlock {
@@ -491,7 +501,12 @@ nav {
   border-bottom: 1px solid black;
   height: 28.5px;
   display: grid;
-  grid-template-columns: 60px 1fr 50%;
+  grid-template-columns: 60px 1fr;
+}
+@media (min-width: 1024px) {
+  .m-navbarBlock {
+    grid-template-columns: 60px 1fr 50%;
+  }
 }
 .m-navbarBlock .a-navbar__item {
   padding: 5px 10px;
@@ -602,29 +617,43 @@ nav {
 }
 
 .o-gridContainer {
-  display: flex;
-  position: relative;
+  display: inline;
   width: 100vw;
 }
-
-.m-gridContainerHome__left {
-  width: 50%;
-  padding-left: 10px;
-  max-height: 100vh;
-  position: fixed;
+@media (min-width: 1024px) {
+  .o-gridContainer {
+    display: flex;
+    position: relative;
+  }
 }
 
-.m-gridContainerHome__right {
-  width: 50%;
-  border-left: 1px solid black;
-  padding-right: 10px;
-  position: absolute;
-  left: 50%;
+@media (min-width: 1024px) {
+  .m-gridContainerHome__left {
+    width: 50%;
+    padding-left: 10px;
+    max-height: 100vh;
+    position: fixed;
+  }
+}
+
+@media (min-width: 1024px) {
+  .m-gridContainerHome__right {
+    width: 50%;
+    border-left: 1px solid black;
+    padding-right: 10px;
+    position: absolute;
+    left: 50%;
+  }
 }
 
 .m-gridContainerProject__left {
   width: 50%;
   margin-left: 10px;
+}
+@media (max-width: 320px) {
+  .m-gridContainerProject__left {
+    background-color: yellow;
+  }
 }
 
 .m-gridContainerProject__right {

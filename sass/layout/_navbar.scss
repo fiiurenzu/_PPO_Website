@@ -1,10 +1,14 @@
 // navbar home //
 nav {
-  position: sticky;
-  top: 5px;
-  z-index: 3;
-  background-color: $second;
+  position: relative;
   margin-top: calc(#{$marg}/ 2);
+
+  @include media(">=desktop") {
+    position: sticky;
+    top: 5px;
+    z-index: 3;
+    background-color: $second;
+  }
 }
 
 .m-navbarBlock {
@@ -12,7 +16,11 @@ nav {
   border-bottom: $border;
   height: 28.5px;
   display: grid;
-  grid-template-columns: 60px 1fr 50%;
+  grid-template-columns: 60px 1fr;
+
+  @include media(">=desktop") {
+    grid-template-columns: 60px 1fr 50%;
+  }
 
   .a-navbar__item {
     padding: $pad-T-B $pad-L-R;

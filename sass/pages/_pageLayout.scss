@@ -1,23 +1,31 @@
 // Container commun
 .o-gridContainer {
-  display: flex;
-  position: relative;
+  display: inline;
   width: 100vw;
+
+  @include media(">=desktop") {
+    display: flex;
+    position: relative;
+  }
 }
 
 // Home page
 .m-gridContainerHome__left {
-  width: 50%;
-  padding-left: $pad-L-R;
-  max-height: 100vh;
-  position: fixed;
+  @include media(">=desktop") {
+    width: 50%;
+    padding-left: $pad-L-R;
+    max-height: 100vh;
+    position: fixed;
+  }
 }
 .m-gridContainerHome__right {
-  width: 50%;
-  border-left: $border;
-  padding-right: $pad-L-R;
-  position: absolute;
-  left: 50%;
+  @include media(">=desktop") {
+    width: 50%;
+    border-left: $border;
+    padding-right: $pad-L-R;
+    position: absolute;
+    left: 50%;
+  }
 }
 
 // Project page
@@ -25,6 +33,10 @@
 .m-gridContainerProject__left {
   width: 50%;
   margin-left: $marg;
+
+  @include media("<=phone") {
+    background-color: yellow;
+  }
 }
 
 .m-gridContainerProject__right {

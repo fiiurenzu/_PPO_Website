@@ -8,32 +8,52 @@ body {
   font-family: $sans-serif;
 }
 
-h1 {
-  font-size: $title;
+// NAVBAR //
+
+// INDEX //
+
+// PROJET //
+// TITLE //
+._projectTitle {
+  font-size: 4rem;
+  @include media(">=desktop") {
+    font-size: $title;
+  }
 }
 
-footer {
-  font-size: $font-footer;
+// PROJET //
+// DATE & CITY //
+._projectCity,
+._projectYear {
+  font-family: "sangneuf", "Courier New", Courier, monospace;
+  line-height: $line-height--index;
+}
+
+// PROJECT //
+// INTRODUCTION //
+._projectIntro {
+  line-height: $line-height--text;
+  font-size: $text1;
 }
 
 // ! HOME //
 
-// About //
+// ABOUT TXT //
 .a-textDescription__item {
   line-height: $line-height--text;
 }
 
-//referencesBlock//
+// SELECTED COLABORATORS TXT //
 .a-textReferences__item {
   line-height: $line-height--text;
 }
 
-//_contactBlock//
+// CONTACT //
 .a-textContact__item {
   line-height: $line-height--text;
 }
 
-//_features & exhibition//
+// EDITORIAL FEATURES & EXHIBITIONS //
 .a-features,
 .a-exhibition {
   font-size: $font-footer;
@@ -42,42 +62,41 @@ footer {
 
 // ! PROJECT //
 
-// Project introduction
-._projectIntro {
-  line-height: $line-height--text;
-  font-size: $text1;
-}
-// projectBlock//
-// informations project//
-._projectCity,
-._projectYear {
-  font-family: "sangneuf", "Courier New", Courier, monospace;
-  line-height: $line-height--index;
-}
-
-// legende image project //
-.figure__item__image {
-  font-size: $font-footer;
-}
-
-// text project //
-// text presentation projet //
+// PROJECT //
+// TEXTE PRESENTATION //
 .a-detailProject__text {
   font-size: $text1;
   line-height: $line-height--text;
 }
 
-// liste images //
+// PROJECT
+// LIST IMAGE //
 .list__images {
   font-size: $text1;
   line-height: $line-height--text;
 }
 
-// texte dans le dropdown //
+//PROJECT//
+// LIST SERVICES (DROPDOWN) //
 summary {
   font-size: $text1;
 }
 
 .list__services {
   font-size: $text2;
+}
+
+// PROJECT //
+// NEXT & PREVIOUS //
+
+// PROJECT //
+// FOOTER//
+.o-footerBlock {
+  font-size: $font-footer;
+}
+
+// LEFT PAGE //
+// LEGENDE IMAGE //
+.figure__item__image {
+  font-size: $font-footer;
 }
