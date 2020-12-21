@@ -1,5 +1,6 @@
 // utils //
 @import "./utils/variables.scss";
+@import "./utils/breakpoints.scss";
 
 // base //
 @import "./base/_font";
@@ -24,4 +25,4 @@
 @import "./layout/footer";
 
 // pages //
-@import "./pages/page-split";
+@import "./pages/pageLayout";

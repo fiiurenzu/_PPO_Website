@@ -1,18 +1,10 @@
 /****** family ******/
 @font-face {
+  src: url(/public/fonts/SangNeufSansMono-Regular.eot);
+  src: url(/public/fonts/SangNeufSansMono-Regular.otf);
+  src: url(/public/fonts/SangNeufSansMono-Regular.woff);
+  src: url(/public/fonts/SangNeufSansMono-Regular.woff2);
   font-family: "sangneuf";
-  src: url("/public/fonts/sangneuf_mono-regular.otf");
-  src: url("/public/fonts/sangneuf_mono-regular.eot");
-  src: url("/public/fonts/sangneuf_mono-regular.woff");
-  src: url("/public/fonts/sangneuf_mono-regular.woff2");
-  font-style: normal;
-}
-@font-face {
-  font-family: "sangNeuf-mono";
-  src: url("/public/fonts/SangNeufSansMono-Regular.otf") format(otf);
-  src: url("/public/fonts/SangNeufSansMono-Regular.eot") format(eot);
-  src: url("/public/fonts/SangNeufSansMono-Regular.woff") format(woff);
-  src: url("/public/fonts/SangNeufSansMono-Regular.woff2") format(woff2);
 }
 html {
   font-size: 62.5%;
@@ -49,9 +41,14 @@ footer {
   line-height: 1.6rem;
 }
 
+._projectIntro {
+  line-height: 2rem;
+  font-size: 1.6rem;
+}
+
 ._projectCity,
 ._projectYear {
-  font-family: sangNeuf-mono;
+  font-family: "sangneuf", "Courier New", Courier, monospace;
   line-height: 1.6rem;
 }
 
@@ -59,9 +56,9 @@ footer {
   font-size: 1.3rem;
 }
 
-.text__wrapper__info {
-  font-size: 1.4rem;
-  line-height: 1.6rem;
+.a-detailProject__text {
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 .list__images {
@@ -191,9 +188,15 @@ section > img {
   width: 100%;
 }
 
+.o-navigationButtons {
+  width: 50vw;
+  padding-right: 10px;
+  position: fixed;
+  bottom: 3rem;
+}
+
 .m-navigationButtons {
   border-top: 1px solid black;
-  border-bottom: 1px solid black;
   display: grid;
   grid-template-columns: 60px repeat(2, 1fr);
   grid-template-areas: ". name-client category";
@@ -201,16 +204,17 @@ section > img {
 
 .a-navigationButtons {
   padding: 5px 10px;
+  border-right: 1px solid black;
 }
 
 #previous {
   border-right: 1px solid black;
-  border-left: 1px solid black;
   grid-area: name-client;
 }
 
 #next {
   grid-area: category;
+  border: none;
 }
 
 .m-navigationButtons :nth-child(2):hover {
@@ -464,7 +468,7 @@ section > img {
   margin-top: calc(10px/ 2);
 }
 
-._indexName {
+._indexName__home {
   border-right: none;
   border-left: 1px solid black;
   grid-area: name-client;
@@ -573,11 +577,13 @@ nav {
 }
 
 .o-footerBlock {
+  width: 50%;
   margin-bottom: calc(10px/ 2);
   background-color: white;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 50%;
+  padding-right: 10px;
 }
 
 .m-footerBlock {
@@ -596,38 +602,35 @@ nav {
 }
 
 .o-gridContainer {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-._containerLeft {
-  position: absolute;
-  right: 50%;
-  margin-left: 10px;
   display: flex;
-  flex-direction: column;
+  position: relative;
+  width: 100vw;
 }
 
-._containerRight {
+.m-gridContainerHome__left {
+  width: 50%;
+  padding-left: 10px;
+  max-height: 100vh;
+  position: fixed;
+}
+
+.m-gridContainerHome__right {
+  width: 50%;
+  border-left: 1px solid black;
+  padding-right: 10px;
   position: absolute;
   left: 50%;
-  display: flex;
-  flex-direction: column;
-  border-left: 1px solid black;
-  margin-right: 10px;
 }
 
-._containerFixed__right {
-  height: 100vh;
-  border-left: 1px solid black;
-  position: fixed;
-  margin-right: 10px;
+.m-gridContainerProject__left {
+  width: 50%;
+  margin-left: 10px;
 }
 
-._containerFixed__left {
-  height: 100vh;
-  position: fixed;
+.m-gridContainerProject__right {
+  width: 50%;
+  border-left: 1px solid black;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,18 +1,10 @@
-@font-face {
-  font-family: "sangNeuf-mono";
-  src: url("/public/fonts/SangNeufSansMono-Regular.otf") format(otf);
-  src: url("/public/fonts/SangNeufSansMono-Regular.eot") format(eot);
-  src: url("/public/fonts/SangNeufSansMono-Regular.woff") format(woff);
-  src: url("/public/fonts/SangNeufSansMono-Regular.woff2") format(woff2);
-}
-
 // ! BASE DOCUMENT //
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-size: $body;
+  font-size: $text1;
   font-family: $sans-serif;
 }
 
@@ -49,11 +41,17 @@ footer {
 }
 
 // ! PROJECT //
+
+// Project introduction
+._projectIntro {
+  line-height: $line-height--text;
+  font-size: $text1;
+}
 // projectBlock//
 // informations project//
 ._projectCity,
 ._projectYear {
-  font-family: $mono;
+  font-family: "sangneuf", "Courier New", Courier, monospace;
   line-height: $line-height--index;
 }
 
@@ -64,22 +62,22 @@ footer {
 
 // text project //
 // text presentation projet //
-.text__wrapper__info {
-  font-size: $text;
-  line-height: $line-height--index;
+.a-detailProject__text {
+  font-size: $text1;
+  line-height: $line-height--text;
 }
 
 // liste images //
 .list__images {
-  font-size: $body;
+  font-size: $text1;
   line-height: $line-height--text;
 }
 
 // texte dans le dropdown //
 summary {
-  font-size: $body;
+  font-size: $text1;
 }
 
 .list__services {
-  font-size: $text;
+  font-size: $text2;
 }

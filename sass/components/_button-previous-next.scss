@@ -1,7 +1,13 @@
 // ! button previous next //
+.o-navigationButtons {
+  width: 50vw;
+  padding-right: 10px;
+  position: fixed;
+  bottom: 3rem;
+}
+
 .m-navigationButtons {
   border-top: $border;
-  border-bottom: $border;
   display: grid;
   grid-template-columns: 60px repeat(2, 1fr);
   grid-template-areas: ". name-client category";
@@ -9,15 +15,16 @@
 
 .a-navigationButtons {
   padding: $pad-T-B $pad-L-R;
+  border-right: $border;
 }
 
 #previous {
   border-right: $border;
-  border-left: $border;
   grid-area: name-client;
 }
 #next {
   grid-area: category;
+  border: none;
 }
 
 // ! on hover //
