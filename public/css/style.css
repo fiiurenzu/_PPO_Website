@@ -238,8 +238,13 @@ section > img {
 .m-descriptionBlock {
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 7% 1fr;
+  grid-template-columns: 5rem 1fr;
   grid-template-areas: ". about";
+}
+@media (min-width: 1024px) {
+  .m-descriptionBlock {
+    grid-template-columns: 5rem 1fr;
+  }
 }
 
 .a-descriptionBlock__item {
@@ -253,8 +258,13 @@ section > img {
 
 .a-textDescription__item {
   display: grid;
-  grid-template-columns: 7% 1fr;
+  grid-template-columns: 5rem 1fr;
   grid-template-areas: ". text-area";
+}
+@media (min-width: 1024px) {
+  .a-textDescription__item {
+    grid-template-columns: 5rem 1fr;
+  }
 }
 
 .-text {
@@ -269,8 +279,13 @@ section > img {
 .m-referencesBlock {
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 7% 1fr;
+  grid-template-columns: 5rem 1fr;
   grid-template-areas: ". reference";
+}
+@media (min-width: 1024px) {
+  .m-referencesBlock {
+    grid-template-columns: 5rem 1fr;
+  }
 }
 
 .a-referencesBlock__item {
@@ -284,8 +299,13 @@ section > img {
 
 .a-textReferences__item {
   display: grid;
-  grid-template-columns: 7% 1fr;
+  grid-template-columns: 5rem 1fr;
   grid-template-areas: ". text-area";
+}
+@media (min-width: 1024px) {
+  .a-textReferences__item {
+    grid-template-columns: 5rem 1fr;
+  }
 }
 
 .-text-references {
@@ -300,17 +320,29 @@ section > img {
 .m-contactBlock {
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 10% 1fr;
+  grid-template-columns: 5rem 1fr;
   grid-template-areas: ". contact";
 }
 @media (min-width: 1024px) {
   .m-contactBlock {
-    grid-template-columns: 7% 1fr;
+    grid-template-columns: 5rem 1fr;
   }
 }
 
 .a-contactBlock__item {
   padding: 5px 10px;
+}
+
+@media (min-width: 1024px) {
+  .contactPhone {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .contactDesktop {
+    display: none;
+  }
 }
 
 .-contact {
@@ -320,13 +352,13 @@ section > img {
 
 .a-textContact__item {
   display: grid;
-  grid-template-columns: 10% auto;
+  grid-template-columns: 5rem auto;
   grid-template-rows: repeat(3, auto);
   grid-template-areas: ". adress" ". inquiries" ". application ";
 }
 @media (min-width: 1024px) {
   .a-textContact__item {
-    grid-template-columns: 7% repeat(2, 1fr);
+    grid-template-columns: 5rem repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-template-areas: ". adress ." ". inquiries application ";
   }
@@ -355,8 +387,14 @@ section > img {
 
 .o-featuresExhibition__grid {
   display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
-  grid-template-areas: " . features exhibition";
+  grid-template-columns: 5rem 1fr;
+  grid-template-areas: " . features" " . exhibition";
+}
+@media (min-width: 1024px) {
+  .o-featuresExhibition__grid {
+    grid-template-columns: 5rem repeat(2, 1fr);
+    grid-template-areas: " . features exhibition";
+  }
 }
 
 .o-features {
@@ -456,7 +494,7 @@ section > img {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 7% repeat(2, 1fr);
+  grid-template-columns: 5rem repeat(2, 1fr);
   grid-template-areas: ". name-client category";
   background-color: white;
 }
@@ -512,11 +550,11 @@ nav {
   border-bottom: 1px solid black;
   height: 28.5px;
   display: grid;
-  grid-template-columns: 10% 1fr;
+  grid-template-columns: 5rem 1fr;
 }
 @media (min-width: 1024px) {
   .m-navbarBlock {
-    grid-template-columns: 7% 1fr 50%;
+    grid-template-columns: 5rem 1fr 50%;
   }
 }
 .m-navbarBlock .a-navbar__item {
@@ -616,7 +654,7 @@ nav {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 7% repeat(4, auto);
+  grid-template-columns: 5rem repeat(4, auto);
 }
 
 .a-footerBlock__item {

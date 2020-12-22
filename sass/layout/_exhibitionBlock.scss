@@ -1,12 +1,19 @@
-// Editorial features &  Exhibition  //
+// EDITORIAL FEATURES &  EXHIBITION  //
 
 .o-featuresExhibition__grid {
   display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
-  grid-template-areas: " . features exhibition";
+  grid-template-columns: $col-phone 1fr;
+  grid-template-areas:
+    " . features"
+    " . exhibition";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk repeat(2, 1fr);
+    grid-template-areas: " . features exhibition";
+  }
 }
 
-// Features //
+// FEATURES //
 .o-features {
   grid-area: features;
 }
@@ -59,7 +66,7 @@
   grid-area: contributions;
 }
 
-// Exhibition//
+// EXHIBITION //
 .o-exhibition {
   grid-area: exhibition;
 }

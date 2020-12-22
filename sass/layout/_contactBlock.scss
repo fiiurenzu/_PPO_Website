@@ -19,6 +19,19 @@
   padding: $pad-T-B $pad-L-R;
 }
 
+// SUPPRESSION | AJOUT CONTACT VS DESKTOP //
+.contactPhone {
+  @include media(">=desktop") {
+    display: none;
+  }
+}
+.contactDesktop {
+  @include media("<=phone") {
+    display: none;
+  }
+}
+//
+
 .-contact {
   border-left: $border;
   grid-area: contact;

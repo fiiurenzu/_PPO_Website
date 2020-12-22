@@ -7,8 +7,12 @@
 .m-referencesBlock {
   border-bottom: $border;
   display: grid;
-  grid-template-columns: $col-desk 1fr;
+  grid-template-columns: $col-phone 1fr;
   grid-template-areas: ". reference";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk 1fr;
+  }
 }
 
 .a-referencesBlock__item {
@@ -22,8 +26,12 @@
 
 .a-textReferences__item {
   display: grid;
-  grid-template-columns: $col-desk 1fr;
+  grid-template-columns: $col-phone 1fr;
   grid-template-areas: ". text-area";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk 1fr;
+  }
 }
 
 .-text-references {

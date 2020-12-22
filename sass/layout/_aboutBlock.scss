@@ -7,8 +7,12 @@
 .m-descriptionBlock {
   border-bottom: $border;
   display: grid;
-  grid-template-columns: $col-desk 1fr;
+  grid-template-columns: $col-phone 1fr;
   grid-template-areas: ". about";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk 1fr;
+  }
 }
 
 .a-descriptionBlock__item {
@@ -22,8 +26,12 @@
 
 .a-textDescription__item {
   display: grid;
-  grid-template-columns: $col-desk 1fr;
+  grid-template-columns: $col-phone 1fr;
   grid-template-areas: ". text-area";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk 1fr;
+  }
 }
 
 .-text {
