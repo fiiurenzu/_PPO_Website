@@ -16,10 +16,10 @@ nav {
   border-bottom: $border;
   height: 28.5px;
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: $col-phone 1fr;
 
   @include media(">=desktop") {
-    grid-template-columns: 60px 1fr 50%;
+    grid-template-columns: $col-desk 1fr 50%;
   }
 
   .a-navbar__item {

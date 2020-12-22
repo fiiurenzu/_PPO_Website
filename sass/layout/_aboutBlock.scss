@@ -7,7 +7,7 @@
 .m-descriptionBlock {
   border-bottom: $border;
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: $col-desk 1fr;
   grid-template-areas: ". about";
 }
 
@@ -22,7 +22,7 @@
 
 .a-textDescription__item {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: $col-desk 1fr;
   grid-template-areas: ". text-area";
 }
 

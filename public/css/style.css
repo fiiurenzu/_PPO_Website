@@ -1,4 +1,3 @@
-/****** family ******/
 @font-face {
   src: url(/public/fonts/SangNeufSansMono-Regular.eot);
   src: url(/public/fonts/SangNeufSansMono-Regular.otf);
@@ -239,7 +238,7 @@ section > img {
 .m-descriptionBlock {
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 7% 1fr;
   grid-template-areas: ". about";
 }
 
@@ -254,7 +253,7 @@ section > img {
 
 .a-textDescription__item {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 7% 1fr;
   grid-template-areas: ". text-area";
 }
 
@@ -270,7 +269,7 @@ section > img {
 .m-referencesBlock {
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 7% 1fr;
   grid-template-areas: ". reference";
 }
 
@@ -285,7 +284,7 @@ section > img {
 
 .a-textReferences__item {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 7% 1fr;
   grid-template-areas: ". text-area";
 }
 
@@ -301,8 +300,13 @@ section > img {
 .m-contactBlock {
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 10% 1fr;
   grid-template-areas: ". contact";
+}
+@media (min-width: 1024px) {
+  .m-contactBlock {
+    grid-template-columns: 7% 1fr;
+  }
 }
 
 .a-contactBlock__item {
@@ -316,9 +320,16 @@ section > img {
 
 .a-textContact__item {
   display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: ". adress ." ". inquiries application ";
+  grid-template-columns: 10% auto;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: ". adress" ". inquiries" ". application ";
+}
+@media (min-width: 1024px) {
+  .a-textContact__item {
+    grid-template-columns: 7% repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: ". adress ." ". inquiries application ";
+  }
 }
 
 #ppoAdress {
@@ -445,7 +456,7 @@ section > img {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-columns: 7% repeat(2, 1fr);
   grid-template-areas: ". name-client category";
   background-color: white;
 }
@@ -501,11 +512,11 @@ nav {
   border-bottom: 1px solid black;
   height: 28.5px;
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 10% 1fr;
 }
 @media (min-width: 1024px) {
   .m-navbarBlock {
-    grid-template-columns: 60px 1fr 50%;
+    grid-template-columns: 7% 1fr 50%;
   }
 }
 .m-navbarBlock .a-navbar__item {
@@ -605,7 +616,7 @@ nav {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-columns: 60px repeat(4, auto);
+  grid-template-columns: 7% repeat(4, auto);
 }
 
 .a-footerBlock__item {

@@ -12,7 +12,7 @@
   border-top: $border;
   border-bottom: $border;
   display: grid;
-  grid-template-columns: 60px repeat(4, auto);
+  grid-template-columns: $col-desk repeat(4, auto);
 }
 
 .a-footerBlock__item {

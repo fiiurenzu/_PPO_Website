@@ -1,24 +1,28 @@
-// colors //
+// SPACING //
+$col-phone: 10%;
+$col-desk: 7%;
+
+// COLORS //
 $first: black;
 $second: white;
 $third: rgb(120, 1, 255);
 $four: rgb(51, 255, 0);
 
-//Borders//
+// BORDERS //
 $border: 1px solid $first;
 
-// padding//
+// PADDING //
 $pad-L-R: 10px;
 $pad-T-B: 5px;
 
-//margin//
+// MARGIN //
 $marg: 10px;
 
-//fonts//
-/****** family ******/
+// FONTS //
+//*** FAMILY ***//
 $sans-serif: helvetica;
 
-// sizes //
+// *** SIZES *** //
 $line-height--index: 1.6rem;
 $line-height--text: 2rem;
 $text1: 1.6rem;
