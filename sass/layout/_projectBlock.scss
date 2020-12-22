@@ -1,16 +1,30 @@
 // intro projet + title //
 .m-introprojectBlock {
   display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-columns: $col-phone 1fr;
   grid-template-rows: auto auto auto 15vh auto;
   grid-template-areas:
-    ". title title"
-    ". city year"
-    ". . ."
-    ". . ."
-    "arrow intro .";
+    ". title"
+    ". city"
+    ". year"
+    ". ."
+    "arrow intro  ";
   border-bottom: $border;
   padding-top: $pad-T-B;
+  padding-right: $pad-L-R;
+
+  @include media(">=desktop") {
+    grid-template-columns: 60px repeat(2, 1fr);
+    grid-template-rows: auto auto auto 15vh auto;
+    grid-template-areas:
+      ". title title"
+      ". city year"
+      ". . ."
+      ". . ."
+      "arrow intro .";
+    border-bottom: $border;
+    padding-top: $pad-T-B;
+  }
 }
 
 .a-projectBlock__item {

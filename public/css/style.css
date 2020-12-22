@@ -339,7 +339,7 @@ section > img {
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 1228px) {
   .contactDesktop {
     display: none;
   }
@@ -576,11 +576,21 @@ nav {
 
 .m-introprojectBlock {
   display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-columns: 5rem 1fr;
   grid-template-rows: auto auto auto 15vh auto;
-  grid-template-areas: ". title title" ". city year" ". . ." ". . ." "arrow intro .";
+  grid-template-areas: ". title" ". city" ". year" ". ." "arrow intro  ";
   border-bottom: 1px solid black;
   padding-top: 5px;
+  padding-right: 10px;
+}
+@media (min-width: 1024px) {
+  .m-introprojectBlock {
+    grid-template-columns: 60px repeat(2, 1fr);
+    grid-template-rows: auto auto auto 15vh auto;
+    grid-template-areas: ". title title" ". city year" ". . ." ". . ." "arrow intro .";
+    border-bottom: 1px solid black;
+    padding-top: 5px;
+  }
 }
 
 .a-projectBlock__item {

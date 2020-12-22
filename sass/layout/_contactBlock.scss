@@ -26,7 +26,7 @@
   }
 }
 .contactDesktop {
-  @include media("<=phone") {
+  @include media(">=phone", "<=1228px") {
     display: none;
   }
 }
