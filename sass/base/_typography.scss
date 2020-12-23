@@ -16,8 +16,11 @@ body {
 // TITLE //
 ._projectTitle {
   font-size: 4rem;
-  @include media(">=desktop") {
+  line-height: $line-height--index--mobile;
+  padding-top: $pad-T-B;
+  @include media("=>desktop") {
     font-size: $title;
+    line-height: $line-height--index--desktop;
   }
 }
 
@@ -26,13 +29,13 @@ body {
 ._projectCity,
 ._projectYear {
   font-family: "sangneuf", "Courier New", Courier, monospace;
-  line-height: $line-height--index;
+  line-height: $line-height--index--desktop;
 }
 
 // PROJECT //
 // INTRODUCTION //
 ._projectIntro {
-  line-height: $line-height--text;
+  line-height: $line-height--text--desktop;
   font-size: $text1;
 }
 
@@ -40,24 +43,24 @@ body {
 
 // ABOUT TXT //
 .a-textDescription__item {
-  line-height: $line-height--text;
+  line-height: $line-height--text--desktop;
 }
 
 // SELECTED COLABORATORS TXT //
 .a-textReferences__item {
-  line-height: $line-height--text;
+  line-height: $line-height--text--desktop;
 }
 
 // CONTACT //
 .a-textContact__item {
-  line-height: $line-height--text;
+  line-height: $line-height--text--desktop;
 }
 
 // EDITORIAL FEATURES & EXHIBITIONS //
 .a-features,
 .a-exhibition {
   font-size: $font-footer;
-  line-height: $line-height--index;
+  line-height: $line-height--index--desktop;
 }
 
 // ! PROJECT //
@@ -66,14 +69,14 @@ body {
 // TEXTE PRESENTATION //
 .a-detailProject__text {
   font-size: $text1;
-  line-height: $line-height--text;
+  line-height: $line-height--text--desktop;
 }
 
 // PROJECT
 // LIST IMAGE //
 .list__images {
   font-size: $text1;
-  line-height: $line-height--text;
+  line-height: $line-height--text--desktop;
 }
 
 //PROJECT//

@@ -1,11 +1,16 @@
+// FOOTER DESKTOP //
 .o-footerBlock {
   width: 50%;
-  margin-bottom: calc(#{$marg}/ 2);
   background-color: $second;
   position: fixed;
   bottom: 0;
   width: 50%;
   padding-right: $pad-L-R;
+  margin-bottom: calc(#{$marg}/ 2);
+
+  @include media("<=1024px") {
+    display: none;
+  }
 }
 
 .m-footerBlock {
@@ -16,6 +21,30 @@
 }
 
 .a-footerBlock__item {
+  border-right: $border;
+  padding: $pad-T-B $pad-L-R;
+  &:last-child {
+    border-right: none;
+  }
+}
+
+// FOOTER MOBILE //
+.o-footerBlock--mobile {
+  width: 100%;
+  background-color: $second;
+
+  @include media(">1024px") {
+    display: none;
+  }
+}
+
+.m-footerBlock--mobile {
+  border-bottom: $border;
+  display: grid;
+  grid-template-columns: $col-desk repeat(4, auto);
+}
+
+.a-footerBlock__item--mobile {
   border-right: $border;
   padding: $pad-T-B $pad-L-R;
   &:last-child {

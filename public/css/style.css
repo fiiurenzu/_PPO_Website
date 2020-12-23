@@ -16,10 +16,13 @@ body {
 
 ._projectTitle {
   font-size: 4rem;
+  line-height: 3.5rem;
+  padding-top: 5px;
 }
-@media (min-width: 1024px) {
+@media (min-=: 1025px) {
   ._projectTitle {
     font-size: 5rem;
+    line-height: 1.6rem;
   }
 }
 
@@ -583,7 +586,7 @@ nav {
   padding-top: 5px;
   padding-right: 10px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .m-introprojectBlock {
     grid-template-columns: 60px repeat(2, 1fr);
     grid-template-rows: auto auto auto 15vh auto;
@@ -652,12 +655,17 @@ nav {
 
 .o-footerBlock {
   width: 50%;
-  margin-bottom: calc(10px/ 2);
   background-color: white;
   position: fixed;
   bottom: 0;
   width: 50%;
   padding-right: 10px;
+  margin-bottom: calc(10px/ 2);
+}
+@media (max-width: 1024px) {
+  .o-footerBlock {
+    display: none;
+  }
 }
 
 .m-footerBlock {
@@ -672,6 +680,30 @@ nav {
   padding: 5px 10px;
 }
 .a-footerBlock__item:last-child {
+  border-right: none;
+}
+
+.o-footerBlock--mobile {
+  width: 100%;
+  background-color: white;
+}
+@media (min-width: 1025px) {
+  .o-footerBlock--mobile {
+    display: none;
+  }
+}
+
+.m-footerBlock--mobile {
+  border-bottom: 1px solid black;
+  display: grid;
+  grid-template-columns: 5rem repeat(4, auto);
+}
+
+.a-footerBlock__item--mobile {
+  border-right: 1px solid black;
+  padding: 5px 10px;
+}
+.a-footerBlock__item--mobile:last-child {
   border-right: none;
 }
 

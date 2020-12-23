@@ -22,11 +22,18 @@ $marg: 10px;
 //*** FAMILY ***//
 $sans-serif: helvetica;
 
-// *** SIZES *** //
-$line-height--index: 1.6rem;
-$line-height--text: 2rem;
+// *** TEXT ZIZE *** //
 $text1: 1.6rem;
 $text2: 1.4rem;
 $title: 5rem;
 $font-footer: 1.3rem;
 $emoji: 1.5rem;
+
+// *** LINE HEIGHT *** //
+// *** MOBILE *** //
+$line-height--index--mobile: 3.5rem;
+
+// *** LINE HEIGHT *** //
+// *** DESKTOP *** //
+$line-height--index--desktop: 1.6rem;
+$line-height--text--desktop: 2rem;

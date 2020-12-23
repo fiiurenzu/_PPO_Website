@@ -13,7 +13,7 @@
   padding-top: $pad-T-B;
   padding-right: $pad-L-R;
 
-  @include media(">=desktop") {
+  @include media(">=tablet") {
     grid-template-columns: 60px repeat(2, 1fr);
     grid-template-rows: auto auto auto 15vh auto;
     grid-template-areas:
