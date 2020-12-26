@@ -11,7 +11,7 @@
 .m-navigationButtons {
   border-top: $border;
   display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-columns: $col-desk repeat(2, 1fr);
   grid-template-areas: ". name-client category";
 }
 

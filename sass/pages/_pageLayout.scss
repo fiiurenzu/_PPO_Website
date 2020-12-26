@@ -2,8 +2,6 @@
 .o-gridContainer {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-
   @include media(">=desktop") {
     flex-direction: row;
     position: relative;
@@ -13,6 +11,7 @@
 // HOME PAGE //
 // LEFT //
 .m-gridContainerHome__left {
+  width: 100%;
   @include media(">=desktop") {
     width: 50%;
     padding-left: $pad-L-R;
@@ -40,6 +39,7 @@
     flex-direction: row;
     width: 50%;
     margin-left: $marg;
+    order: 1;
   }
 }
 
@@ -50,5 +50,6 @@
     width: 50%;
     border-left: $border;
     margin-right: $marg;
+    order: 2;
   }
 }
