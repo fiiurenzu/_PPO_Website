@@ -191,8 +191,16 @@ img {
   bottom: 0;
 }
 
-section > img {
-  max-height: 100%;
+@media (max-width: 768px) {
+  section > img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  section > img {
+    max-height: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
