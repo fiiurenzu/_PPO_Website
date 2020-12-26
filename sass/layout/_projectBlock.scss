@@ -57,9 +57,12 @@
 // Details projet + services //
 .o-detailsProject {
   padding: $pad-T-B $pad-L-R;
-  display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
-  grid-template-areas: ". gridlist gridtext";
+  @include media(">=desktop") {
+    padding: $pad-T-B $pad-L-R;
+    display: grid;
+    grid-template-columns: 60px repeat(2, 1fr);
+    grid-template-areas: ". gridlist gridtext";
+  }
 }
 
 .m-detailsProject__list {
@@ -73,8 +76,10 @@
 }
 
 .m-detailsProject__text {
-  grid-area: gridtext;
-  padding-left: $pad-L-R;
+  @include media(">=desktop") {
+    grid-area: gridtext;
+    padding-left: $pad-L-R;
+  }
 }
 
 // change la couleur de fond pair impair en hover sur la liste//

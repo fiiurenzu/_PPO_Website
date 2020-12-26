@@ -1,9 +1,11 @@
 // BUTTON PREVIOUS NEXT //
 .o-navigationButtons {
-  width: 50vw;
-  padding-right: 10px;
-  position: fixed;
-  bottom: 3rem;
+  @include media(">=desktop") {
+    width: 50vw;
+    padding-right: 10px;
+    position: fixed;
+    bottom: 3rem;
+  }
 }
 
 .m-navigationButtons {

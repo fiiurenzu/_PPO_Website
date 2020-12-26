@@ -152,13 +152,17 @@ img {
 
 .a-scrollerImage__item {
   height: calc(100% - 10px);
-  margin-top: calc(10px/ 2);
   margin-bottom: calc(10px/ 2);
   box-sizing: border-box;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   background-color: #ececec;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .a-scrollerImage__item {
+    margin-top: calc(10px/ 2);
+  }
 }
 
 .a-scrollerImage__item__home {
@@ -187,11 +191,13 @@ section > img {
   max-height: 100%;
 }
 
-.o-navigationButtons {
-  width: 50vw;
-  padding-right: 10px;
-  position: fixed;
-  bottom: 3rem;
+@media (min-width: 1024px) {
+  .o-navigationButtons {
+    width: 50vw;
+    padding-right: 10px;
+    position: fixed;
+    bottom: 3rem;
+  }
 }
 
 .m-navigationButtons {
@@ -617,9 +623,14 @@ nav {
 
 .o-detailsProject {
   padding: 5px 10px;
-  display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
-  grid-template-areas: ". gridlist gridtext";
+}
+@media (min-width: 1024px) {
+  .o-detailsProject {
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: 60px repeat(2, 1fr);
+    grid-template-areas: ". gridlist gridtext";
+  }
 }
 
 .m-detailsProject__list {
@@ -632,9 +643,11 @@ nav {
   padding-bottom: 5px;
 }
 
-.m-detailsProject__text {
-  grid-area: gridtext;
-  padding-left: 10px;
+@media (min-width: 1024px) {
+  .m-detailsProject__text {
+    grid-area: gridtext;
+    padding-left: 10px;
+  }
 }
 
 .m-detailsProject__list :nth-child(even):hover {
@@ -700,12 +713,13 @@ nav {
 }
 
 .o-gridContainer {
-  display: inline;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
 }
 @media (min-width: 1024px) {
   .o-gridContainer {
-    display: flex;
+    flex-direction: row;
     position: relative;
   }
 }
@@ -730,19 +744,25 @@ nav {
 }
 
 .m-gridContainerProject__left {
-  width: 50%;
-  margin-left: 10px;
+  order: 2;
 }
-@media (max-width: 320px) {
+@media (min-width: 1024px) {
   .m-gridContainerProject__left {
-    background-color: yellow;
+    flex-direction: row;
+    width: 50%;
+    margin-left: 10px;
   }
 }
 
 .m-gridContainerProject__right {
-  width: 50%;
-  border-left: 1px solid black;
-  margin-right: 10px;
+  order: 1;
+}
+@media (min-width: 1024px) {
+  .m-gridContainerProject__right {
+    width: 50%;
+    border-left: 1px solid black;
+    margin-right: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

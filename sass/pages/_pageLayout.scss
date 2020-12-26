@@ -1,10 +1,11 @@
 // CONTAINER //
 .o-gridContainer {
-  display: inline;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
 
   @include media(">=desktop") {
-    display: flex;
+    flex-direction: row;
     position: relative;
   }
 }
@@ -34,17 +35,20 @@
 // PROJECT PAGE //
 //LEFT //
 .m-gridContainerProject__left {
-  width: 50%;
-  margin-left: $marg;
-
-  @include media("<=phone") {
-    background-color: yellow;
+  order: 2;
+  @include media(">=desktop") {
+    flex-direction: row;
+    width: 50%;
+    margin-left: $marg;
   }
 }
 
 // RIGHT //
 .m-gridContainerProject__right {
-  width: 50%;
-  border-left: $border;
-  margin-right: $marg;
+  order: 1;
+  @include media(">=desktop") {
+    width: 50%;
+    border-left: $border;
+    margin-right: $marg;
+  }
 }
