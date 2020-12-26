@@ -137,13 +137,17 @@ img {
   font-size: 2rem;
 }
 
-.m-scrollerImage {
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+@media (min-width: 1024px) {
+  .m-scrollerImage {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
 }
 
-.m-scrollerImage section {
-  scroll-snap-align: center;
+@media (min-width: 1024px) {
+  .m-scrollerImage section {
+    scroll-snap-align: center;
+  }
 }
 
 ._scrollProject {
@@ -203,7 +207,7 @@ section > img {
 .m-navigationButtons {
   border-top: 1px solid black;
   display: grid;
-  grid-template-columns: 60px repeat(2, 1fr);
+  grid-template-columns: 5rem repeat(2, 1fr);
   grid-template-areas: ". name-client category";
 }
 
@@ -643,6 +647,11 @@ nav {
   padding-bottom: 5px;
 }
 
+@media (max-width: 768px) {
+  .m-detailsProject__text {
+    padding-top: 5px;
+  }
+}
 @media (min-width: 1024px) {
   .m-detailsProject__text {
     grid-area: gridtext;
@@ -715,7 +724,6 @@ nav {
 .o-gridContainer {
   display: flex;
   flex-direction: column;
-  width: 100vw;
 }
 @media (min-width: 1024px) {
   .o-gridContainer {
@@ -724,6 +732,9 @@ nav {
   }
 }
 
+.m-gridContainerHome__left {
+  width: 100%;
+}
 @media (min-width: 1024px) {
   .m-gridContainerHome__left {
     width: 50%;
@@ -751,6 +762,7 @@ nav {
     flex-direction: row;
     width: 50%;
     margin-left: 10px;
+    order: 1;
   }
 }
 
@@ -762,6 +774,7 @@ nav {
     width: 50%;
     border-left: 1px solid black;
     margin-right: 10px;
+    order: 2;
   }
 }
 

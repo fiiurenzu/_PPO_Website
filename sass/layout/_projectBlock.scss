@@ -76,6 +76,9 @@
 }
 
 .m-detailsProject__text {
+  @include media("<=tablet") {
+    padding-top: $pad-T-B;
+  }
   @include media(">=desktop") {
     grid-area: gridtext;
     padding-left: $pad-L-R;

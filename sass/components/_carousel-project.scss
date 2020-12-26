@@ -1,12 +1,16 @@
 //carrousel scroller snap images//
 
 .m-scrollerImage {
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  @include media(">=desktop") {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
 }
 
 .m-scrollerImage section {
-  scroll-snap-align: center;
+  @include media(">=desktop") {
+    scroll-snap-align: center;
+  }
 }
 ._scrollProject {
   height: 100vh;
