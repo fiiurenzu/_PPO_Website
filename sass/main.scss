@@ -1,28 +1,26 @@
-// utils //
+// UTILS //
 @import "./utils/variables.scss";
 @import "./utils/breakpoints.scss";
 
-// base //
+// BASE //
 @import "./base/_font";
 @import "./base/typography";
 @import "./base/base.scss";
 
-// Components //
+// COMPONENTS //
 @import "./components/_summary";
 @import "./components/carousel-project";
-@import "./components/carousel-home";
 @import "./components/button-previous-next";
 
-// Layout //
+// LAYOUT //
 @import "./layout/aboutBlock";
 @import "./layout/collaboratorsBlock";
 @import "./layout/_contactBlock";
 @import "./layout/_exhibitionBlock";
-
 @import "./layout/index";
 @import "./layout/navbar.scss";
 @import "./layout/projectBlock";
 @import "./layout/footer";
 
-// pages //
+// PAGES //
 @import "./pages/pageLayout";

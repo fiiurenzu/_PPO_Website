@@ -187,14 +187,6 @@ section > img {
   max-height: 100%;
 }
 
-.o-imageContainer__home {
-  margin-top: calc(10px/ 2);
-}
-
-.a-imageContainer__home {
-  width: 100%;
-}
-
 .o-navigationButtons {
   width: 50vw;
   padding-right: 10px;

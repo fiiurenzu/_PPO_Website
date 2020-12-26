@@ -18,6 +18,7 @@ body {
   font-size: 4rem;
   line-height: $line-height--index--mobile;
   padding-top: $pad-T-B;
+
   @include media("=>desktop") {
     font-size: $title;
     line-height: $line-height--index--desktop;

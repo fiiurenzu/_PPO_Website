@@ -1,4 +1,4 @@
-// Container commun
+// CONTAINER //
 .o-gridContainer {
   display: inline;
   width: 100vw;
@@ -9,7 +9,8 @@
   }
 }
 
-// Home page
+// HOME PAGE //
+// LEFT //
 .m-gridContainerHome__left {
   @include media(">=desktop") {
     width: 50%;
@@ -18,6 +19,8 @@
     position: fixed;
   }
 }
+
+// RIGHT //
 .m-gridContainerHome__right {
   @include media(">=desktop") {
     width: 50%;
@@ -28,8 +31,8 @@
   }
 }
 
-// Project page
-
+// PROJECT PAGE //
+//LEFT //
 .m-gridContainerProject__left {
   width: 50%;
   margin-left: $marg;
@@ -39,6 +42,7 @@
   }
 }
 
+// RIGHT //
 .m-gridContainerProject__right {
   width: 50%;
   border-left: $border;
