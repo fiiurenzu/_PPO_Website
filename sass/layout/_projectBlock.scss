@@ -67,6 +67,7 @@
 
 .m-detailsProject__list {
   grid-area: gridlist;
+  max-height: 40rem; //TODO CHANGER EN VARIABLE
 }
 
 .m-detailsProject__list > li {
@@ -83,6 +84,11 @@
     grid-area: gridtext;
     padding-left: $pad-L-R;
   }
+}
+
+.a-detailsProject__text {
+  max-height: 35rem; //TODO CHANGER EN VARIABLE
+  overflow: scroll;
 }
 
 // change la couleur de fond pair impair en hover sur la liste//

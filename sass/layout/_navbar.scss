@@ -2,19 +2,15 @@
 nav {
   position: relative;
   margin-top: calc(#{$marg}/ 2);
+}
 
-  @include media(">=desktop") {
-    position: sticky;
-    top: 5px;
-    z-index: 3;
-    background-color: $second;
-  }
+.__navRight {
 }
 
 .m-navbarBlock {
   border-top: $border;
   border-bottom: $border;
-  height: 28.5px;
+  //height: 28.5px;
   display: grid;
   grid-template-columns: $col-phone 1fr;
 

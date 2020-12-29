@@ -1,6 +1,19 @@
+.m-scrollerImage {
+  @include media(">=desktop") {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+}
+.a-scrollerImage {
+  width: 100%;
+  background-color: black;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
 //carrousel scroller snap images//
 
-.m-scrollerImage {
+/*.m-scrollerImage {
   @include media(">=desktop") {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -11,36 +24,9 @@
   @include media(">=desktop") {
     scroll-snap-align: center;
   }
-}
-._scrollProject {
-  height: 100vh;
-}
+}*/
 
-.a-scrollerImage__item {
-  height: calc(100% - 10px);
-  margin-bottom: calc(#{$marg}/ 2);
-  box-sizing: border-box;
-  border-top: $border;
-  border-bottom: $border;
-  background-color: rgb(236, 236, 236); //TODO changer en variable //
-  position: relative;
-
-  @include media(">=desktop") {
-    margin-top: calc(#{$marg}/ 2);
-  }
-}
-
-.a-scrollerImage__item__home {
-  height: auto;
-  margin-bottom: calc(#{$marg}/ 2);
-  box-sizing: border-box;
-  border-top: none;
-  border-bottom: $border;
-  background-color: rgb(236, 236, 236); //TODO changer en variable //
-  position: relative;
-}
-
-.figure__item__image {
+/*.figure__item__image {
   padding-top: $pad-T-B;
   padding-right: $pad-L-R;
   padding-bottom: $pad-T-B;
@@ -52,7 +38,7 @@
   bottom: 0;
 }
 
-section > img {
+picture > img {
   @include media("<=tablet") {
     max-width: 100%;
     height: auto;
@@ -60,4 +46,4 @@ section > img {
   @include media(">=desktop") {
     max-height: 100%;
   }
-}
+}*/

@@ -38,7 +38,7 @@
   @include media(">=desktop") {
     flex-direction: row;
     width: 50%;
-    margin-left: $marg;
+    padding-left: $pad-L-R;
     order: 1;
   }
 }
@@ -47,9 +47,12 @@
 .m-gridContainerProject__right {
   order: 1;
   @include media(">=desktop") {
+    position: fixed;
+    left: 50%;
     width: 50%;
-    border-left: $border;
-    margin-right: $marg;
+    height: 100vh;
     order: 2;
+    border-left: $border;
+    padding-right: $pad-L-R;
   }
 }
