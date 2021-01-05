@@ -1,10 +1,9 @@
 // navbar home //
 nav {
-  position: relative;
-  margin-top: calc(#{$marg}/ 2);
-}
-
-.__navRight {
+  @include media(">=desktop") {
+    position: relative;
+    margin-top: calc(#{$marg}/ 2);
+  }
 }
 
 .m-navbarBlock {
