@@ -5,12 +5,10 @@
   }
 }
 .a-scrollerImage {
-  width: 100%;
   background-color: black;
   height: 100%;
   scroll-snap-align: start;
-}
-
-.a-scrollerImage img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }

@@ -137,6 +137,23 @@ img {
   font-size: 2rem;
 }
 
+.a-listServices {
+  height: 15rem;
+  padding-top: 5px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.a-listServices li {
+  border-bottom: 1px solid black;
+  padding-top: 0.7rem;
+  padding-bottom: 5px;
+}
+
+.a-listServices::-webkit-scrollbar {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .m-scrollerImage {
     overflow-y: scroll;
@@ -145,30 +162,29 @@ img {
 }
 
 .a-scrollerImage {
-  width: 100%;
   background-color: black;
   height: 100%;
   scroll-snap-align: start;
 }
-
 .a-scrollerImage img {
   width: 100%;
 }
 
 @media (min-width: 1024px) {
   .o-navigationButtons {
-    width: 50vw;
-    padding-right: 10px;
+    width: 50%;
+    background-color: white;
     position: fixed;
     bottom: 3rem;
+    padding-right: 10px;
   }
 }
 
 .m-navigationButtons {
-  border-top: 1px solid black;
   display: grid;
   grid-template-columns: 5rem repeat(2, 1fr);
   grid-template-areas: ". name-client category";
+  border-top: 1px solid black;
 }
 
 .a-navigationButtons {
@@ -616,6 +632,12 @@ img {
 .a-detailsProject__text {
   max-height: 35rem;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.a-detailsProject__text::-webkit-scrollbar {
+  display: none;
 }
 
 .m-detailsProject__list :nth-child(even):hover {
@@ -631,7 +653,6 @@ img {
   background-color: white;
   position: fixed;
   bottom: 0;
-  width: 50%;
   padding-right: 10px;
   margin-bottom: calc(10px/ 2);
 }

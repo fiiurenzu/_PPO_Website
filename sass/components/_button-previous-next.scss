@@ -1,18 +1,19 @@
 // BUTTON PREVIOUS NEXT //
 .o-navigationButtons {
   @include media(">=desktop") {
-    width: 50vw;
-    padding-right: 10px;
+    width: 50%;
+    background-color: $second;
     position: fixed;
     bottom: 3rem;
+    padding-right: $pad-L-R;
   }
 }
 
 .m-navigationButtons {
-  border-top: $border;
   display: grid;
   grid-template-columns: $col-desk repeat(2, 1fr);
   grid-template-areas: ". name-client category";
+  border-top: $border;
 }
 
 .a-navigationButtons {
