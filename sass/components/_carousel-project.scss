@@ -1,13 +1,7 @@
-.m-scrollerImage {
-  @include media(">=desktop") {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-  }
-}
+// Caroussel image et video
+
 .a-scrollerImage {
-  background-color: black;
   height: 100%;
-  scroll-snap-align: start;
   img {
     width: 100%;
   }

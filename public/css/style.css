@@ -119,6 +119,10 @@ img {
   list-style: none;
 }
 
+.m-listServices summary::-webkit-details-marker {
+  display: none;
+}
+
 .m-listServices:after {
   content: "+";
   color: black;
@@ -154,17 +158,12 @@ img {
   display: none;
 }
 
-@media (min-width: 1024px) {
-  .m-scrollerImage {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-  }
+.titleServices {
+  text-decoration: underline;
 }
 
 .a-scrollerImage {
-  background-color: black;
   height: 100%;
-  scroll-snap-align: start;
 }
 .a-scrollerImage img {
   width: 100%;
@@ -559,7 +558,7 @@ img {
 }
 @media (min-width: 768px) {
   .m-introprojectBlock {
-    grid-template-columns: 60px repeat(2, 1fr);
+    grid-template-columns: 5rem repeat(2, 1fr);
     grid-template-rows: auto auto auto 15vh auto;
     grid-template-areas: ". title title" ". city year" ". . ." ". . ." "arrow intro .";
     border-bottom: 1px solid black;
