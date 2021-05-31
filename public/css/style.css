@@ -635,6 +635,7 @@ img {
 #__buttonReturnHome:hover {
   font-size: 0;
   background-color: #7c7c7c;
+  padding-left: 6px;
 }
 #__buttonReturnHome:hover:after {
   content: attr(data-hover);
