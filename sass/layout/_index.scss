@@ -1,41 +1,58 @@
-//  index container //
-.m-indexBlock {
+/** ========================================================================
+* = INDEX
+*
+* 01 - INDEX HOME
+* 02 - INDEX PROJECTS
+* 
+* ========================================================================= */
+
+/**
+ * = 01 - INDEX HOME
+ * ------------------------------------------------------------------------- */
+.o-indexHome__container {
   border-top: $border;
   border-bottom: $border;
+  border-left: $border;
+  margin-top: calc(#{$marg}/ 2);
+}
+
+.m-indexHome__wrapper {
+  display: grid;
+  grid-template-columns: $col-phone 1fr;
+  grid-template-areas: ". about";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk 1fr;
+  }
+}
+.a-indexHome__item {
+  border-left: $border;
+  grid-area: about;
+  padding: $pad-T-B $pad-L-R;
+}
+
+/**
+ * = 02 - INDEX PROJECTS
+ * ------------------------------------------------------------------------- */
+
+.o-indexProjects__container {
+  border-bottom: $border;
+}
+.m-indexProjects__wrapper {
   display: grid;
   grid-template-columns: $col-desk repeat(2, 1fr);
   grid-template-areas: ". name-client category";
   background-color: $second;
 }
-._indexTop {
-  border-top: none;
-}
-
-.a-indexBlock__item {
+.a-indexProjects_name__item,
+.a-indexProjects_category__item {
   padding: $pad-T-B $pad-L-R;
 }
-._indexName {
+.a-indexProjects_name__item {
   border-right: $border;
   border-left: $border;
   grid-area: name-client;
 }
-._indexCategory {
+.a-indexProjects_category__item {
   grid-area: category;
-}
-
-// index home page top border/
-._indexTop__home {
-  border-top: $border;
-  margin-top: calc(#{$marg}/ 2);
-}
-
-._indexName__home {
-  border-right: none;
-  border-left: $border;
-  grid-area: name-client;
-}
-
-// index sub container sans top border //
-.index__project {
-  border-top: none;
 }

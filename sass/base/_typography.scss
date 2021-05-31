@@ -1,4 +1,29 @@
-// ! BASE DOCUMENT //
+/** ========================================================================
+* = CHARTE TYPOGRAPHIQUE
+*
+* 01 - BASE : HTML BODY 
+* 02 - TYPO ENSEMBLE DES PAGES
+* 02.1 - NAVBAR
+* 02.2 - INDEX
+* 02.3 - COVER 
+* 02.3.1 - TITLE
+* 02.3.1 - DATE & CITY
+* 02.3.1 - MOTS CLEFS
+* -----
+* 03 - HOME 
+* -----
+* 04 - PROJECT
+* 04.1 - BUTTONS ANCHORS
+* 04.2 - TEXTE (cf.body)
+* 04.3 - LISTE DÉROULANTE DETAILS SERVICES
+* 05 - FOOTER
+* 
+* ========================================================================= */
+
+/**
+ * = 01 - BASE : HTML BODY
+ * 
+ * ------------------------------------------------------------------------- */
 html {
   font-size: 62.5%;
 }
@@ -6,18 +31,32 @@ html {
 body {
   font-size: $text1;
   font-family: $sans-serif;
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: $second;
+    background: $first;
+  }
+
+  ::selection {
+    color: $second;
+    background: $first;
+  }
 }
 
-// NAVBAR //
+/**
+ * = 02 - TYPO COMMUNE : NAVBAR, INDEX, CONTAINER COVER PROJECT (HOME + PROJECT)
+ * 
+ * ------------------------------------------------------------------------- */
+/* = 02.1 - NAVBAR */
 
-// INDEX //
+/* = 02.2 - INDEX */
 
-// PROJET //
-// TITLE //
-._projectTitle {
+/* = 02.3 - CONTAINER COVER : TITLE */
+.a-project_informationsTitle__item {
   font-size: 4rem;
   line-height: $line-height--index--mobile;
   padding-top: $pad-T-B;
+  text-transform: uppercase;
 
   @include media("=>desktop") {
     font-size: $title;
@@ -25,63 +64,68 @@ body {
   }
 }
 
-// PROJET //
-// DATE & CITY //
-._projectCity,
-._projectYear {
+/* = 02.4 - CONTAINER COVER : DATE & CITY */
+.a-project_informationsCity__item,
+.a-project_informationsYear__item {
   font-family: "sangneuf", "Courier New", Courier, monospace;
   line-height: $line-height--index--desktop;
 }
 
-// PROJECT //
-// INTRODUCTION //
+/* = 02.5 - CONTAINER COVER : MOTS CLEFS */
 ._projectIntro {
   line-height: $line-height--text--desktop;
   font-size: $text1;
 }
 
-// ! HOME //
-
-// ABOUT TXT //
-.a-textDescription__item {
+/**
+ * = 03 - HOME
+ * 
+ * ------------------------------------------------------------------------- */
+/* = 03.1 - ABOUT */
+.m-about_textAbout__wrapper {
   line-height: $line-height--text--desktop;
 }
 
-// SELECTED COLABORATORS TXT //
-.a-textReferences__item {
+/* = 03.2 - SELECTED COLLABORATORS */
+.m-collaborators_textCollabs__wrapper {
   line-height: $line-height--text--desktop;
 }
 
-// CONTACT //
-.a-textContact__item {
+/* = 03.3 - CONTACT */
+.m-contact_textContact__wrapper {
   line-height: $line-height--text--desktop;
 }
 
-// EDITORIAL FEATURES & EXHIBITIONS //
-.a-features,
-.a-exhibition {
+/* = 03.4 - CONTRIBUTIONS & EXHIBITIONS */
+.m-contribution_content__wrapper,
+.a-exhibitionTab__wrapper {
   font-size: $font-footer;
   line-height: $line-height--index--desktop;
 }
+/**
+ * = 04 - PROJECT
+ * 
+ * ------------------------------------------------------------------------- */
 
-// ! PROJECT //
+/* = 04.1 - BOUTTONS ANCHORS */
+.m-buttonText__wrapper {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 
-// PROJECT //
-// TEXTE PRESENTATION //
-.a-detailProject__text {
+/* = 04.2 - TEXTES */
+.m-text__wrapper {
   font-size: $text1;
   line-height: $line-height--text--desktop;
 }
 
-// PROJECT
-// LIST IMAGE //
-.list__images {
-  font-size: $text1;
-  line-height: $line-height--text--desktop;
+/* = 04.3 - LIENS EXTERNES */
+.a-linkProject {
+  font-size: 1.1rem; //TODO CHANGER EN VARIABLE
+  font-weight: bold;
 }
 
-//PROJECT//
-// LIST SERVICES (DROPDOWN) //
+/* = 04.2 - LISTE DEROULANTE */
 summary {
   font-size: $text1;
 }
@@ -90,17 +134,10 @@ summary {
   font-size: $text2;
 }
 
-// PROJECT //
-// NEXT & PREVIOUS //
-
-// PROJECT //
-// FOOTER//
-.o-footerBlock {
-  font-size: $font-footer;
-}
-
-// LEFT PAGE //
-// LEGENDE IMAGE //
-.figure__item__image {
+/**
+ * = 05 - FOOTER
+ * 
+ * ------------------------------------------------------------------------- */
+.o-footer__container {
   font-size: $font-footer;
 }

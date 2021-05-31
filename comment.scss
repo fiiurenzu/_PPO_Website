@@ -1,0 +1,38 @@
+/**
+ * = MAIN Comment Block
+ *
+ * A Main Comment Block for a file. Recognized by the 
+ * 'heavy' bottom border. This comment lives at the top of a file and 
+ * document's its function.
+ * 
+ * ========================================================================= */
+
+/**
+ * = SECTION Comment Block
+ *
+ * A Section Comment Block document's a section.
+ * It has a 'lighter' bottom-border
+ *
+ * ------------------------------------------------------------------------- */
+
+/**
+ * = A SUBSECTION Comment Block
+ *
+ * A simple comment block, documenting some subsection/code
+ */
+
+/* = An INLINE Comment */
+
+/* !
+ * = PRESERVED Comment
+ *
+ * A line of text describing a *permanent comment*: a comment that is preserved 
+ * in the processed CSS because it starts with an exclamation point: '!'
+ *
+ * Often contains:
+ * 
+ * @version: 1.0
+ * @author:  David Hund <valuedstandards.com>
+ * etc...
+ * 
+ */

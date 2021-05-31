@@ -8,306 +8,274 @@
   </head>
   <body>
     <!-- MAIN CONTAINER GRID 2 COL  -->
-    <main class="o-gridContainer">
+    <main class="o-pageSplit__container">
       <!-- ! CONTAINER LEFT -->
-      <div class="m-gridContainerHome__left">
+      <div class="m-pageSplit_homeLeft__wrapper">
 
         <!-- NAVBAR -->
-        <nav class="o-navabarBlock __navLeft">
-          <ul class="m-navbarBlock">
-            <li class="a-navbar__item">PPO</li></a>
-            <li class="a-navbar__item _logo">Panama Papers.Office</li>
+        <nav class="o-navbar__container">
+          <ul class="m-navbar__wrapper">
+            <li class="a-navbar__item" id="name_ppo">PPO</li></a>
+            <li class="a-navbar__item" id="name_panamaPapersOffice">Panama Papers.Office</li>
           </ul>
         </nav>
 
         <!-- ABOUT -->
-        <article class="o-descriptionBlock">
-          <div class="m-descriptionBlock">
-            <div class="a-descriptionBlock__item -empty"></div>
-            <div class="a-descriptionBlock__item -about">About</div>
+        <section class="o-about__container">
+          <!-- ABOUT INDEX-->
+          <div class="m-about_indexAbout__wrapper">
+            <div class="a-about_indexAbout__item">About</div>
           </div>
-          <div class="a-textDescription__item">
-            <div class="a-descriptionBlock__item -empty"></div>
-            <p class="a-descriptionBlock__item -text">
-              PPOffice (panama papers.office) is a creative studio established in 2019 by Pierre Dufresne, Ilan Begarin &
-              Florent Martini. Joined by Etienne Clerc in 2020 developping creative systems, images, design and
-              consulting.
+          <!-- ABOUT TEXTE-->
+          <div class="m-about_textAbout__wrapper">
+            <p class="a-about_textAbout__item"> 
+                PPOffice (panama papers.office) is a creative studio established in 2019 by Pierre Dufresne, Ilan Begarin &
+                Florent Martini, joined by Etienne Clerc in 2020. The studio is developping creative systems, images, design and
+                consulting.  
             </p>
           </div>
-        </article>
+        </section>
 
         <!-- SELECTED COLLABORATORS -->
-        <article class="o-referencesBlock">
-          <div class="m-referencesBlock">
-            <div class="a-referencesBlock__item -empty"></div>
-            <div class="a-referencesBlock__item -references">Selected Collaborators</div>
+        <section class="o-collaborators__container">
+          <!-- SELECTED COLLABORATORS INDEX-->
+          <div class="m-collaborators_indexCollabs__wrapper">
+            <div class="a-collaborators_indexCollabs__item">Selected Collaborators</div>
           </div>
-          <div class="a-textReferences__item">
-            <div class="a-referencesBlock__item -empty"></div>
-            <p class="a-referencesBlock__item -text-references">
+           <!-- SELECTED COLLABORATORS TEXTE-->
+          <div class="m-collaborators_textCollabs__wrapper">
+            <p class="a-collaborators_textCollabs__item">
               Sony Music (SW), Timur Si-Qin (USA), Vonammon Gallery (USA), University Le Havre Normandie (FR), Gerrit
               Rietveld Academy (NL), Ada Sokol (PL), Tunica Magazine (USA), Stedelijk Museum (NL), Entercourse of The
               New Age (FR), Edwin (EU), WWMM Magazine (CH)
             </p>
           </div>
-        </article>
+        </section>
 
         <!-- CONTACT -->
-        <article class="o-contactBlock">
-          <div class="m-contactBlock">
-            <div class="a-contactBlock__item -empty"></div>
-            <div class="a-contactBlock__item -contact">Contact</div>
+        <section class="o-contact__container">
+          <!-- CONTACT INDEX-->
+          <div class="m-contact_indexContact__wrapper">
+            <div class="a-contact-indexContact__item">Contact</div>
           </div>
-          <div class="a-textContact__item">
-            <div class="a-contactBlock__item -empty"></div>
-            <p class="a-contactBlock__item" id="ppoAdress">31 rue saint sébastien, 75011 Paris</p>
-            <p class="a-contactBlock__item" id="inquiries">
+           <!-- CONTACT INFORMATIONS-->
+          <div class="m-contact_textContact__wrapper">
+            <p class="a-contact_textContact__item" id="ppoAdress">31 rue saint sébastien, 75011 Paris</p>
+            <!-- CONTACT BUSINESS INQUIRIES-->
+            <p class="a-contact_textContact__item" id="inquiries">
               Business inquiries : <br />
-              <a class="contactDesktop" href="#">contact@panamapapersoffice.com</a>
-              <a class="contactPhone" href="#"> <span class="arrow">&rarr;</span> contact us</a>
+              <a id="contactDesktop" href="#">contact@panamapapersoffice.com</a>
+              <a id="contactPhone" href="#"> <span class="arrow">&rarr;</span> contact us</a>
             </p>
-
-            <p class="a-contactBlock__item" id="application">
+            <!-- CONTACT APPLICATION -->
+            <p class="a-contact_textContact__item" id="application">
               Application job & internship : <br />
-              <a class="contactDesktop" href="#">application@panamapapersoffice.com</a>
-              <a class="contactPhone" href="#"><span class="arrow">&rarr;</span> contact us</a>
+              <a id="contactDesktop" href="#">application@panamapapersoffice.com</a>
+              <a id="contactPhone" href="#"><span class="arrow">&rarr;</span> contact us</a>
             </p>
           </div>
-        </article>
+        </section>
 
-        <!-- EDITORIAL FEATURES -->
-        <div class="o-featuresExhibition__grid">
-          <details class="o-features">
-            <summary class="m-features">Editorial features & contributions</summary>
-            <ul class="a-features">
+        <!-- CONTRIBUTION & EXHIBITION -->
+        <section class="o-contributionsExhibitions__container">
+          <!-- CONTRIBUTION -->
+          <details class="m-contribution_tab__wrapper">
+            <summary class="a-contribution_tab__item">Editorial features & contributions</summary>
 
-              <!-- FEATURE 1-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2020</li>
-                <li class="a-featuresContributions">
+            <!-- CONTRIBUTION 1-->
+            <div class="m-contribution_content__wrapper">
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2020</li>
+                <li class="a-contribution_content__item__details">
                   « From A to Z, the curation of independent type designers », published by Vrints-Kolstersen Editions,
                   Antwerp, BE
                 </li>
-              </div>
+              </ul>
 
-              <!-- FEATURE 2-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2020</li>
-                <li class="a-featuresContributions">« New aesthetic » Vol.2 published by Sorry Press, Berlin, GE</li>
-              </div>
+              <!-- CONTRIBUTION 2-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2020</li>
+                <li class="a-contribution_content__item__details">« New aesthetic » Vol.2 published by Sorry Press, Berlin, GE</li>
+              </ul>
 
-              <!-- FEATURE 3-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2020</li>
-                <li class="a-featuresContributions">
+              <!-- CONTRIBUTION 3-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2020</li>
+                <li class="a-contribution_content__item__details">
                   The forces behind the visuality of a “Malleable Identity” - Online interview with Ada Sokol
                 </li>
-              </div>
+              </ul>
 
-              <!-- FEATURE 4-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">
+              <!-- CONTRIBUTION 4-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">
                   « REVU » DSAA Image-Média-Editorial, Published by Duperré School, Paris, FR
                 </li>
-              </div>
+              </ul>
 
-              <!-- FEATURE 5-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">
+              <!-- CONTRIBUTION 5-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">
                   « Post - Medium » - Exhibition catalogue - International Graphic Design Biennial - Chaumont, FR
                 </li>
-              </div>
+              </ul>
 
-              <!-- FEATURE 6-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">
+              <!-- CONTRIBUTION 6-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">
                   « International Poster Book », Graphic Design Festival Scotland, Glasgow, SCT
                 </li>
-              </div>
+              </ul>
 
-              <!-- FEATURE 7-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">
+              <!-- CONTRIBUTION 7-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">
                   « Write it Personal » MA Research Thesis - Nicolo Oriani - Milan, IT
                 </li>
-              </div>
+              </ul>
 
-              <!-- FEATURE 8-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">« Ekezetek » MA Research Thesis Laura Csocsan - Budapest, HU</li>
-              </div>
+              <!-- CONTRIBUTION 8-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">« Ekezetek » MA Research Thesis Laura Csocsan - Budapest, HU</li>
+              </ul>
 
-              <!-- FEATURE 9-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">
+              <!-- CONTRIBUTION 9-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">
                   Tunica Magazine NO.7 « Extended Fantasy ». Art & Fashion publication, New-York, USA
                 </li>
-              </div>
-            </ul>
+              </ul>
+            </div>
           </details>
 
           <!-- EXHIBITION -->
-          <details class="o-exhibition">
-            <summary class="m-exhibition">Exhibitions</summary>
-            <ul class="a-exhibition">
-
-              <!-- FEATURE 1 -->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2020</li>
-                <li class="a-featuresContributions">
+          <details class="m-exhibition_tab__wrapper">
+            <summary class="a-exhibition_tab__item">Exhibitions</summary>
+            <!-- EXHIBITION 1 -->
+            <div class="a-exhibitionTab__wrapper">
+              <ul class="a-contribution_content__item"> <!-- TODO CREER CLASSE POUR EXHIBTION-->
+                <li class="a-contribution_content__item__date">2020</li>
+                <li class="a-contribution_content__item__details">
                   « Take Me, I Love You » by Timur Si-Qin, VonAmmon Co, Washington D.C, USA
                 </li>
-              </div>
+              </ul>
 
-              <!-- FEATURE 2 -->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">
+              <!-- EXHIBITION 2 -->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">
                   International Poster Competition (online exhibition) GDF, Scotland, UK
                 </li>
-              </div>
+              </ul>
 
-              <!-- FEATURE 3-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">
+              <!-- EXHIBITION 3-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">
                   International Poster Competition Graphic Design Biennial Le Signe, Centre National du Graphisme,
                   Chaumont, FR
                 </li>
-              </div>
+              </ul>
 
-              <!-- FEATURE 4-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">Offprint, Art Book Fair Tate Modern, London UK</li>
-              </div>
+              <!-- EXHIBITION 4-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">Offprint, Art Book Fair Tate Modern, London UK</li>
+              </ul>
 
-              <!-- FEATURE 5-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">Nu Signal Group Show Galerie Martine Aboucaya, Paris, FR</li>
-              </div>
+              <!-- EXHIBITION 5-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">Nu Signal Group Show Galerie Martine Aboucaya, Paris, FR</li>
+              </ul>
               
-              <!-- FEATURE 6-->
-              <div class="a-featuresBlock">
-                <li class="a-featuresDate">2019</li>
-                <li class="a-featuresContributions">
+              <!-- EXHIBITION 6-->
+              <ul class="a-contribution_content__item">
+                <li class="a-contribution_content__item__date">2019</li>
+                <li class="a-contribution_content__item__details">
                   Cringe, the anticipation of touch with Tasio Bidegain, Stedelijk Museum, Amsterdam, NL
                 </li>
-              </div>
-            </ul>
+              </ul>
+            </div>
           </details>
-        </div>
+        </section>
 
-        <!-- FOOTER DESKTOP-->
-        <footer class="o-footerBlock">
-          <ul class="m-footerBlock">
-            <li class="a-footerBlock__item">
+        <!-- FOOTER -->
+        <footer class="o-footer__container">
+          <ul class="m-footer__wrapper">
+            <li class="a-footer__item">
               <a href="#">PPO</a>
             </li>
-            <li class="a-footerBlock__item">
+            <li class="a-footer__item">
               <a href="contact@panamapapersoffice.com">contact@panamapapersoffice.com</a>
             </li>
-            <li class="a-footerBlock__item">
-              <a href="https://www.instagram.com/ppoffice.paris/">instagram</a>
+            <li class="a-footer__item">
+              <a class="infoBulle" href="https://www.instagram.com/ppoffice.eu/" target="_blank" aria-label="Feel free to follow us">instagram</a>
             </li>
           </ul>
         </footer>
       </div>
 
       <!-- ! CONTAINER RIGHT  -->
-      <div class="m-gridContainerHome__right">
+      <div class="m-pageSplit_homeRight__wrapper">
         <!-- INDEX TOP -->
-        <div class="m-indexBlock _indexTop _indexTop__home">
-          <div class="a-indexBlock__item _indexEmpty"></div>
-          <div class="a-indexBlock__item _indexName__home">Projects</div>
+        <div class="o-indexHome__container">
+          <div class="m-indexHome__wrapper">
+            <div class="a-indexHome__item">Projects</div>
+          </div>
         </div>
 
-        <!-- INTRO PROJET -->
-        <section class="m-introprojectBlock">
-          <h1 class="a-projectBlock__item _projectTitle">
-            <a href="/newpeace.html">Take me i love you</a>
-          </h1>
-          <div class="a-projectBlock__item _projectCity">
-            Washington, DC <br />
-            United-States
-          </div>
-          <div class="a-projectBlock__item _projectYear">2020</div>
-          <span class="arrow">&rarr;</span>
-          <p class="a-projectBlock__item _projectIntro">
-            Art direction, typeface development & design consulting Concept & creative direction : Timur Si-Qin
-          </p>
-        </section>
+        <!-- COVER PROJET -- REFRESH-->
+        <header class="o-coverImage__container">
+          <a class="m-coverImage__wrapper" href="">
+          <div class="a-coverImage__item" id="refresh-project"></div>
+          </a>
+        </header>
 
-        <!-- INTRO PROJET -->
-        <section class="m-introprojectBlock">
-          <h1 class="a-projectBlock__item _projectTitle">
-            <a href="/newpeace.html">The Unissen</a>
-          </h1>
-          <div class="a-projectBlock__item _projectCity">
-            Paris <br />
-            France
-          </div>
-          <div class="a-projectBlock__item _projectYear">2020</div>
-          <span class="arrow">&rarr;</span>
-          <p class="a-projectBlock__item _projectIntro">
-            Art direction, typeface development & design consulting Concept & creative direction : Timur Si-Qin
-          </p>
-        </section>
+        <!-- COVER PROJET -- NEW PEACE-->
+        <header class="o-coverImage__container">
+          <a class="m-coverImage__wrapper" href="/newpeace.html">
+          <div class="a-coverImage__item" id="newpeace-project"></div>
+          </a>
+        </header>
 
-        <!-- INTRO PROJET -->
-        <section class="m-introprojectBlock">
-          <h1 class="a-projectBlock__item _projectTitle">
-            <a href="/newpeace.html">Recording Time 2'34</a>
-          </h1>
-          <div class="a-projectBlock__item _projectCity">
-            Paris <br />
-            France
-          </div>
-          <div class="a-projectBlock__item _projectYear">2020</div>
-          <span class="arrow">&rarr;</span>
-          <p class="a-projectBlock__item _projectIntro">
-            Art direction, typeface development & design consulting Concept & creative direction : Timur Si-Qin
-          </p>
-        </section>
+        <!-- COVER PROJET -- ADA SOKOL-->
+        <header class="o-coverImage__container">
+          <a class="m-coverImage__wrapper" href="">
+          <div class="a-coverImage__item" id="adasokol-project"></div>
+          </a>
+        </header>
+        
+        <!-- COVER PROJET -- HOTLINE-->
+        <header class="o-coverImage__container">
+          <a class="m-coverImage__wrapper" href="">
+          <div class="a-coverImage__item" id="hotline-project"></div>
+          </a>
+        </header>
 
-        <!-- INTRO PROJET -->
-        <section class="m-introprojectBlock">
-          <h1 class="a-projectBlock__item _projectTitle">
-            <a href="/newpeace.html">Malleable Identity</a>
-          </h1>
-          <div class="a-projectBlock__item _projectCity">
-            Paris <br />
-            France
-          </div>
-          <div class="a-projectBlock__item _projectYear">2020</div>
-          <span class="arrow">&rarr;</span>
-          <p class="a-projectBlock__item _projectIntro">
-            Art direction, typeface development & design consulting Concept & creative direction : Timur Si-Qin
-          </p>
-        </section>
+
+       
          
-        <!-- FOOTER MOBILE-->
-        <footer class="o-footerBlock--mobile">
-          <ul class="m-footerBlock--mobile">
-            <li class="a-footerBlock__item--mobile">
+        <!-- FOOTER MOBILE -- SUR LE CONTAINER RIGHT -->
+        <footer class="o-footer__container--mobile">
+          <ul class="m-footer__wrapper--mobile">
+            <li class="a-footer__item--mobile">
               <a href="#"></a>
             </li>
-            <li class="a-footerBlock__item--mobile">
+            <li class="a-footer__item--mobile">
               <a href="contact@panamapapersoffice.com">email</a>
             </li>
-            <li class="a-footerBlock__item--mobile">
+            <li class="a-footer__item--mobile">
               <a href="https://www.instagram.com/ppoffice.paris/">instagram</a>
             </li>
           </ul>
         </footer>
-      </div>
       </div>
     </main>
   </body>

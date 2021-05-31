@@ -1,0 +1,180 @@
+/** ========================================================================
+* = PROJECT 
+*
+* 01 - CONTAINER PARENT PROJET
+* 02 - TITRE
+* 03 - TEXTE
+* 04 - LISTE DEROULANTE DETAIL SERVICES
+* 
+ * ========================================================================= */
+
+/**
+ * = 01 - CONTAINER PROJECT
+ *
+ * Grille de mise en page des éléments : titre, texte et liste
+ *
+ * ------------------------------------------------------------------------- */
+.o-projectGrid__container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "title-area title-area "
+    "texte-area texte-area"
+    "list-area list-area";
+}
+.o-project_informations__container {
+  grid-area: title-area;
+}
+.o-text {
+  grid-area: texte-area;
+}
+.o-gridList {
+  grid-area: list-area;
+}
+
+/**
+ * = 02 - TITLE CONTAINER
+ *
+ * Grille de mise en page cover : titre, city, year, (si besoin mots CLEFS)
+ *
+ * ------------------------------------------------------------------------- */
+.m-project_informations__wrapper {
+  display: grid;
+  grid-template-columns: $col-phone 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    ". title"
+    ". city"
+    ". year"
+    ". ."
+    "arrow intro  ";
+  border-bottom: $border;
+  padding-top: $pad-T-B;
+  padding-left: $pad-L-R;
+  padding-right: $pad-L-R;
+
+  @include media(">=tablet") {
+    grid-template-columns: 5rem repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      ". title title"
+      ". city year";
+    border-bottom: $border;
+    padding-top: 3rem; //TODO A VOIR
+    padding-bottom: 3rem; //TODO IDEM A VOIR
+  }
+}
+.a-project_informationsTitle__item {
+  grid-area: title;
+}
+.a-project_informationsCity__item {
+  grid-area: city;
+}
+.a-project_informationsYear__item {
+  grid-area: year;
+}
+
+/**
+ * = 03 - TEXTE
+ *
+ * o-text : container parent de mise en forme (Nav + Texte) - Applique un systeme de padding
+ * m-textBlock__wrapper : Container de mise en forme du block de texte 
+ * m-buttonText__wrapper : Englobe les boutons de navigation (anchors) des paragraphes
+ * .m-text__wrapper : Padding de chaque paragraphe + id anchors + 
+ * Liens externes
+ *
+ * ------------------------------------------------------------------------- */
+//TODO REVOIR NOMAGE CONTAINER TEXTE + BUTTONS
+//TODO SUPPRIMER LE PADDING TOP DE : 2 REM DU PREMIER PARAGRAPHE
+.o-text {
+  @include media("<=tablet") {
+    padding-top: $pad-T-B;
+  }
+  @include media(">=desktop") {
+    padding-left: $pad-L-R;
+    padding-bottom: 2rem;
+    border-bottom: $border;
+    scroll-snap-type: y mandatory;
+  }
+}
+.m-textBlock__wrapper {
+  position: relative;
+  max-height: 35rem;
+  overflow: scroll;
+  -ms-overflow-style: none; // OVERFLOW POUR IE & EDGE
+  scrollbar-width: none; // DISABLE SCROLLBAR FIREFOX
+}
+.m-textBlock__wrapper::-webkit-scrollbar {
+  display: none; //DISABLE SCROLLBAR CHROMIUM
+}
+/* = BUTTON NAVIGATION */
+// TODO : IMPLEMENTER SMOOTH SCROLL JS OU CSS //
+.m-buttonText__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "context purpose artist takeMe";
+  background-color: $second;
+  padding-top: $pad-T-B;
+  padding-bottom: $pad-T-B;
+  padding-right: $pad-L-R;
+  position: sticky;
+  top: 0;
+}
+.a-indexButton__item {
+  &:hover {
+    color: $third;
+    border-bottom: 2px solid $third;
+  }
+}
+#buttonText--01 {
+  grid-area: context;
+}
+#buttonText--02 {
+  grid-area: purpose;
+}
+#buttonText--03 {
+  grid-area: artist;
+}
+#tbuttonText--04 {
+  grid-area: takeMe;
+}
+
+/* = PARAGRAPHE TEXTE */
+.m-text__wrapper {
+  padding-top: 2.2rem; // PADDING PARAGRAPHES SUIVANTS//
+}
+/* = ANCHORS */
+.blockText__purpose {
+  scroll-snap-type: start;
+}
+.blockText__artist {
+  scroll-snap-type: start;
+}
+.blockText__takeMe {
+  scroll-snap-type: start;
+}
+
+/* = LIENS EXTERNES */
+.a-linkProject {
+  padding-top: 3rem;
+}
+
+/**
+ * = 04 - LISTE DEROULANTE DETAILS SERVICES
+ *
+ * ------------------------------------------------------------------------- */
+.o-gridList {
+  padding: $pad-T-B $pad-L-R;
+  @include media(">=desktop") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: ". listServices";
+    padding: $pad-T-B $pad-L-R;
+  }
+}
+
+.m-listServices {
+  padding-left: $pad-L-R;
+  grid-area: listServices;
+}

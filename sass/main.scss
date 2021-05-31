@@ -6,20 +6,22 @@
 @import "./base/_font";
 @import "./base/typography";
 @import "./base/base.scss";
+@import "./base/imagesVideo--project";
 
 // COMPONENTS //
-@import "./components/_summary";
-@import "./components/carousel-project";
 @import "./components/button-previous-next";
+@import "./components/_infoBulle";
 
 // LAYOUT //
-@import "./layout/aboutBlock";
-@import "./layout/collaboratorsBlock";
-@import "./layout/_contactBlock";
-@import "./layout/_exhibitionBlock";
-@import "./layout/index";
+@import "./layout/about";
+@import "./layout/selectedCollaborators";
+@import "./layout/_contact";
+@import "./layout/_contributionExhibition";
 @import "./layout/navbar.scss";
-@import "./layout/projectBlock";
+@import "./layout/_cover";
+@import "./layout/_projectContainer";
+@import "./layout/index";
+@import "./layout/_detailsServices";
 @import "./layout/footer";
 
 // PAGES //

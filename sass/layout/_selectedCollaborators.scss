@@ -1,0 +1,53 @@
+/**
+ * = COLLABORAOTRS 
+ *
+ * 01 - INDEX COLLABORATORS
+ * 02 - TEXTE COLLABORATORS
+ * 
+ * ========================================================================= */
+
+/**
+ * = 01 - INDEX COLALBORATORS
+ * ------------------------------------------------------------------------- */
+.o-collaborators__container {
+  border-bottom: $border;
+}
+
+.m-collaborators_indexCollabs__wrapper {
+  border-bottom: $border;
+  display: grid;
+  grid-template-columns: $col-phone 1fr;
+  grid-template-areas: ". reference";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk 1fr;
+  }
+}
+
+.a-collaborators_indexCollabs__item,
+.a-collaborators_textCollabs__item {
+  padding: $pad-T-B $pad-L-R;
+}
+
+.a-collaborators_indexCollabs__item {
+  border-left: $border;
+  grid-area: reference;
+}
+
+/**
+ * = 02 - TEXTE COLLABORATORS
+ * ------------------------------------------------------------------------- */
+.m-collaborators_textCollabs__wrapper {
+  display: grid;
+  grid-template-columns: $col-phone 1fr;
+  grid-template-areas: ". text-area";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk 1fr;
+  }
+}
+
+.a-collaborators_textCollabs__item {
+  grid-area: text-area;
+  padding: calc(#{$pad-T-B}* 2) $pad-L-R;
+}

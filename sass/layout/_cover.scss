@@ -1,0 +1,25 @@
+.o-coverImage__container {
+  border-left: $border;
+  border-bottom: $border;
+}
+
+.a-coverImage__item {
+  height: 40vh;
+}
+
+#refresh-project {
+  background-image: url(/public/img/refresh/Refresh_cover4.jpg);
+  background-size: contain;
+}
+#newpeace-project {
+  background-image: url(/public/img/timur/Timur_cover4.jpg);
+  background-size: contain;
+}
+#adasokol-project {
+  background-image: url(/public/img/ada_sokol/Ada_cover1.jpg);
+  background-size: contain;
+}
+#hotline-project {
+  background-image: url(/public/img/hotline/issue2-1.jpg);
+  background-size: contain;
+}

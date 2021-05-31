@@ -1,4 +1,14 @@
-// navbar home //
+/**
+ * = NAVBAR 
+ *
+ * 01 - NAVBAR
+ * 02 - CTA RETURN HOME
+ * 
+ * ========================================================================= */
+
+/**
+ * = 01 - NAVBAR
+ * ------------------------------------------------------------------------- */
 nav {
   @include media(">=desktop") {
     position: relative;
@@ -6,7 +16,7 @@ nav {
   }
 }
 
-.m-navbarBlock {
+.m-navbar__wrapper {
   border-top: $border;
   border-bottom: $border;
   //height: 28.5px;
@@ -22,14 +32,16 @@ nav {
   }
 }
 
-._logo {
+#name_panamaPapersOffice {
   border-left: $border;
 }
 
-// change content on hover //
-._returnHome {
+/**
+ * = 02 - CTA RETURN HOME
+ * ------------------------------------------------------------------------- */
+#__buttonReturnHome {
   &:hover {
-    font-size: 0;
+    font-size: 0; //permet de masquer l'acronyme PPO pour afficher le data hover : Back
     background-color: $third;
     &:after {
       content: attr(data-hover);

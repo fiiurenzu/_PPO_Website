@@ -1,0 +1,127 @@
+/**
+ * = CONTRIBUTION & EXHIBITION
+ *
+ * 01 - CONTRIBUTION 
+ * 01.1 - ONGLET DEROULANT
+ * 01.1 - CONTRIBUTION 1
+ * 01.2 - CONTRIBUTION 2
+ * 01.3 - CONTRIBUTION 3
+ * 01.4 - CONTRIBUTION 4
+ * 01.5 - CONTRIBUTION 5
+ * 01.6 - CONTRIBUTION 6
+ * 01.7 - CONTRIBUTION 7
+ * 01.8 - CONTRIBUTION 8
+ * 01.9 - CONTRIBUTION 9
+ * 02 - EXHBITION 
+ * 
+ * ========================================================================= */
+
+.o-contributionsExhibitions__container {
+  display: grid;
+  grid-template-columns: $col-phone 1fr;
+  grid-template-areas:
+    " . features"
+    " . exhibition";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk repeat(2, 1fr);
+    grid-template-areas: " . features exhibition";
+  }
+}
+
+/**
+ * = 01 - CONTRIBUTION
+ * ------------------------------------------------------------------------- */
+.m-contribution_tab__wrapper {
+  grid-area: features;
+}
+
+.a-contribution_tab__item {
+  width: 100%;
+  padding: calc(#{$pad-T-B}* 2) $pad-L-R;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+.a-contribution_tab__item:after {
+  content: "+";
+  color: $first;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: $pad-L-R;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+
+.m-contribution_tab__wrapper[open] .a-contribution_tab__item:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+
+.m-contribution_content__wrapper {
+  padding-top: $pad-T-B;
+  padding-right: $pad-L-R;
+  padding-left: $pad-L-R;
+  li {
+    padding-top: 0.7rem;
+  }
+}
+.a-contribution_content__item {
+  display: grid;
+  grid-template-columns: 60px 20px 1fr;
+  grid-template-areas: "date . contributions";
+  border-bottom: $border;
+}
+.a-contribution_content__item__date {
+  grid-area: date;
+}
+
+.a-contribution_content__item__details {
+  grid-area: contributions;
+}
+
+/**
+ * = 02 - EXHIBITION
+ * ------------------------------------------------------------------------- */
+.m-exhibition_tab__wrapper {
+  grid-area: exhibition;
+}
+
+.a-exhibition_tab__item {
+  width: 100%;
+  padding: calc(#{$pad-T-B}* 2) $pad-L-R;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+.a-exhibition_tab__item:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: $pad-L-R;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+
+.m-exhibition_tab__wrapper[open] .a-exhibition_tab__item:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+
+.a-exhibitionTab__wrapper {
+  padding-top: $pad-T-B;
+  padding-right: $pad-L-R;
+  padding-left: $pad-L-R;
+  li {
+    padding-top: 0.7rem;
+  }
+}

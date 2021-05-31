@@ -1,0 +1,54 @@
+/**
+ * = ABOUT 
+ *
+ * 01 - INDEX ABOUT
+ * 02 - TEXTE ABOUT
+ * 
+ * ========================================================================= */
+
+/**
+ * = 01 - INDEX ABOUT
+ * ------------------------------------------------------------------------- */
+.o-about__container {
+  border-bottom: $border;
+}
+
+.m-about_indexAbout__wrapper {
+  border-bottom: $border;
+  display: grid;
+  grid-template-columns: $col-phone 1fr;
+  grid-template-areas: ". about";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk 1fr;
+  }
+}
+
+// PADDING SUR L'ITEM INDEX ABOUT//
+.a-about_textAbout__item,
+.a-about_indexAbout__item {
+  padding: $pad-T-B $pad-L-R;
+}
+
+.a-about_indexAbout__item {
+  border-left: $border;
+  grid-area: about;
+}
+
+/**
+ * = 02 - TEXTE ABOUT
+ * ------------------------------------------------------------------------- */
+.m-about_textAbout__wrapper {
+  display: grid;
+  grid-template-columns: $col-phone 1fr;
+  grid-template-areas: ". text-area";
+
+  @include media(">=desktop") {
+    grid-template-columns: $col-desk 1fr;
+  }
+}
+
+.a-about_textAbout__item {
+  grid-area: text-area;
+  padding: calc(#{$pad-T-B}* 2) $pad-L-R;
+}

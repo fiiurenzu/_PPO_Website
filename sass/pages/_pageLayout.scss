@@ -1,5 +1,18 @@
-// CONTAINER //
-.o-gridContainer {
+/**
+ * = PAGE LAYOUT
+ *
+ * 01 - CONTAINER COMMUN
+ * 02 - HOME LEFT
+ * 03 - HOME RIGHT 
+ * 04 - PROJECT LEFT
+ * 05 - PROJECT RIGHT
+ * 
+ * ========================================================================= */
+
+/**
+ * = 01 - CONTAINER COMMUN
+ * ------------------------------------------------------------------------- */
+.o-pageSplit__container {
   display: flex;
   flex-direction: column;
   @include media(">=desktop") {
@@ -8,9 +21,10 @@
   }
 }
 
-// HOME PAGE //
-// LEFT //
-.m-gridContainerHome__left {
+/**
+ * = 02 - HOME PAGE LEFT
+ * ------------------------------------------------------------------------- */
+.m-pageSplit_homeLeft__wrapper {
   width: 100%;
   @include media(">=desktop") {
     width: 50%;
@@ -20,19 +34,21 @@
   }
 }
 
-// RIGHT //
-.m-gridContainerHome__right {
+/**
+   * = 03 - HOME PAGE RIGHT
+   * ------------------------------------------------------------------------- */
+.m-pageSplit_homeRight__wrapper {
   @include media(">=desktop") {
     width: 50%;
-    border-left: $border;
     padding-right: $pad-L-R;
     position: absolute;
     left: 50%;
   }
 }
 
-// PROJECT PAGE //
-//LEFT //
+/**
+ * = 04 - PROJECT PAGE LEFT
+ * ------------------------------------------------------------------------- */
 .m-gridContainerProject__left {
   order: 2;
   @include media(">=desktop") {
@@ -43,7 +59,9 @@
   }
 }
 
-// RIGHT //
+/**
+ * = 05 - PROJECT PAGE RIGHT
+ * ------------------------------------------------------------------------- */
 .m-gridContainerProject__right {
   order: 1;
   @include media(">=desktop") {
