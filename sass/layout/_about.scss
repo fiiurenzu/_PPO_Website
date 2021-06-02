@@ -11,6 +11,10 @@
  * ------------------------------------------------------------------------- */
 .o-about__container {
   border-bottom: $border;
+  margin-top: 3.3rem; //decalage margin mobile
+  @include media(">phone") {
+    margin-top: 0;
+  }
 }
 
 .m-about_indexAbout__wrapper {
@@ -29,7 +33,6 @@
 .a-about_indexAbout__item {
   padding: $pad-T-B $pad-L-R;
 }
-
 .a-about_indexAbout__item {
   border-left: $border;
   grid-area: about;

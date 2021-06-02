@@ -42,6 +42,9 @@ body {
     background: $first;
   }
 }
+h4 {
+  font-weight: 400;
+}
 
 /**
  * = 02 - TYPO COMMUNE : NAVBAR, INDEX, CONTAINER COVER PROJECT (HOME + PROJECT)
@@ -126,6 +129,7 @@ body {
 }
 
 /* = 04.2 - LISTE DEROULANTE */
+
 summary {
   font-size: $text1;
 }

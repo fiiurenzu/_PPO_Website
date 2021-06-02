@@ -50,10 +50,10 @@
     ". ."
     "arrow intro  ";
   border-bottom: $border;
-  padding-top: $pad-T-B;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   padding-left: $pad-L-R;
   padding-right: $pad-L-R;
-
   @include media(">=tablet") {
     grid-template-columns: 5rem repeat(2, 1fr);
     grid-template-rows: auto auto;
@@ -88,62 +88,57 @@
 //TODO REVOIR NOMAGE CONTAINER TEXTE + BUTTONS
 //TODO SUPPRIMER LE PADDING TOP DE : 2 REM DU PREMIER PARAGRAPHE
 .o-text {
+  padding-left: $pad-L-R;
+  padding-right: $pad-L-R;
+  border-bottom: $border;
+  position: relative;
   @include media("<=tablet") {
     padding-top: $pad-T-B;
   }
   @include media(">=desktop") {
-    padding-left: $pad-L-R;
     padding-bottom: 2rem;
-    border-bottom: $border;
     scroll-snap-type: y mandatory;
   }
 }
 .m-textBlock__wrapper {
-  position: relative;
-  max-height: 35rem;
-  overflow: scroll;
-  -ms-overflow-style: none; // OVERFLOW POUR IE & EDGE
-  scrollbar-width: none; // DISABLE SCROLLBAR FIREFOX
+  position: sticky;
+  top: 0;
 }
-.m-textBlock__wrapper::-webkit-scrollbar {
-  display: none; //DISABLE SCROLLBAR CHROMIUM
-}
+
 /* = BUTTON NAVIGATION */
 // TODO : IMPLEMENTER SMOOTH SCROLL JS OU CSS //
 .m-buttonText__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "context purpose artist takeMe";
   background-color: $second;
   padding-top: $pad-T-B;
   padding-bottom: $pad-T-B;
   padding-right: $pad-L-R;
-  position: sticky;
-  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .a-indexButton__item {
+  flex-grow: 1;
   &:hover {
     color: $third;
     border-bottom: 2px solid $third;
   }
 }
-#buttonText--01 {
-  grid-area: context;
-}
-#buttonText--02 {
-  grid-area: purpose;
-}
-#buttonText--03 {
-  grid-area: artist;
-}
-#tbuttonText--04 {
-  grid-area: takeMe;
-}
 
 /* = PARAGRAPHE TEXTE */
+.o-text__container {
+  position: relative;
+  max-height: 35vh;
+  overflow: scroll;
+  -ms-overflow-style: none; // OVERFLOW POUR IE & EDGE
+  scrollbar-width: none; // DISABLE SCROLLBAR FIREFOX
+}
+.o-text__container::-webkit-scrollbar {
+  display: none; //DISABLE SCROLLBAR CHROMIUM
+}
 .m-text__wrapper {
   padding-top: 2.2rem; // PADDING PARAGRAPHES SUIVANTS//
 }
+
 /* = ANCHORS */
 .blockText__purpose {
   scroll-snap-type: start;
@@ -155,15 +150,21 @@
   scroll-snap-type: start;
 }
 
+#word-noWrap {
+  white-space: nowrap;
+}
+
 /* = LIENS EXTERNES */
 .a-linkProject {
   padding-top: 3rem;
 }
 
 /**
- * = 04 - LISTE DEROULANTE DETAILS SERVICES
+ * = 04 - LISTE DEROULANTE DETAILS SERVICES [ A SUPP ] 
  *
  * ------------------------------------------------------------------------- */
+
+/*
 .o-gridList {
   padding: $pad-T-B $pad-L-R;
   @include media(">=desktop") {
@@ -178,3 +179,4 @@
   padding-left: $pad-L-R;
   grid-area: listServices;
 }
+*/

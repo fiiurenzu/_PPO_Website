@@ -1,14 +1,20 @@
 .o-coverImage__container {
-  border-left: $border;
-  border-bottom: $border;
+  border-left: none;
+  @include media(">tablet") {
+    border-left: $border;
+    border-bottom: $border;
+  }
 }
 
 .a-coverImage__item {
-  height: 40vh;
+  height: 166px;
+  @include media(">=tablet") {
+    height: 40vh;
+  }
 }
 
 #refresh-project {
-  background-image: url(/public/img/refresh/Refresh_cover4.jpg);
+  background-image: url(/public/img/refresh/refresh_cover.jpg);
   background-size: contain;
 }
 #newpeace-project {
@@ -16,7 +22,7 @@
   background-size: contain;
 }
 #adasokol-project {
-  background-image: url(/public/img/ada_sokol/Ada_cover1.jpg);
+  background-image: url(/public/img/ada_sokol/ada_cover.jpg);
   background-size: contain;
 }
 #hotline-project {

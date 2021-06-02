@@ -49,6 +49,10 @@ body ::selection {
   background: black;
 }
 
+h4 {
+  font-weight: 400;
+}
+
 /**
  * = 02 - TYPO COMMUNE : NAVBAR, INDEX, CONTAINER COVER PROJECT (HOME + PROJECT)
  * 
@@ -182,6 +186,10 @@ img {
   width: 100%;
 }
 
+#timur_exhibition {
+  margin-top: -4px;
+}
+
 @media (min-width: 1024px) {
   .o-navigationButtons {
     width: 50%;
@@ -269,6 +277,93 @@ img {
   outline: none;
 }
 
+/* Style the buttons that are used to open and close the accordion panel */
+.o-detailServices__Container {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(15px, 1fr);
+  grid-template-areas: ". accordion" ". panel";
+}
+
+.accordion {
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion {
+  grid-area: accordion;
+}
+
+.panel {
+  grid-area: panel;
+}
+
+.accordion:after {
+  content: "+";
+  /* Unicode character for "plus" sign (+) */
+  float: right;
+}
+
+.active:after {
+  content: "-";
+  /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  max-height: 0px;
+  transition: max-height 0.2s ease-out;
+  overflow: scroll;
+}
+
+.service {
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: "number-service infos-service";
+  border-bottom: 1px solid black;
+}
+.service .number-service {
+  grid-area: number-service;
+}
+.service .infos-service {
+  grid-area: infos-service;
+}
+
+/**
+* = TYPOGRAPHY 
+* 
+*-------------------------------------------------*/
+.accordion {
+  padding-top: 5px;
+  font-size: 1.6rem;
+}
+.accordion .accordion:after {
+  font-weight: 400;
+}
+
+.panel {
+  font-size: 1.4rem;
+}
+
+#title-service {
+  text-transform: uppercase;
+}
+
+#content-service {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 /**
  * = ABOUT 
  *
@@ -281,6 +376,12 @@ img {
  * ------------------------------------------------------------------------- */
 .o-about__container {
   border-bottom: 1px solid black;
+  margin-top: 3.3rem;
+}
+@media (min-width: 321px) {
+  .o-about__container {
+    margin-top: 0;
+  }
 }
 
 .m-about_indexAbout__wrapper {
@@ -603,10 +704,17 @@ img {
 /**
  * = 01 - NAVBAR
  * ------------------------------------------------------------------------- */
+.o-navbar__container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding-top: calc(10px/ 2);
+  z-index: 9999;
+}
 @media (min-width: 1024px) {
-  nav {
+  .o-navbar__container {
     position: relative;
-    margin-top: calc(10px/ 2);
   }
 }
 
@@ -643,16 +751,26 @@ img {
 }
 
 .o-coverImage__container {
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: none;
+}
+@media (min-width: 769px) {
+  .o-coverImage__container {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+  }
 }
 
 .a-coverImage__item {
-  height: 40vh;
+  height: 166px;
+}
+@media (min-width: 768px) {
+  .a-coverImage__item {
+    height: 40vh;
+  }
 }
 
 #refresh-project {
-  background-image: url(/public/img/refresh/Refresh_cover4.jpg);
+  background-image: url(/public/img/refresh/refresh_cover.jpg);
   background-size: contain;
 }
 
@@ -662,7 +780,7 @@ img {
 }
 
 #adasokol-project {
-  background-image: url(/public/img/ada_sokol/Ada_cover1.jpg);
+  background-image: url(/public/img/ada_sokol/ada_cover.jpg);
   background-size: contain;
 }
 
@@ -717,7 +835,8 @@ img {
   grid-template-rows: auto auto;
   grid-template-areas: ". title" ". city" ". year" ". ." "arrow intro  ";
   border-bottom: 1px solid black;
-  padding-top: 5px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -754,6 +873,12 @@ img {
  * Liens externes
  *
  * ------------------------------------------------------------------------- */
+.o-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid black;
+  position: relative;
+}
 @media (max-width: 768px) {
   .o-text {
     padding-top: 5px;
@@ -761,60 +886,48 @@ img {
 }
 @media (min-width: 1024px) {
   .o-text {
-    padding-left: 10px;
     padding-bottom: 2rem;
-    border-bottom: 1px solid black;
     scroll-snap-type: y mandatory;
   }
 }
 
 .m-textBlock__wrapper {
-  position: relative;
-  max-height: 35rem;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.m-textBlock__wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-/* = BUTTON NAVIGATION */
-.m-buttonText__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "context purpose artist takeMe";
-  background-color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 10px;
   position: sticky;
   top: 0;
 }
 
+/* = BUTTON NAVIGATION */
+.m-buttonText__wrapper {
+  background-color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.a-indexButton__item {
+  flex-grow: 1;
+}
 .a-indexButton__item:hover {
   color: #7c7c7c;
   border-bottom: 2px solid #7c7c7c;
 }
 
-#buttonText--01 {
-  grid-area: context;
-}
-
-#buttonText--02 {
-  grid-area: purpose;
-}
-
-#buttonText--03 {
-  grid-area: artist;
-}
-
-#tbuttonText--04 {
-  grid-area: takeMe;
-}
-
 /* = PARAGRAPHE TEXTE */
+.o-text__container {
+  position: relative;
+  max-height: 35vh;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.o-text__container::-webkit-scrollbar {
+  display: none;
+}
+
 .m-text__wrapper {
   padding-top: 2.2rem;
 }
@@ -832,32 +945,35 @@ img {
   scroll-snap-type: start;
 }
 
+#word-noWrap {
+  white-space: nowrap;
+}
+
 /* = LIENS EXTERNES */
 .a-linkProject {
   padding-top: 3rem;
 }
 
 /**
- * = 04 - LISTE DEROULANTE DETAILS SERVICES
+ * = 04 - LISTE DEROULANTE DETAILS SERVICES [ A SUPP ] 
  *
  * ------------------------------------------------------------------------- */
+/*
 .o-gridList {
-  padding: 5px 10px;
-}
-@media (min-width: 1024px) {
-  .o-gridList {
+  padding: $pad-T-B $pad-L-R;
+  @include media(">=desktop") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: ". listServices";
-    padding: 5px 10px;
+    padding: $pad-T-B $pad-L-R;
   }
 }
 
 .m-listServices {
-  padding-left: 10px;
+  padding-left: $pad-L-R;
   grid-area: listServices;
 }
-
+*/
 /** ========================================================================
 * = INDEX
 *
@@ -921,74 +1037,87 @@ img {
   grid-area: category;
 }
 
+/*
+// DETAILS SERVICES BLOCK //
+// ONGLET DEROULANT DES SERVICES //
+// PAGE PROJET //
+
+// GRID SUR LA SECTION //
 .o-detailsServicesBlock {
-  padding: 5px 10px;
-}
-@media (min-width: 1024px) {
-  .o-detailsServicesBlock {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: " listServices";
-    padding: 5px 10px;
+    padding: $pad-T-B $pad-L-R;
+    overflow: hidden;
+    @include media(">=desktop") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: ". listServices";
+      padding: $pad-T-B $pad-L-R;
+    }
   }
-}
 
-.m-detailsServicesBlock {
-  padding-left: 10px;
-  grid-area: listServices;
-}
+  .m-detailsServicesBlock {
+    padding-left: $pad-L-R;
+    grid-area: listServices;
+  }
 
-.a-detailsServicesList {
-  padding-top: 5px;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.a-detailsServicesList li {
-  border-bottom: 1px solid black;
-  padding-top: 0.7rem;
-  padding-bottom: 5px;
-}
+  // DESIGN DE LA LISTE //
+  .a-detailsServicesList {
+    padding-top: $pad-T-B;
+    overflow-y: scroll;
+    -ms-overflow-style: none; //! IE and Edge
+    scrollbar-width: none; //! Firefox
+    li {
+      border-bottom: $border;
+      padding-top: 0.7rem;
+      padding-bottom: $pad-T-B;
+    }
+  }
+  .a-detailsServicesList::-webkit-scrollbar {
+    //! Hide scrollbar for Chrome, Safari and Opera
+    display: none;
+  }
 
-.a-detailsServicesList::-webkit-scrollbar {
-  display: none;
-}
+  .titleServices {
+    text-decoration: underline;
+  }
 
-.titleServices {
-  text-decoration: underline;
-}
+  // SUMMARY EFFECT //
+  // CREATION DE L'ONGLET DETAILS SERVICES  //
+  // PAGE PROJET //
 
-.o-summaryBlock {
-  width: 100%;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid black;
-  position: relative;
-  cursor: pointer;
-  list-style: none;
-}
+  .o-summaryBlock {
+    width: 100%;
+    padding: 0.5rem 0; // TODO MODIFIER VALEUR
+    border-bottom: $border;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+  }
 
-.o-summaryBlock summary::-webkit-details-marker {
-  display: none;
-}
+  .o-summaryBlock summary::-webkit-details-marker {
+    display: none;
+  }
+  .o-summaryBlock summary::marker {
+    display: none;
+  }
 
-.o-summaryBlock:after {
-  content: "+";
-  color: black;
-  position: absolute;
-  font-size: 1.75rem;
-  line-height: 0;
-  margin-top: 0.75rem;
-  right: 0;
-  font-weight: 200;
-  transform-origin: center;
-  transition: 200ms linear;
-}
+  .o-summaryBlock:after {
+    content: "+";
+    color: black;
+    position: absolute;
+    font-size: 1.75rem;
+    line-height: 0;
+    margin-top: 0.75rem;
+    right: 0;
+    font-weight: 200;
+    transform-origin: center;
+    transition: 200ms linear;
+  }
 
-.m-detailsServicesBlock[open] .o-summaryBlock:after {
-  transform: rotate(45deg);
-  font-size: 2rem;
-}
-
+  .m-detailsServicesBlock[open] .o-summaryBlock:after {
+    transform: rotate(45deg);
+    font-size: 2rem;
+  }
+  */
 .o-footer__container {
   width: 50%;
   background-color: white;

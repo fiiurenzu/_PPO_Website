@@ -1,0 +1,82 @@
+/* Style the buttons that are used to open and close the accordion panel */
+
+.o-detailServices__Container {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(15px, 1fr);
+  grid-template-areas:
+    ". accordion"
+    ". panel";
+}
+.accordion {
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.accordion {
+  grid-area: accordion;
+}
+.panel {
+  grid-area: panel;
+}
+
+.accordion:after {
+  content: "+"; /* Unicode character for "plus" sign (+) */
+  float: right;
+}
+
+.active:after {
+  content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  max-height: 0px;
+  transition: max-height 0.2s ease-out;
+  overflow: scroll;
+}
+
+.service {
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: "number-service infos-service";
+  border-bottom: $border;
+  .number-service {
+    grid-area: number-service;
+  }
+  .infos-service {
+    grid-area: infos-service;
+  }
+}
+
+/**
+* = TYPOGRAPHY 
+* 
+*-------------------------------------------------*/
+.accordion {
+  padding-top: $pad-T-B;
+  font-size: $text1;
+  .accordion:after {
+    font-weight: 400;
+  }
+}
+.panel {
+  font-size: $text2;
+}
+
+#title-service {
+  text-transform: uppercase;
+}
+#content-service {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

@@ -1,75 +1,81 @@
+/*
 // DETAILS SERVICES BLOCK //
 // ONGLET DEROULANT DES SERVICES //
 // PAGE PROJET //
 
 // GRID SUR LA SECTION //
 .o-detailsServicesBlock {
-  padding: $pad-T-B $pad-L-R;
-  @include media(">=desktop") {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: " listServices";
     padding: $pad-T-B $pad-L-R;
+    overflow: hidden;
+    @include media(">=desktop") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: ". listServices";
+      padding: $pad-T-B $pad-L-R;
+    }
   }
-}
-
-.m-detailsServicesBlock {
-  padding-left: $pad-L-R;
-  grid-area: listServices;
-}
-
-// DESIGN DE LA LISTE //
-.a-detailsServicesList {
-  padding-top: $pad-T-B;
-  overflow-y: scroll;
-  -ms-overflow-style: none; //! IE and Edge
-  scrollbar-width: none; //! Firefox
-  li {
+  
+  .m-detailsServicesBlock {
+    padding-left: $pad-L-R;
+    grid-area: listServices;
+  }
+  
+  // DESIGN DE LA LISTE //
+  .a-detailsServicesList {
+    padding-top: $pad-T-B;
+    overflow-y: scroll;
+    -ms-overflow-style: none; //! IE and Edge
+    scrollbar-width: none; //! Firefox
+    li {
+      border-bottom: $border;
+      padding-top: 0.7rem;
+      padding-bottom: $pad-T-B;
+    }
+  }
+  .a-detailsServicesList::-webkit-scrollbar {
+    //! Hide scrollbar for Chrome, Safari and Opera
+    display: none;
+  }
+  
+  .titleServices {
+    text-decoration: underline;
+  }
+  
+  // SUMMARY EFFECT //
+  // CREATION DE L'ONGLET DETAILS SERVICES  //
+  // PAGE PROJET //
+  
+  .o-summaryBlock {
+    width: 100%;
+    padding: 0.5rem 0; // TODO MODIFIER VALEUR
     border-bottom: $border;
-    padding-top: 0.7rem;
-    padding-bottom: $pad-T-B;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
   }
-}
-.a-detailsServicesList::-webkit-scrollbar {
-  //! Hide scrollbar for Chrome, Safari and Opera
-  display: none;
-}
-
-.titleServices {
-  text-decoration: underline;
-}
-
-// SUMMARY EFFECT //
-// CREATION DE L'ONGLET DETAILS SERVICES  //
-// PAGE PROJET //
-
-.o-summaryBlock {
-  width: 100%;
-  padding: 0.5rem 0; // TODO MODIFIER VALEUR
-  border-bottom: $border;
-  position: relative;
-  cursor: pointer;
-  list-style: none;
-}
-
-.o-summaryBlock summary::-webkit-details-marker {
-  display: none;
-}
-
-.o-summaryBlock:after {
-  content: "+";
-  color: black;
-  position: absolute;
-  font-size: 1.75rem;
-  line-height: 0;
-  margin-top: 0.75rem;
-  right: 0;
-  font-weight: 200;
-  transform-origin: center;
-  transition: 200ms linear;
-}
-
-.m-detailsServicesBlock[open] .o-summaryBlock:after {
-  transform: rotate(45deg);
-  font-size: 2rem;
-}
+  
+  .o-summaryBlock summary::-webkit-details-marker {
+    display: none;
+  }
+  .o-summaryBlock summary::marker {
+    display: none;
+  }
+  
+  .o-summaryBlock:after {
+    content: "+";
+    color: black;
+    position: absolute;
+    font-size: 1.75rem;
+    line-height: 0;
+    margin-top: 0.75rem;
+    right: 0;
+    font-weight: 200;
+    transform-origin: center;
+    transition: 200ms linear;
+  }
+  
+  .m-detailsServicesBlock[open] .o-summaryBlock:after {
+    transform: rotate(45deg);
+    font-size: 2rem;
+  }
+  */

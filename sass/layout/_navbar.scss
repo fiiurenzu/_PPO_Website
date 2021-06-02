@@ -9,10 +9,18 @@
 /**
  * = 01 - NAVBAR
  * ------------------------------------------------------------------------- */
-nav {
+
+.o-navbar__container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $second;
+  padding-top: calc(#{$marg}/ 2);
+  // decalage de 5px en top
+  //cache blanc pour masquer le passage du contenu en dessous
+  z-index: 9999;
   @include media(">=desktop") {
     position: relative;
-    margin-top: calc(#{$marg}/ 2);
   }
 }
 
