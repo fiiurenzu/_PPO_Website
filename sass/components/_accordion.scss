@@ -1,17 +1,16 @@
-/* Style the buttons that are used to open and close the accordion panel */
+/**
+ * = ACCORDION 
+ *
+ * Bouton .accordion
+ * .panel = systeme d'ouverture
+ * .service = informations présentées
+ *
+ * ------------------------------------------------------------------------- */
 
-.o-detailServices__Container {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(15px, 1fr);
-  grid-template-areas:
-    ". accordion"
-    ". panel";
-}
-.accordion {
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion--contribution,
+.accordion--exhibition,
+.accordion--services {
   background-color: white;
   cursor: pointer;
   width: 100%;
@@ -19,15 +18,12 @@
   border: none;
   outline: none;
   transition: 0.4s;
+  padding-top: $pad-T-B;
+  padding-bottom: $pad-T-B;
 }
-.accordion {
-  grid-area: accordion;
-}
-.panel {
-  grid-area: panel;
-}
-
-.accordion:after {
+.accordion--contribution:after,
+.accordion--exhibition:after,
+.accordion--services:after {
   content: "+"; /* Unicode character for "plus" sign (+) */
   float: right;
 }
@@ -62,8 +58,9 @@
 * = TYPOGRAPHY 
 * 
 *-------------------------------------------------*/
-.accordion {
-  padding-top: $pad-T-B;
+.accordion--contribution,
+.accordion--exhibition,
+.accordion--services {
   font-size: $text1;
   .accordion:after {
     font-weight: 400;

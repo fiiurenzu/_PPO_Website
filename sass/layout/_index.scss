@@ -12,8 +12,10 @@
 .o-indexHome__container {
   border-top: $border;
   border-bottom: $border;
-  border-left: $border;
   margin-top: calc(#{$marg}/ 2);
+  @include media(">=desktop") {
+    border-left: $border;
+  }
 }
 
 .m-indexHome__wrapper {
