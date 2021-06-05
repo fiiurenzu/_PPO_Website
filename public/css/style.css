@@ -564,6 +564,10 @@ img {
   color: #7c7c7c;
 }
 
+#hidden {
+  display: none;
+}
+
 /**
  * = CONTAINER CONTRIBUTION & EXHIBITION 
  *
@@ -1023,9 +1027,6 @@ img {
 /**
  * = 02 - HOME PAGE LEFT
  * ------------------------------------------------------------------------- */
-.m-pageSplit_homeLeft__wrapper {
-  width: 100%;
-}
 @media (min-width: 1024px) {
   .m-pageSplit_homeLeft__wrapper {
     width: 50%;
@@ -1050,11 +1051,11 @@ img {
 /**
  * = 04 - PROJECT PAGE LEFT
  * ------------------------------------------------------------------------- */
-.m-gridContainerProject__left {
+.m-pageSplit_projectLeft__wrapper {
   order: 2;
 }
 @media (min-width: 1024px) {
-  .m-gridContainerProject__left {
+  .m-pageSplit_projectLeft__wrapper {
     flex-direction: row;
     width: 50%;
     padding-left: 10px;
@@ -1065,18 +1066,18 @@ img {
 /**
  * = 05 - PROJECT PAGE RIGHT
  * ------------------------------------------------------------------------- */
-.m-gridContainerProject__right {
+.m-pageSplit_projectRight__wrapper {
   order: 1;
 }
 @media (min-width: 1024px) {
-  .m-gridContainerProject__right {
+  .m-pageSplit_projectRight__wrapper {
+    order: 2;
     position: fixed;
     left: 50%;
     width: 50%;
     height: 100vh;
-    order: 2;
-    border-left: 1px solid black;
     padding-right: 10px;
+    border-left: 1px solid black;
   }
 }
 

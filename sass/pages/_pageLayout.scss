@@ -25,7 +25,6 @@
  * = 02 - HOME PAGE LEFT
  * ------------------------------------------------------------------------- */
 .m-pageSplit_homeLeft__wrapper {
-  width: 100%;
   @include media(">=desktop") {
     width: 50%;
     padding-left: $pad-L-R;
@@ -49,7 +48,7 @@
 /**
  * = 04 - PROJECT PAGE LEFT
  * ------------------------------------------------------------------------- */
-.m-gridContainerProject__left {
+.m-pageSplit_projectLeft__wrapper {
   order: 2;
   @include media(">=desktop") {
     flex-direction: row;
@@ -62,15 +61,15 @@
 /**
  * = 05 - PROJECT PAGE RIGHT
  * ------------------------------------------------------------------------- */
-.m-gridContainerProject__right {
+.m-pageSplit_projectRight__wrapper {
   order: 1;
   @include media(">=desktop") {
+    order: 2;
     position: fixed;
     left: 50%;
     width: 50%;
     height: 100vh;
-    order: 2;
-    border-left: $border;
     padding-right: $pad-L-R;
+    border-left: $border;
   }
 }
