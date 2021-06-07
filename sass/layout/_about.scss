@@ -11,8 +11,8 @@
  * ------------------------------------------------------------------------- */
 .o-about__container {
   border-bottom: $border;
-  margin-top: 3.3rem; //decalage margin mobile
-  @include media(">phone") {
+  margin-top: 3rem; //decalage margin mobile
+  @include media(">=desktop") {
     margin-top: 0;
   }
 }

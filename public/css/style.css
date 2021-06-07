@@ -375,9 +375,9 @@ img {
  * ------------------------------------------------------------------------- */
 .o-about__container {
   border-bottom: 1px solid black;
-  margin-top: 3.3rem;
+  margin-top: 3rem;
 }
-@media (min-width: 321px) {
+@media (min-width: 1024px) {
   .o-about__container {
     margin-top: 0;
   }
