@@ -1,1 +1,33 @@
+/**
+ * = UNDERLINE & ANIMATION UNDERLINE HOVER
+ *
+ * @mixin pour l'underline en background image
+ * Animation de l'underline 
+ *
+ * ------------------------------------------------------------------------- */
+@mixin underline {
+  text-decoration: none;
+  background-image: linear-gradient($first, $first);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
 
+#title-service {
+  display: inline;
+  line-height: $line-height--text--desktop;
+}
+
+#number-service,
+.slide__underline {
+  @include underline();
+}
+.slide__underline {
+  color: $first;
+  transition: all 300ms ease-in-out;
+  transition-delay: 90ms;
+  &:hover {
+    background-size: 100% 100%;
+    color: $second;
+  }
+}
