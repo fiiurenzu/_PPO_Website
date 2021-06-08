@@ -6,6 +6,34 @@
   src: url(/public/fonts/SangNeufSansMono-Regular.woff2);
   font-family: "sangneuf";
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+}
+
+img {
+  box-sizing: border-box;
+  display: block;
+}
+
 /** ========================================================================
 * = CHARTE TYPOGRAPHIQUE
 *
@@ -39,12 +67,12 @@ body {
   font-size: 1.6rem;
   font-family: helvetica;
 }
-body ::-moz-selection {
-  /* Code for Firefox */
+body ::selection {
   color: white;
   background: black;
 }
-body ::selection {
+body ::-moz-selection {
+  /* Code for Firefox */
   color: white;
   background: black;
 }
@@ -91,16 +119,7 @@ h4 {
  * 
  * ------------------------------------------------------------------------- */
 /* = 03.1 - ABOUT */
-.m-about_textAbout__wrapper {
-  line-height: 2rem;
-}
-
-/* = 03.2 - SELECTED COLLABORATORS */
-.m-collaborators_textCollabs__wrapper {
-  line-height: 2rem;
-}
-
-/* = 03.3 - CONTACT */
+.m-collaborators_textCollabs__wrapper .m-about_textAbout__wrapper,
 .m-contact_textContact__wrapper {
   line-height: 2rem;
 }
@@ -124,21 +143,16 @@ h4 {
 
 /* = 04.2 - TEXTES */
 .m-text__wrapper {
-  font-size: 1.6rem;
   line-height: 2rem;
+  font-size: 1.6rem;
 }
 
 /* = 04.3 - LIENS EXTERNES */
 .a-linkProject {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1.4rem;
 }
 
-/* = 04.2 - LISTE DEROULANTE */
-summary {
-  font-size: 1.6rem;
-}
-
+/* = 04.3 - LISTE DERULANTE - SERVICES */
 .list__services {
   font-size: 1.4rem;
 }
@@ -149,34 +163,6 @@ summary {
  * ------------------------------------------------------------------------- */
 .o-footer__container {
   font-size: 1.3rem;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  box-sizing: border-box;
-}
-
-img {
-  box-sizing: border-box;
-  display: block;
 }
 
 .a-scrollerImage {
@@ -295,7 +281,7 @@ img {
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
+  transition: 400ms;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -317,7 +303,7 @@ img {
 .panel {
   background-color: white;
   max-height: 0px;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 250ms ease-in-out;
   overflow: scroll;
 }
 

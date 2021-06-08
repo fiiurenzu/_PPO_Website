@@ -24,20 +24,19 @@
  * = 01 - BASE : HTML BODY
  * 
  * ------------------------------------------------------------------------- */
+
 html {
   font-size: 62.5%;
 }
-
 body {
   font-size: $text1;
   font-family: $sans-serif;
-  ::-moz-selection {
-    /* Code for Firefox */
+  ::selection {
     color: $second;
     background: $first;
   }
-
-  ::selection {
+  ::-moz-selection {
+    /* Code for Firefox */
     color: $second;
     background: $first;
   }
@@ -56,11 +55,10 @@ h4 {
 
 /* = 02.3 - CONTAINER COVER : TITLE */
 .a-project_informationsTitle__item {
-  font-size: 4rem;
+  font-size: $title-mobile;
   line-height: $line-height--index--mobile;
   padding-top: $pad-T-B;
   text-transform: uppercase;
-
   @include media("=>desktop") {
     font-size: $title;
     line-height: $line-height--index--desktop;
@@ -76,8 +74,7 @@ h4 {
 
 /* = 02.5 - CONTAINER COVER : MOTS CLEFS */
 ._projectIntro {
-  line-height: $line-height--text--desktop;
-  font-size: $text1;
+  @include typography-content();
 }
 
 /**
@@ -85,16 +82,7 @@ h4 {
  * 
  * ------------------------------------------------------------------------- */
 /* = 03.1 - ABOUT */
-.m-about_textAbout__wrapper {
-  line-height: $line-height--text--desktop;
-}
-
-/* = 03.2 - SELECTED COLLABORATORS */
-.m-collaborators_textCollabs__wrapper {
-  line-height: $line-height--text--desktop;
-}
-
-/* = 03.3 - CONTACT */
+.m-collaborators_textCollabs__wrapper .m-about_textAbout__wrapper,
 .m-contact_textContact__wrapper {
   line-height: $line-height--text--desktop;
 }
@@ -102,7 +90,7 @@ h4 {
 /* = 03.4 - CONTRIBUTIONS & EXHIBITIONS */
 .m-contribution_content__wrapper,
 .a-exhibitionTab__wrapper {
-  font-size: $font-footer;
+  font-size: $text3;
   line-height: $line-height--index--desktop;
 }
 /**
@@ -112,28 +100,21 @@ h4 {
 
 /* = 04.1 - BOUTTONS ANCHORS */
 .m-buttonText__wrapper {
-  font-size: 1.3rem;
+  font-size: $text3;
   font-weight: bold;
 }
 
 /* = 04.2 - TEXTES */
 .m-text__wrapper {
-  font-size: $text1;
-  line-height: $line-height--text--desktop;
+  @include typography-content();
 }
 
 /* = 04.3 - LIENS EXTERNES */
 .a-linkProject {
-  font-size: 1.1rem; //TODO CHANGER EN VARIABLE
-  font-weight: bold;
+  font-size: $text2;
 }
 
-/* = 04.2 - LISTE DEROULANTE */
-
-summary {
-  font-size: $text1;
-}
-
+/* = 04.3 - LISTE DERULANTE - SERVICES */
 .list__services {
   font-size: $text2;
 }
@@ -143,5 +124,5 @@ summary {
  * 
  * ------------------------------------------------------------------------- */
 .o-footer__container {
-  font-size: $font-footer;
+  font-size: $text3;
 }
