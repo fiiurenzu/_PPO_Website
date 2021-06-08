@@ -87,9 +87,6 @@
 #application {
   grid-area: application;
   padding-bottom: calc(#{$pad-T-B}* 2);
-  a:hover {
-    color: $third;
-  }
 }
 
 #hidden {

@@ -582,9 +582,6 @@ h4 {
   grid-area: application;
   padding-bottom: calc(5px* 2);
 }
-#application a:hover {
-  color: #7c7c7c;
-}
 
 #hidden {
   display: none;
