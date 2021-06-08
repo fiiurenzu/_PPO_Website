@@ -1,0 +1,12 @@
+@mixin typography-content {
+  line-height: $line-height--text--desktop;
+  font-size: $text1;
+}
+
+@mixin underline {
+  text-decoration: none;
+  background-image: linear-gradient($first, $first);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}

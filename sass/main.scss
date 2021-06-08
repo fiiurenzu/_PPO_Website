@@ -4,8 +4,9 @@
 
 // BASE //
 @import "./base/_font";
-@import "./base/typography";
+@import "./base/mixins";
 @import "./base/base.scss";
+@import "./base/typography";
 @import "./base/imagesVideo--project";
 
 // COMPONENTS //
