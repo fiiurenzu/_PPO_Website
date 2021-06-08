@@ -17,7 +17,7 @@
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
+  transition: 400ms;
   padding-top: $pad-T-B;
   padding-bottom: $pad-T-B;
 }
@@ -36,7 +36,7 @@
 .panel {
   background-color: white;
   max-height: 0px;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 250ms ease-in-out;
   overflow: scroll;
 }
 
