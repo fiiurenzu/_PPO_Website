@@ -17,8 +17,14 @@
 }
 
 .a-navigationButtons {
-  padding: $pad-T-B $pad-L-R;
+  @include button-slide-hover-right();
   border-right: $border;
+}
+._slideHover {
+  &:hover {
+    color: $second;
+    box-shadow: inset 400px 0 0 0 $first;
+  }
 }
 
 #previous {
@@ -28,18 +34,4 @@
 #next {
   grid-area: category;
   border: none;
-}
-
-// ON HOVER //
-.m-navigationButtons :nth-child(2) {
-  &:hover {
-    background-color: $third;
-    display: block;
-  }
-}
-.m-navigationButtons :nth-child(3) {
-  &:hover {
-    background-color: $third;
-    display: block;
-  }
 }

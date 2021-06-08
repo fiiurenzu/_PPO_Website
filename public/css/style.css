@@ -195,7 +195,15 @@ h4 {
 
 .a-navigationButtons {
   padding: 5px 10px;
+  color: black;
+  box-shadow: inset 0 0 0 0 black;
+  transition: all ease-in-out 400ms;
   border-right: 1px solid black;
+}
+
+._slideHover:hover {
+  color: white;
+  box-shadow: inset 400px 0 0 0 black;
 }
 
 #previous {
@@ -206,16 +214,6 @@ h4 {
 #next {
   grid-area: category;
   border: none;
-}
-
-.m-navigationButtons :nth-child(2):hover {
-  background-color: #7c7c7c;
-  display: block;
-}
-
-.m-navigationButtons :nth-child(3):hover {
-  background-color: #7c7c7c;
-  display: block;
 }
 
 .infoBulle {
@@ -656,6 +654,9 @@ h4 {
 }
 .m-navbar__wrapper .a-navbar__item {
   padding: 5px 10px;
+  color: black;
+  box-shadow: inset 0 0 0 0 black;
+  transition: all ease-in-out 400ms;
 }
 
 #name_panamaPapersOffice {
@@ -665,13 +666,11 @@ h4 {
 /**
  * = 02 - CTA RETURN HOME
  * ------------------------------------------------------------------------- */
-#__buttonReturnHome:hover {
-  font-size: 0;
-  background-color: #7c7c7c;
-  padding-left: 6px;
+._slideHover:hover {
+  color: white;
+  box-shadow: inset 400px 0 0 0 black;
 }
-#__buttonReturnHome:hover:after {
-  content: attr(data-hover);
+._slideHover:after {
   font-size: 1.6rem;
 }
 
