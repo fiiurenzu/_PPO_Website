@@ -37,6 +37,7 @@
 
   .a-navbar__item {
     @include button-slide-hover-right();
+    padding: $pad-T-B $pad-L-R;
   }
 }
 

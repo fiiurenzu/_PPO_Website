@@ -29,6 +29,14 @@
   padding: $pad-T-B $pad-L-R;
 }
 
+.a-contact_textContact__item > a {
+  @include button-slide-hover-right;
+  &:hover {
+    color: $second;
+    box-shadow: inset 400px 0 0 0 $first;
+  }
+}
+
 // VERISION IPHONE : ADRESSE MAIL REMPLACEE PAR CONTACT US //
 #contactPhone {
   @include media(">=desktop") {
@@ -75,9 +83,6 @@
 #inquiries {
   grid-area: inquiries;
   padding-bottom: calc(#{$pad-T-B}* 2);
-  a:hover {
-    color: $third;
-  }
 }
 #application {
   grid-area: application;

@@ -18,6 +18,7 @@
 
 .a-navigationButtons {
   @include button-slide-hover-right();
+  padding: $pad-T-B $pad-L-R;
   border-right: $border;
 }
 ._slideHover {
