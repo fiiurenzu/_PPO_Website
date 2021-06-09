@@ -1,11 +1,26 @@
-// Caroussel image et video
-
-.a-scrollerImage {
-  height: 100%;
-  img {
-    width: 100%;
-  }
+.m-image__wrapper {
+  position: relative;
 }
 #timur_exhibition {
   margin-top: -4px;
+}
+
+.a-image__description__item {
+  position: absolute;
+  z-index: 999;
+  top: 5px;
+  left: 5px;
+  background-color: $second;
+  padding: 1px;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+.m-image__wrapper {
+  &:hover .a-image__description__item {
+    opacity: 1;
+  }
+}
+img {
+  width: 100%;
 }

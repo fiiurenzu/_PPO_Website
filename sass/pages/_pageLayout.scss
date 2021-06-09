@@ -53,7 +53,7 @@
   @include media(">=desktop") {
     flex-direction: row;
     width: 50%;
-    padding-left: $pad-L-R;
+    //padding-left: $pad-L-R; //!TODO A SUPP//
     order: 1;
   }
 }

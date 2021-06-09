@@ -93,7 +93,7 @@ h4 {
  * ------------------------------------------------------------------------- */
 /* = 02.1 - NAVBAR */
 /* = 02.2 - INDEX */
-/* = 02.3 - CONTAINER COVER : TITLE */
+/* = 02.3 - CONTAINER PROJECT : TITLE */
 .a-project_informationsTitle__item {
   font-size: 4rem;
   line-height: 3.5rem;
@@ -107,14 +107,15 @@ h4 {
   }
 }
 
-/* = 02.4 - CONTAINER COVER : DATE & CITY */
+/* = 02.4 - CONTAINER PROJECT : DATE & CITY */
 .a-project_informationsCity__item,
-.a-project_informationsYear__item {
+.a-project_informationsYear__item,
+.a-image__description__item {
   font-family: "sangneuf", "Courier New", Courier, monospace;
   line-height: 1.6rem;
 }
 
-/* = 02.5 - CONTAINER COVER : MOTS CLEFS */
+/* = 02.5 - CONTAINER PROJECT : MOTS CLEFS */
 ._projectIntro {
   line-height: 2rem;
   font-size: 1.6rem;
@@ -125,8 +126,7 @@ h4 {
  * 
  * ------------------------------------------------------------------------- */
 /* = 03.1 - ABOUT */
-.m-collaborators_textCollabs__wrapper .m-about_textAbout__wrapper,
-.m-contact_textContact__wrapper {
+.a-infos__text_item {
   line-height: 2rem;
 }
 
@@ -171,15 +171,31 @@ h4 {
   font-size: 1.3rem;
 }
 
-.a-scrollerImage {
-  height: 100%;
-}
-.a-scrollerImage img {
-  width: 100%;
+.m-image__wrapper {
+  position: relative;
 }
 
 #timur_exhibition {
   margin-top: -4px;
+}
+
+.a-image__description__item {
+  position: absolute;
+  z-index: 999;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  padding: 1px;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+.m-image__wrapper:hover .a-image__description__item {
+  opacity: 1;
+}
+
+img {
+  width: 100%;
 }
 
 /**
@@ -457,7 +473,7 @@ h4 {
 /**
  * = UNDERLINE & ANIMATION UNDERLINE HOVER
  *
- * @mixin pour l'underline en background image
+ * @include pour l'underline en background image
  * Animation de l'underline 
  *
  * ------------------------------------------------------------------------- */
@@ -976,7 +992,6 @@ h4 {
   .m-pageSplit_projectLeft__wrapper {
     flex-direction: row;
     width: 50%;
-    padding-left: 10px;
     order: 1;
   }
 }

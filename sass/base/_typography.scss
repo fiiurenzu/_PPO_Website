@@ -53,7 +53,7 @@ h4 {
 
 /* = 02.2 - INDEX */
 
-/* = 02.3 - CONTAINER COVER : TITLE */
+/* = 02.3 - CONTAINER PROJECT : TITLE */
 .a-project_informationsTitle__item {
   font-size: $title-mobile;
   line-height: $line-height--index--mobile;
@@ -65,14 +65,15 @@ h4 {
   }
 }
 
-/* = 02.4 - CONTAINER COVER : DATE & CITY */
+/* = 02.4 - CONTAINER PROJECT : DATE & CITY */
 .a-project_informationsCity__item,
-.a-project_informationsYear__item {
+.a-project_informationsYear__item,
+.a-image__description__item {
   font-family: "sangneuf", "Courier New", Courier, monospace;
   line-height: $line-height--index--desktop;
 }
 
-/* = 02.5 - CONTAINER COVER : MOTS CLEFS */
+/* = 02.5 - CONTAINER PROJECT : MOTS CLEFS */
 ._projectIntro {
   @include typography-content();
 }
@@ -82,8 +83,7 @@ h4 {
  * 
  * ------------------------------------------------------------------------- */
 /* = 03.1 - ABOUT */
-.m-collaborators_textCollabs__wrapper .m-about_textAbout__wrapper,
-.m-contact_textContact__wrapper {
+.a-infos__text_item {
   line-height: $line-height--text--desktop;
 }
 
