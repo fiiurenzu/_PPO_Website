@@ -1,0 +1,93 @@
+/**
+ * = 01 - CONTAINER COMMUN
+ * ------------------------------------------------------------------------- */
+.m-infos__heading_wrapper {
+  @include infos-index;
+}
+
+.a-infos__heading_item {
+  margin-left: 5rem;
+  padding: $pad-T-B $pad-L-R;
+}
+#heading--border_left {
+  border-left: $border;
+}
+
+.m-infos__text_wrapper {
+  margin-left: 5rem;
+}
+.a-infos__text_item {
+  padding: $pad-L-R;
+}
+
+/**
+ * = 02 - ABOUT
+ * ------------------------------------------------------------------------- */
+
+#container__about {
+  margin-top: 3rem; //decalage margin mobile
+  @include media(">=desktop") {
+    margin-top: 0;
+  }
+}
+
+/**
+ * = 03 - CONTACT
+ * ------------------------------------------------------------------------- */
+.o-infos_container--border-bottom {
+  border-bottom: $border;
+}
+.a-infos__text_item > a {
+  @include button-slide-hover-right;
+  &:hover {
+    color: $second;
+    box-shadow: inset 400px 0 0 0 $first;
+  }
+}
+
+// VERISION IPHONE : ADRESSE MAIL REMPLACEE PAR CONTACT US //
+#contactPhone {
+  @include media(">=desktop") {
+    display: none;
+  }
+}
+#contactDesktop {
+  @include media(">=phone", "<=1228px") {
+    display: none;
+  }
+}
+
+#contact__grid_container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    " adress"
+    " inquiries"
+    " application ";
+
+  @include media(">=desktop") {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      " adress ."
+      " inquiries application ";
+  }
+}
+
+#ppoAdress {
+  grid-area: adress;
+  padding: calc(#{$pad-T-B}* 2) $pad-L-R;
+}
+#inquiries {
+  grid-area: inquiries;
+  padding-bottom: calc(#{$pad-T-B}* 2);
+}
+#application {
+  grid-area: application;
+  padding-bottom: calc(#{$pad-T-B}* 2);
+}
+
+#hidden {
+  display: none;
+}

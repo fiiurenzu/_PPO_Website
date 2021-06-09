@@ -3,6 +3,24 @@
   font-size: $text1;
 }
 
+/**
+ * = 01 - INFOS CONTAINER COMMUN
+ * ------------------------------------------------------------------------- */
+@mixin infos-index {
+  border-top: $border;
+  border-bottom: $border;
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin text-infos {
+  display: flex;
+  flex-direction: row;
+}
+
+/**
+ * = 02 - HOVER UNDERLINE 
+ * ------------------------------------------------------------------------- */
 @mixin underline {
   text-decoration: none;
   background-image: linear-gradient($first, $first);

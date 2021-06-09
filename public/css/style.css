@@ -6,6 +6,12 @@
   src: url(/public/fonts/SangNeufSansMono-Regular.woff2);
   font-family: "sangneuf";
 }
+/**
+ * = 01 - INFOS CONTAINER COMMUN
+ * ------------------------------------------------------------------------- */
+/**
+ * = 02 - HOVER UNDERLINE 
+ * ------------------------------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -174,6 +180,107 @@ h4 {
 
 #timur_exhibition {
   margin-top: -4px;
+}
+
+/**
+ * = 01 - CONTAINER COMMUN
+ * ------------------------------------------------------------------------- */
+.m-infos__heading_wrapper {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.a-infos__heading_item {
+  margin-left: 5rem;
+  padding: 5px 10px;
+}
+
+#heading--border_left {
+  border-left: 1px solid black;
+}
+
+.m-infos__text_wrapper {
+  margin-left: 5rem;
+}
+
+.a-infos__text_item {
+  padding: 10px;
+}
+
+/**
+ * = 02 - ABOUT
+ * ------------------------------------------------------------------------- */
+#container__about {
+  margin-top: 3rem;
+}
+@media (min-width: 1024px) {
+  #container__about {
+    margin-top: 0;
+  }
+}
+
+/**
+ * = 03 - CONTACT
+ * ------------------------------------------------------------------------- */
+.o-infos_container--border-bottom {
+  border-bottom: 1px solid black;
+}
+
+.a-infos__text_item > a {
+  color: black;
+  box-shadow: inset 0 0 0 0 black;
+  transition: all ease-in-out 400ms;
+}
+.a-infos__text_item > a:hover {
+  color: white;
+  box-shadow: inset 400px 0 0 0 black;
+}
+
+@media (min-width: 1024px) {
+  #contactPhone {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1228px) {
+  #contactDesktop {
+    display: none;
+  }
+}
+
+#contact__grid_container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: " adress" " inquiries" " application ";
+}
+@media (min-width: 1024px) {
+  #contact__grid_container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: " adress ." " inquiries application ";
+  }
+}
+
+#ppoAdress {
+  grid-area: adress;
+  padding: calc(5px* 2) 10px;
+}
+
+#inquiries {
+  grid-area: inquiries;
+  padding-bottom: calc(5px* 2);
+}
+
+#application {
+  grid-area: application;
+  padding-bottom: calc(5px* 2);
+}
+
+#hidden {
+  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -379,249 +486,6 @@ h4 {
 }
 
 /**
- * = ABOUT 
- *
- * 01 - INDEX ABOUT
- * 02 - TEXTE ABOUT
- * 
- * ========================================================================= */
-/**
- * = 01 - INDEX ABOUT
- * ------------------------------------------------------------------------- */
-.o-about__container {
-  border-bottom: 1px solid black;
-  margin-top: 3rem;
-}
-@media (min-width: 1024px) {
-  .o-about__container {
-    margin-top: 0;
-  }
-}
-
-/*  A supprimer
-.m-about_indexAbout__wrapper {
-  border-bottom: $border;
-  display: grid;
-  grid-template-columns: $col-phone 1fr;
-  grid-template-areas: ". about";
-
-  @include media(">=desktop") {
-    grid-template-columns: $col-desk 1fr;
-  }
-}
-
-// PADDING SUR L'ITEM INDEX ABOUT//
-.a-about_textAbout__item,
-.a-about_indexAbout__item {
-  padding: $pad-T-B $pad-L-R;
-}
-.a-about_indexAbout__item {
-  border-left: $border;
-  grid-area: about;
-}*/
-/**
- * = 02 - TEXTE ABOUT
- * ------------------------------------------------------------------------- */
-.m-about_textAbout__wrapper {
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  grid-template-areas: ". text-area";
-}
-@media (min-width: 1024px) {
-  .m-about_textAbout__wrapper {
-    grid-template-columns: 5rem 1fr;
-  }
-}
-
-.a-about_textAbout__item {
-  grid-area: text-area;
-  padding: calc(5px* 2) 10px;
-}
-
-/**
- * = COLLABORAOTRS 
- *
- * 01 - INDEX COLLABORATORS
- * 02 - TEXTE COLLABORATORS
- * 
- * ========================================================================= */
-/**
- * = 01 - INDEX COLALBORATORS
- * ------------------------------------------------------------------------- */
-.o-collaborators__container {
-  border-bottom: 1px solid black;
-}
-
-.m-collaborators_indexCollabs__wrapper {
-  border-bottom: 1px solid black;
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  grid-template-areas: ". reference";
-}
-@media (min-width: 1024px) {
-  .m-collaborators_indexCollabs__wrapper {
-    grid-template-columns: 5rem 1fr;
-  }
-}
-
-.a-collaborators_indexCollabs__item,
-.a-collaborators_textCollabs__item {
-  padding: 5px 10px;
-}
-
-.a-collaborators_indexCollabs__item {
-  border-left: 1px solid black;
-  grid-area: reference;
-}
-
-/**
- * = 02 - TEXTE COLLABORATORS
- * ------------------------------------------------------------------------- */
-.m-collaborators_textCollabs__wrapper {
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  grid-template-areas: ". text-area";
-}
-@media (min-width: 1024px) {
-  .m-collaborators_textCollabs__wrapper {
-    grid-template-columns: 5rem 1fr;
-  }
-}
-
-.a-collaborators_textCollabs__item {
-  grid-area: text-area;
-  padding: calc(5px* 2) 10px;
-}
-
-/**
- * = CONTACT
- *
- * 01 - INDEX CONTACT
- * 02 - TEXTE CONTACT
- * 
- * ========================================================================= */
-/**
- * = 01 - INDEX CONTACT
- * ------------------------------------------------------------------------- */
-.o-contact__container {
-  border-bottom: 1px solid black;
-}
-
-.m-contact_indexContact__wrapper {
-  border-bottom: 1px solid black;
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  grid-template-areas: ". contact";
-}
-@media (min-width: 1024px) {
-  .m-contact_indexContact__wrapper {
-    grid-template-columns: 5rem 1fr;
-  }
-}
-
-.a-contact-indexContact__item,
-.a-contact_textContact__item {
-  padding: 5px 10px;
-}
-
-.a-contact_textContact__item > a {
-  color: black;
-  box-shadow: inset 0 0 0 0 black;
-  transition: all ease-in-out 400ms;
-}
-.a-contact_textContact__item > a:hover {
-  color: white;
-  box-shadow: inset 400px 0 0 0 black;
-}
-
-@media (min-width: 1024px) {
-  #contactPhone {
-    display: none;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 1228px) {
-  #contactDesktop {
-    display: none;
-  }
-}
-
-.a-contact-indexContact__item {
-  border-left: 1px solid black;
-  grid-area: contact;
-}
-
-/**
- * = 02 - TEXTE CONTACT
- * ------------------------------------------------------------------------- */
-.m-contact_textContact__wrapper {
-  display: grid;
-  grid-template-columns: 5rem auto;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: ". adress" ". inquiries" ". application ";
-}
-@media (min-width: 1024px) {
-  .m-contact_textContact__wrapper {
-    grid-template-columns: 5rem repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: ". adress ." ". inquiries application ";
-  }
-}
-
-#ppoAdress {
-  grid-area: adress;
-  padding: calc(5px* 2) 10px;
-}
-
-#inquiries {
-  grid-area: inquiries;
-  padding-bottom: calc(5px* 2);
-}
-
-#application {
-  grid-area: application;
-  padding-bottom: calc(5px* 2);
-}
-
-#hidden {
-  display: none;
-}
-
-/**
- * = CONTAINER CONTRIBUTION & EXHIBITION 
- *
- * Présent uniquement sur la page home
- * Container qui gere la grid des deux element contribution + exhibition
- *
- * ------------------------------------------------------------------------- */
-.o-contributionsExhibitions__container {
-  display: block;
-}
-@media (min-width: 769px) {
-  .o-contributionsExhibitions__container {
-    display: grid;
-    grid-template-columns: 5rem repeat(2, 1fr);
-    grid-template-areas: ". contribution exhibition";
-  }
-}
-
-#contribution__wrapper {
-  grid-area: contribution;
-  padding-right: 10px;
-}
-
-#exhibition__wrapper {
-  grid-area: exhibition;
-  padding-right: 10px;
-}
-
-#contribution__wrapper,
-#exhibition__wrapper {
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
-
-/**
  * = NAVBAR 
  *
  * 01 - NAVBAR
@@ -676,6 +540,40 @@ h4 {
 }
 ._slideHover:after {
   font-size: 1.6rem;
+}
+
+/**
+ * = CONTAINER CONTRIBUTION & EXHIBITION 
+ *
+ * Présent uniquement sur la page home
+ * Container qui gere la grid des deux element contribution + exhibition
+ *
+ * ------------------------------------------------------------------------- */
+.o-contributionsExhibitions__container {
+  display: block;
+}
+@media (min-width: 769px) {
+  .o-contributionsExhibitions__container {
+    display: grid;
+    grid-template-columns: 5rem repeat(2, 1fr);
+    grid-template-areas: ". contribution exhibition";
+  }
+}
+
+#contribution__wrapper {
+  grid-area: contribution;
+  padding-right: 10px;
+}
+
+#exhibition__wrapper {
+  grid-area: exhibition;
+  padding-right: 10px;
+}
+
+#contribution__wrapper,
+#exhibition__wrapper {
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .o-coverImage__container {
