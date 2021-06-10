@@ -717,25 +717,6 @@ img {
   top: 0;
 }
 
-/* = BUTTON NAVIGATION */
-.m-buttonText__wrapper {
-  background-color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.a-indexButton__item {
-  flex-grow: 1;
-}
-.a-indexButton__item:hover {
-  color: #7c7c7c;
-  border-bottom: 2px solid #7c7c7c;
-}
-
 /* = PARAGRAPHE TEXTE */
 .o-text__container {
   position: relative;
