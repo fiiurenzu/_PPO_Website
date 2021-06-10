@@ -96,13 +96,21 @@
     padding-top: $pad-T-B;
   }
   @include media(">=desktop") {
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
     scroll-snap-type: y mandatory;
   }
 }
 .m-textBlock__wrapper {
   position: sticky;
   top: 0;
+}
+
+/* = LIENS EXTERNES */
+.a-linkProject {
+  @include padding-links-copyright;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* = PARAGRAPHE TEXTE */
@@ -117,47 +125,25 @@
   display: none; //DISABLE SCROLLBAR CHROMIUM
 }
 .m-text__wrapper {
-  padding-top: 2.2rem; // PADDING PARAGRAPHES SUIVANTS//
-}
-
-/* = ANCHORS */
-.blockText__purpose {
-  scroll-snap-type: start;
-}
-.blockText__artist {
-  scroll-snap-type: start;
-}
-.blockText__takeMe {
-  scroll-snap-type: start;
+  padding-top: 1.3rem; // PADDING PARAGRAPHES SUIVANTS//
 }
 
 #word-noWrap {
   white-space: nowrap;
 }
 
-/* = LIENS EXTERNES */
-.a-linkProject {
-  padding-top: 1rem;
-}
-
-/**
- * = 04 - LISTE DEROULANTE DETAILS SERVICES [ A SUPP ] 
- *
- * ------------------------------------------------------------------------- */
-
-/*
-.o-gridList {
-  padding: $pad-T-B $pad-L-R;
-  @include media(">=desktop") {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: ". listServices";
-    padding: $pad-T-B $pad-L-R;
+.copyright-image {
+  @include padding-links-copyright($padding-top: 0);
+  display: flex;
+  flex-direction: row;
+  :nth-child(1) {
+    margin-right: 3rem;
   }
 }
-
-.m-listServices {
-  padding-left: $pad-L-R;
-  grid-area: listServices;
+#border-top {
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 3rem;
+  height: 1px;
+  border-bottom: 2px solid $first;
 }
-*/
