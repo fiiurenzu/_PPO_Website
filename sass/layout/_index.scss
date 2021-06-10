@@ -38,14 +38,18 @@
  * ------------------------------------------------------------------------- */
 
 .o-indexProjects__container {
-  border-bottom: $border;
+  margin-top: 33px;
+  @include media(">=desktop") {
+    margin-top: 0;
+  }
+  .m-infos__heading_wrapper {
+    border-top: none;
+    > .a-infos__heading_item {
+      border-left: $border;
+    }
+  }
 }
-.m-indexProjects__wrapper {
-  display: grid;
-  grid-template-columns: $col-desk repeat(2, 1fr);
-  grid-template-areas: ". name-client category";
-  background-color: $second;
-}
+
 .a-indexProjects_name__item,
 .a-indexProjects_category__item {
   padding: $pad-T-B $pad-L-R;

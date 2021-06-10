@@ -834,14 +834,18 @@ img {
  * = 02 - INDEX PROJECTS
  * ------------------------------------------------------------------------- */
 .o-indexProjects__container {
-  border-bottom: 1px solid black;
+  margin-top: 33px;
 }
-
-.m-indexProjects__wrapper {
-  display: grid;
-  grid-template-columns: 5rem repeat(2, 1fr);
-  grid-template-areas: ". name-client category";
-  background-color: white;
+@media (min-width: 1024px) {
+  .o-indexProjects__container {
+    margin-top: 0;
+  }
+}
+.o-indexProjects__container .m-infos__heading_wrapper {
+  border-top: none;
+}
+.o-indexProjects__container .m-infos__heading_wrapper > .a-infos__heading_item {
+  border-left: 1px solid black;
 }
 
 .a-indexProjects_name__item,

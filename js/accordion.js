@@ -7,7 +7,7 @@ for (var i = 0; i < acc.length; i++) {
     var panel = this.nextElementSibling;
     var isActive = document.querySelector(".accordion--contribution").classList.contains("active");
     if (isActive) {
-      panel.style.maxHeight = "480px";
+      panel.style.maxHeight = "25vw";
     } else {
       panel.style.maxHeight = "0px";
     }
@@ -23,7 +23,7 @@ for (var i = 0; i < acc.length; i++) {
     var panel = this.nextElementSibling;
     var isActive = document.querySelector(".accordion--exhibition").classList.contains("active");
     if (isActive) {
-      panel.style.maxHeight = "480px";
+      panel.style.maxHeight = "25vw";
     } else {
       panel.style.maxHeight = "0px";
     }
@@ -39,7 +39,7 @@ for (var i = 0; i < acc.length; i++) {
     var panel = this.nextElementSibling;
     var isActive = document.querySelector(".accordion--services").classList.contains("active");
     if (isActive) {
-      panel.style.maxHeight = "230px";
+      panel.style.maxHeight = "13vw";
     } else {
       panel.style.maxHeight = "0px";
     }
