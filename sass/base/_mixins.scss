@@ -34,3 +34,12 @@
   box-shadow: inset 0 0 0 0 $first;
   transition: all ease-in-out 400ms;
 }
+
+/**
+ * = 03 - LINKS & COPYRIGHT PROJECT 
+ * ------------------------------------------------------------------------- */
+
+@mixin padding-links-copyright($padding-top: 0.5rem, $padding-bottom: 0.5rem) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
