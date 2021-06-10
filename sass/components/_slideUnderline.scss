@@ -18,6 +18,9 @@
 .slide__underline {
   color: $first;
   transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   transition-delay: 90ms;
   &:hover {
     background-size: 100% 100%;
