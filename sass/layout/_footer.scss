@@ -6,46 +6,47 @@
   bottom: 0;
   padding-right: $pad-L-R;
   margin-bottom: calc(#{$marg}/ 2);
-
-  @include media("<=1024px") {
+  // QUAND SCREEN DEVIENT FORMAT MOBILE ALORS LE FOOTER DESKTOP HIDDEN//
+  @include media("<=1023px") {
     display: none;
   }
 }
-
 .m-footer__wrapper {
-  border-top: $border;
-  border-bottom: $border;
-  display: grid;
-  grid-template-columns: $col repeat(4, auto);
+  @include index_container-style;
 }
-
 .a-footer__item {
-  border-right: $border;
   padding: $pad-T-B $pad-L-R;
+  &:first-child {
+    width: $col;
+    text-align: center;
+  }
+  &:nth-child(2) {
+    border-left: $border;
+    border-right: $border;
+    //BORDER GAUCHE ET DROITE DE LA CASE CONTACT//
+  }
   &:last-child {
     border-right: none;
   }
 }
-
 // FOOTER MOBILE //
 .o-footer__container--mobile {
   width: 100%;
   background-color: $second;
-
-  @include media(">1024px") {
+  @include media(">1023px") {
     display: none;
   }
 }
-
 .m-footer__wrapper--mobile {
-  border-bottom: $border;
-  display: grid;
-  grid-template-columns: $col repeat(4, auto);
+  @include index_container-style;
 }
 
 .a-footer__item--mobile {
   border-right: $border;
   padding: $pad-T-B $pad-L-R;
+  &:first-child {
+    width: $col;
+  }
   &:last-child {
     border-right: none;
   }

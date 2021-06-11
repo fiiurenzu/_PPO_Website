@@ -1,15 +1,4 @@
 /**
- * = PAGE LAYOUT
- *
- * 01 - CONTAINER COMMUN
- * 02 - HOME LEFT
- * 03 - HOME RIGHT 
- * 04 - PROJECT LEFT
- * 05 - PROJECT RIGHT
- * 
- * ========================================================================= */
-
-/**
  * = 01 - CONTAINER COMMUN
  * ------------------------------------------------------------------------- */
 .o-pageSplit__container {
@@ -18,58 +7,5 @@
   @include media(">=desktop") {
     flex-direction: row;
     position: relative;
-  }
-}
-
-/**
- * = 02 - HOME PAGE LEFT
- * ------------------------------------------------------------------------- */
-.m-pageSplit_homeLeft__wrapper {
-  @include media(">=desktop") {
-    width: 50%;
-    padding-left: $pad-L-R;
-    max-height: 100vh;
-    position: fixed;
-  }
-}
-
-/**
-   * = 03 - HOME PAGE RIGHT
-   * ------------------------------------------------------------------------- */
-.m-pageSplit_homeRight__wrapper {
-  @include media(">=desktop") {
-    width: 50%;
-    padding-right: $pad-L-R;
-    position: absolute;
-    left: 50%;
-  }
-}
-
-/**
- * = 04 - PROJECT PAGE LEFT
- * ------------------------------------------------------------------------- */
-.m-pageSplit_projectLeft__wrapper {
-  order: 2;
-  @include media(">=desktop") {
-    flex-direction: row;
-    width: 50%;
-    //padding-left: $pad-L-R; //!TODO A SUPP//
-    order: 1;
-  }
-}
-
-/**
- * = 05 - PROJECT PAGE RIGHT
- * ------------------------------------------------------------------------- */
-.m-pageSplit_projectRight__wrapper {
-  order: 1;
-  @include media(">=desktop") {
-    order: 2;
-    position: fixed;
-    left: 50%;
-    width: 50%;
-    height: 100vh;
-    padding-right: $pad-L-R;
-    border-left: $border;
   }
 }

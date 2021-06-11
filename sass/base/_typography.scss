@@ -100,11 +100,11 @@ h4 {
   font-weight: bold;
 }
 /* = 04.2 - TEXTES */
-.m-text__wrapper {
+.a-text_project__item {
   @include typography-content();
 }
 /* = 04.3 - LIENS EXTERNES */
-.a-linkProject,
+.a-link_project,
 .copyright-image {
   font-size: $text2;
 }

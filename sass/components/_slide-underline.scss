@@ -3,15 +3,7 @@
  *
  * @include pour l'underline en background image
  * Animation de l'underline 
- *
  * ------------------------------------------------------------------------- */
-
-#title-service {
-  display: inline;
-  line-height: $line-height-medium;
-}
-
-#number-service,
 .slide__underline {
   @include underline();
 }

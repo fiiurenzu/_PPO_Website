@@ -1,11 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  src: url(/public/fonts/SangNeufSansMono-Regular.eot);
-  src: url(/public/fonts/SangNeufSansMono-Regular.otf);
-  src: url(/public/fonts/SangNeufSansMono-Regular.woff);
-  src: url(/public/fonts/SangNeufSansMono-Regular.woff2);
-  font-family: "sangneuf";
-}
 /**
  * = 01 - INFOS CONTAINER COMMUN
  * ------------------------------------------------------------------------- */
@@ -13,8 +6,18 @@
  * = 02 - HOVER UNDERLINE 
  * ------------------------------------------------------------------------- */
 /**
+ * = 03 - PADDING & BORDER POUR CADRE DE CONTAINER
+ * ------------------------------------------------------------------------- */
+/**
  * = 03 - LINKS & COPYRIGHT PROJECT 
  * ------------------------------------------------------------------------- */
+@font-face {
+  src: url(/public/fonts/SangNeufSansMono-Regular.eot);
+  src: url(/public/fonts/SangNeufSansMono-Regular.otf);
+  src: url(/public/fonts/SangNeufSansMono-Regular.woff);
+  src: url(/public/fonts/SangNeufSansMono-Regular.woff2);
+  font-family: "sangneuf";
+}
 * {
   margin: 0;
   padding: 0;
@@ -99,14 +102,12 @@ h4 {
 /* = 02.3 - CONTAINER PROJECT : TITLE */
 .a-project_informationsTitle__item {
   font-size: 4rem;
-  line-height: 3.5rem;
   padding-top: 5px;
   text-transform: uppercase;
 }
-@media (min-=: 1025px) {
+@media (min-width: 768px) {
   .a-project_informationsTitle__item {
     font-size: 5rem;
-    line-height: 1.6rem;
   }
 }
 
@@ -151,13 +152,13 @@ h4 {
 }
 
 /* = 04.2 - TEXTES */
-.m-text__wrapper {
+.a-text_project__item {
   line-height: 2rem;
   font-size: 1.6rem;
 }
 
 /* = 04.3 - LIENS EXTERNES */
-.a-linkProject,
+.a-link_project,
 .copyright-image {
   font-size: 1.4rem;
 }
@@ -203,108 +204,10 @@ img {
 }
 
 /**
- * = 01 - CONTAINER COMMUN
+ * = 01 - BOUTON DE NAV PREVIOUS NEXT
  * ------------------------------------------------------------------------- */
-.m-infos__heading_wrapper {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  display: flex;
-  flex-direction: row;
-}
-
-.a-infos__heading_item {
-  margin-left: 5rem;
-  padding: 5px 10px;
-}
-
-#heading--border_left {
-  border-left: 1px solid black;
-}
-
-.m-infos__text_wrapper {
-  margin-left: 5rem;
-}
-
-.a-infos__text_item {
-  padding: 10px;
-}
-
-/**
- * = 02 - ABOUT
- * ------------------------------------------------------------------------- */
-#container__about {
-  margin-top: 3rem;
-}
 @media (min-width: 1024px) {
-  #container__about {
-    margin-top: 0;
-  }
-}
-
-/**
- * = 03 - CONTACT
- * ------------------------------------------------------------------------- */
-.o-infos_container--border-bottom {
-  border-bottom: 1px solid black;
-}
-
-.a-infos__text_item > a {
-  color: black;
-  box-shadow: inset 0 0 0 0 black;
-  transition: all ease-in-out 400ms;
-}
-.a-infos__text_item > a:hover {
-  color: white;
-  box-shadow: inset 400px 0 0 0 black;
-}
-
-@media (min-width: 1024px) {
-  #contactPhone {
-    display: none;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 1228px) {
-  #contactDesktop {
-    display: none;
-  }
-}
-
-#contact__grid_container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: " adress" " inquiries" " application ";
-}
-@media (min-width: 1024px) {
-  #contact__grid_container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: " adress ." " inquiries application ";
-  }
-}
-
-#ppoAdress {
-  grid-area: adress;
-  padding: calc(5px* 2) 10px;
-}
-
-#inquiries {
-  grid-area: inquiries;
-  padding-bottom: calc(5px* 2);
-}
-
-#application {
-  grid-area: application;
-  padding-bottom: calc(5px* 2);
-}
-
-#hidden {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .o-navigationButtons {
+  .o-navigation_buttons {
     width: 50%;
     background-color: white;
     position: fixed;
@@ -313,34 +216,32 @@ img {
   }
 }
 
-.m-navigationButtons {
-  display: grid;
-  grid-template-columns: 5rem repeat(2, 1fr);
-  grid-template-areas: ". name-client category";
+.m-navigation_buttons {
   border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 1024px) {
+  .m-navigation_buttons {
+    border-bottom: none;
+  }
+}
+.m-navigation_buttons :first-child {
+  margin-left: 5rem;
+  border-left: 1px solid black;
+}
+.m-navigation_buttons :last-child {
+  border-right: none;
 }
 
-.a-navigationButtons {
+.a-navigation_buttons {
   color: black;
   box-shadow: inset 0 0 0 0 black;
   transition: all ease-in-out 400ms;
   padding: 5px 10px;
   border-right: 1px solid black;
-}
-
-._slideHover:hover {
-  color: white;
-  box-shadow: inset 400px 0 0 0 black;
-}
-
-#previous {
-  border-right: 1px solid black;
-  grid-area: name-client;
-}
-
-#next {
-  grid-area: category;
-  border: none;
+  flex-grow: 1;
 }
 
 .infoBulle {
@@ -479,14 +380,7 @@ img {
  *
  * @include pour l'underline en background image
  * Animation de l'underline 
- *
  * ------------------------------------------------------------------------- */
-#title-service {
-  display: inline;
-  line-height: 2rem;
-}
-
-#number-service,
 .slide__underline {
   text-decoration: none;
   background-image: linear-gradient(black, black);
@@ -566,301 +460,22 @@ img {
 }
 
 /**
- * = CONTAINER CONTRIBUTION & EXHIBITION 
- *
- * Présent uniquement sur la page home
- * Container qui gere la grid des deux element contribution + exhibition
- *
+ * = 01 - INDEX DES PARTIES : CONTACT, PROJECT ETC.
  * ------------------------------------------------------------------------- */
-.o-contributionsExhibitions__container {
-  display: block;
-}
-@media (min-width: 769px) {
-  .o-contributionsExhibitions__container {
-    display: grid;
-    grid-template-columns: 5rem repeat(2, 1fr);
-    grid-template-areas: ". contribution exhibition";
-  }
-}
-
-#contribution__wrapper {
-  grid-area: contribution;
-  padding-right: 10px;
-}
-
-#exhibition__wrapper {
-  grid-area: exhibition;
-  padding-right: 10px;
-}
-
-#contribution__wrapper,
-#exhibition__wrapper {
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
-
-.o-coverImage__container {
-  border-left: none;
-}
-@media (min-width: 769px) {
-  .o-coverImage__container {
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-  }
-}
-
-.a-coverImage__item {
-  width: 100%;
-  height: auto;
-}
-
-/** ========================================================================
-* = PROJECT 
-*
-* 01 - CONTAINER PARENT PROJET
-* 02 - TITRE
-* 03 - TEXTE
-* 04 - LISTE DEROULANTE DETAIL SERVICES
-* 
- * ========================================================================= */
-/**
- * = 01 - CONTAINER PROJECT
- *
- * Grille de mise en page des éléments : titre, texte et liste
- *
- * ------------------------------------------------------------------------- */
-.o-projectGrid__container {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "title-area title-area " "texte-area texte-area" "list-area list-area";
-}
-
-.o-project_informations__container {
-  grid-area: title-area;
-}
-
-.o-text {
-  grid-area: texte-area;
-}
-
-.o-gridList {
-  grid-area: list-area;
-}
-
-/**
- * = 02 - TITLE CONTAINER
- *
- * Grille de mise en page cover : titre, city, year, (si besoin mots CLEFS)
- *
- * ------------------------------------------------------------------------- */
-.m-project_informations__wrapper {
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: ". title" ". city" ". year" ". ." "arrow intro  ";
-  border-bottom: 1px solid black;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-@media (min-width: 768px) {
-  .m-project_informations__wrapper {
-    grid-template-columns: 5rem repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    grid-template-areas: ". title title" ". city year";
-    border-bottom: 1px solid black;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-
-.a-project_informationsTitle__item {
-  grid-area: title;
-}
-
-.a-project_informationsCity__item {
-  grid-area: city;
-}
-
-.a-project_informationsYear__item {
-  grid-area: year;
-}
-
-/**
- * = 03 - TEXTE
- *
- * o-text : container parent de mise en forme (Nav + Texte) - Applique un systeme de padding
- * m-textBlock__wrapper : Container de mise en forme du block de texte 
- * m-buttonText__wrapper : Englobe les boutons de navigation (anchors) des paragraphes
- * .m-text__wrapper : Padding de chaque paragraphe + id anchors + 
- * Liens externes
- *
- * ------------------------------------------------------------------------- */
-.o-text {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-bottom: 1px solid black;
-  position: relative;
-}
-@media (max-width: 768px) {
-  .o-text {
-    padding-top: 5px;
-  }
-}
-@media (min-width: 1024px) {
-  .o-text {
-    padding-bottom: 0.5rem;
-    scroll-snap-type: y mandatory;
-  }
-}
-
-.m-textBlock__wrapper {
-  position: sticky;
-  top: 0;
-}
-
-/* = LIENS EXTERNES */
-.a-linkProject {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-/* = PARAGRAPHE TEXTE */
-.o-text__container {
-  position: relative;
-  max-height: 35vh;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.o-text__container::-webkit-scrollbar {
-  display: none;
-}
-
-.m-text__wrapper {
-  padding-top: 1.3rem;
-}
-
-#word-noWrap {
-  white-space: nowrap;
-}
-
-.copyright-image {
-  padding-top: 0;
-  padding-bottom: 0.5rem;
-  display: flex;
-  flex-direction: row;
-}
-.copyright-image :nth-child(1) {
-  margin-right: 3rem;
-}
-
-#border-top {
-  padding-top: 1rem;
-  margin-bottom: 0.5rem;
-  width: 3rem;
-  height: 1px;
-  border-bottom: 2px solid black;
-}
-
-/** ========================================================================
-* = INDEX
-*
-* 01 - INDEX HOME
-* 02 - INDEX PROJECTS
-* 
-* ========================================================================= */
-/**
- * = 01 - INDEX HOME
- * ------------------------------------------------------------------------- */
-.o-indexHome__container {
+.m-index_heading__wrapper {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  margin-top: calc(10px/ 2);
-}
-@media (min-width: 1024px) {
-  .o-indexHome__container {
-    border-left: 1px solid black;
-  }
+  display: flex;
+  flex-direction: row;
 }
 
-.m-indexHome__wrapper {
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  grid-template-areas: ". about";
-}
-@media (min-width: 1024px) {
-  .m-indexHome__wrapper {
-    grid-template-columns: 5rem 1fr;
-  }
-}
-
-.a-indexHome__item {
-  border-left: 1px solid black;
-  grid-area: about;
+.a-index_heading__item {
+  margin-left: 5rem;
   padding: 5px 10px;
 }
 
-/**
- * = 02 - INDEX PROJECTS
- * ------------------------------------------------------------------------- */
-.o-indexProjects__container {
-  margin-top: 33px;
-}
-@media (min-width: 1024px) {
-  .o-indexProjects__container {
-    margin-top: 0;
-  }
-}
-.o-indexProjects__container .m-infos__heading_wrapper {
-  border-top: none;
-}
-.o-indexProjects__container .m-infos__heading_wrapper > .a-infos__heading_item {
+#heading--border_left {
   border-left: 1px solid black;
-}
-
-.a-indexProjects_name__item,
-.a-indexProjects_category__item {
-  padding: 5px 10px;
-}
-
-.a-indexProjects_name__item {
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  grid-area: name-client;
-}
-
-.a-indexProjects_category__item {
-  grid-area: category;
-}
-
-/**
- * = CONTAINER DETAILS SERVICES 
- *
- * Présent uniquement sur la page projet
- * Container parent GRID qui gere la grid de deux éléments
- *
- * ------------------------------------------------------------------------- */
-.o-detailServices__Container {
-  display: block;
-  padding: 0 10px;
-}
-@media (min-width: 769px) {
-  .o-detailServices__Container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: ". accordion";
-  }
-}
-
-#detailServices__wrapper {
-  grid-area: accordion;
 }
 
 .o-footer__container {
@@ -871,7 +486,7 @@ img {
   padding-right: 10px;
   margin-bottom: calc(10px/ 2);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .o-footer__container {
     display: none;
   }
@@ -880,13 +495,20 @@ img {
 .m-footer__wrapper {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  display: grid;
-  grid-template-columns: 5rem repeat(4, auto);
+  display: flex;
+  flex-direction: row;
 }
 
 .a-footer__item {
-  border-right: 1px solid black;
   padding: 5px 10px;
+}
+.a-footer__item:first-child {
+  width: 5rem;
+  text-align: center;
+}
+.a-footer__item:nth-child(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .a-footer__item:last-child {
   border-right: none;
@@ -896,36 +518,30 @@ img {
   width: 100%;
   background-color: white;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .o-footer__container--mobile {
     display: none;
   }
 }
 
 .m-footer__wrapper--mobile {
+  border-top: 1px solid black;
   border-bottom: 1px solid black;
-  display: grid;
-  grid-template-columns: 5rem repeat(4, auto);
+  display: flex;
+  flex-direction: row;
 }
 
 .a-footer__item--mobile {
   border-right: 1px solid black;
   padding: 5px 10px;
 }
+.a-footer__item--mobile:first-child {
+  width: 5rem;
+}
 .a-footer__item--mobile:last-child {
   border-right: none;
 }
 
-/**
- * = PAGE LAYOUT
- *
- * 01 - CONTAINER COMMUN
- * 02 - HOME LEFT
- * 03 - HOME RIGHT 
- * 04 - PROJECT LEFT
- * 05 - PROJECT RIGHT
- * 
- * ========================================================================= */
 /**
  * = 01 - CONTAINER COMMUN
  * ------------------------------------------------------------------------- */
@@ -941,8 +557,8 @@ img {
 }
 
 /**
- * = 02 - HOME PAGE LEFT
- * ------------------------------------------------------------------------- */
+* = 01 - HOME PAGE LEFT
+* ------------------------------------------------------------------------- */
 @media (min-width: 1024px) {
   .m-pageSplit_homeLeft__wrapper {
     width: 50%;
@@ -953,8 +569,130 @@ img {
 }
 
 /**
-   * = 03 - HOME PAGE RIGHT
-   * ------------------------------------------------------------------------- */
+* = 02 - ABOUT
+* ------------------------------------------------------------------------- */
+#container__about {
+  margin-top: 3rem;
+}
+@media (min-width: 1024px) {
+  #container__about {
+    margin-top: 0;
+  }
+}
+
+/**
+* = 03 - CONTAINER COMMUN TEXTE INFORMATIONS
+* bio ppo + textes collaborateurs
+* ------------------------------------------------------------------------- */
+.o-infos_container--border-bottom {
+  border-bottom: 1px solid black;
+}
+
+.m-infos__text_wrapper {
+  margin-left: 5rem;
+}
+
+.a-infos__text_item {
+  padding: 10px;
+}
+
+.a-infos__text_item > a {
+  color: black;
+  box-shadow: inset 0 0 0 0 black;
+  transition: all ease-in-out 400ms;
+}
+.a-infos__text_item > a:hover {
+  color: white;
+  box-shadow: inset 400px 0 0 0 black;
+}
+
+/**
+* = 04 - CONTACT
+* ------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  #contactPhone {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1228px) {
+  #contactDesktop {
+    display: none;
+  }
+}
+
+#contact__grid_container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: " adress" " inquiries" " application ";
+}
+@media (min-width: 1024px) {
+  #contact__grid_container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: " adress ." " inquiries application ";
+  }
+}
+
+#ppoAdress {
+  grid-area: adress;
+  padding: calc(5px* 2) 10px;
+}
+
+#inquiries {
+  grid-area: inquiries;
+  padding-bottom: calc(5px* 2);
+}
+
+#application {
+  grid-area: application;
+  padding-bottom: calc(5px* 2);
+}
+
+#hidden {
+  display: none;
+}
+
+/**
+* = CONTAINER CONTRIBUTION & EXHIBITION 
+* Container qui gere la grid des deux element contribution + exhibition
+* ------------------------------------------------------------------------- */
+.o-contributionsExhibitions__container {
+  display: block;
+}
+@media (min-width: 769px) {
+  .o-contributionsExhibitions__container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5rem;
+  }
+}
+.o-contributionsExhibitions__container :last-child {
+  padding-right: 10px;
+}
+
+.m-contributionExhibition__wrapper {
+  padding-left: 10px;
+  width: 50%;
+}
+
+#title-service {
+  display: inline;
+  line-height: 2rem;
+}
+
+#number-service {
+  text-decoration: none;
+  background-image: linear-gradient(black, black);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+
+/**
+* = 04 - HOME PAGE RIGHT
+* ------------------------------------------------------------------------- */
 @media (min-width: 1024px) {
   .m-pageSplit_homeRight__wrapper {
     width: 50%;
@@ -965,7 +703,37 @@ img {
 }
 
 /**
- * = 04 - PROJECT PAGE LEFT
+* = 04 - INDEX : PROJECT
+* ------------------------------------------------------------------------- */
+.m-pageSplit_homeRight__wrapper > .m-index_heading__wrapper {
+  margin-top: 5px;
+}
+@media (min-width: 1024px) {
+  .m-pageSplit_homeRight__wrapper > .m-index_heading__wrapper {
+    border-left: 1px solid black;
+  }
+}
+
+/**
+* = 04 - COVER IMAGES
+* ------------------------------------------------------------------------- */
+.o-coverImage__container {
+  border-left: none;
+}
+@media (min-width: 1024px) {
+  .o-coverImage__container {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
+
+.a-coverImage__item {
+  width: 100%;
+  height: auto;
+}
+
+/**
+ * = 01 - PROJECT PAGE LEFT
  * ------------------------------------------------------------------------- */
 .m-pageSplit_projectLeft__wrapper {
   order: 2;
@@ -979,8 +747,8 @@ img {
 }
 
 /**
- * = 05 - PROJECT PAGE RIGHT
- * ------------------------------------------------------------------------- */
+* = 02 - PROJECT PAGE RIGHT
+* ------------------------------------------------------------------------- */
 .m-pageSplit_projectRight__wrapper {
   order: 1;
 }
@@ -993,6 +761,141 @@ img {
     height: 100vh;
     padding-right: 10px;
     border-left: 1px solid black;
+  }
+}
+.m-pageSplit_projectRight__wrapper > .m-index_heading__wrapper {
+  margin-top: 33px;
+  border-top: none;
+}
+@media (min-width: 1024px) {
+  .m-pageSplit_projectRight__wrapper > .m-index_heading__wrapper {
+    margin-top: 0;
+  }
+}
+.m-pageSplit_projectRight__wrapper > .m-index_heading__wrapper > .a-index_heading__item {
+  border-left: 1px solid black;
+}
+
+/**
+* = 02 - TITLE CONTAINER
+* Grille de mise en page cover : titre, city, year, (si besoin mots CLEFS)
+* ------------------------------------------------------------------------- */
+.m-title_project__container {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: ". title" ". city" ". year" ". ." "arrow intro  ";
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 10px;
+  border-bottom: 1px solid black;
+}
+@media (min-width: 768px) {
+  .m-title_project__container {
+    grid-template-columns: 5rem repeat(2, 1fr);
+    grid-template-areas: ". title title" ". city year";
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.a-project_informationsTitle__item {
+  grid-area: title;
+}
+
+.a-project_informationsCity__item {
+  grid-area: city;
+  padding-left: 10px;
+}
+
+.a-project_informationsYear__item {
+  grid-area: year;
+}
+
+/**
+* = 02 - TEXTE CONTAINER
+* Liens externes
+* ------------------------------------------------------------------------- */
+.m-text_project__container {
+  position: relative;
+  padding-left: 10px;
+  border-bottom: 1px solid black;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+@media (min-width: 1024px) {
+  .m-text_project__container {
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+    scroll-snap-type: y mandatory;
+  }
+}
+
+/* = LIENS EXTERNES */
+.a-link_project {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* = PARAGRAPHE TEXTE */
+.m-text_project__wrapper {
+  position: relative;
+  max-height: 35vh;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.m-text_project__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.a-text_project__item {
+  padding-top: 1.3rem;
+}
+
+#word-noWrap {
+  white-space: nowrap;
+}
+
+/**
+* = 03 - TEXTE CONTAINER
+* Liens externes
+* ------------------------------------------------------------------------- */
+#border-top {
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 3rem;
+  height: 1px;
+  border-bottom: 2px solid black;
+  background-color: white;
+}
+
+.copyright-image {
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+.copyright-image :nth-child(1) {
+  margin-right: 3rem;
+}
+
+/**
+* = 04 - ACCORIDON DETAILS
+* ------------------------------------------------------------------------- */
+.o-details_accordion__container {
+  display: block;
+  padding: 0 10px;
+}
+@media (min-width: 769px) {
+  .o-details_accordion__container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
   }
 }
 

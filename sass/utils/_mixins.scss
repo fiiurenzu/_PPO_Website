@@ -6,14 +6,9 @@
 /**
  * = 01 - INFOS CONTAINER COMMUN
  * ------------------------------------------------------------------------- */
-@mixin infos-index {
+@mixin index_container-style {
   border-top: $border;
   border-bottom: $border;
-  display: flex;
-  flex-direction: row;
-}
-
-@mixin text-infos {
   display: flex;
   flex-direction: row;
 }
@@ -39,9 +34,8 @@
  * = 03 - PADDING & BORDER POUR CADRE DE CONTAINER
  * ------------------------------------------------------------------------- */
 
-@mixin cadre-container {
+@mixin cadre-container($padding-left: $pad-L-R) {
   padding-left: $pad-L-R;
-  padding-right: $pad-L-R;
   border-bottom: $border;
 }
 

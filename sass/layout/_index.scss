@@ -1,64 +1,14 @@
-/** ========================================================================
-* = INDEX
-*
-* 01 - INDEX HOME
-* 02 - INDEX PROJECTS
-* 
-* ========================================================================= */
-
 /**
- * = 01 - INDEX HOME
+ * = 01 - INDEX DES PARTIES : CONTACT, PROJECT ETC.
  * ------------------------------------------------------------------------- */
-.o-indexHome__container {
-  border-top: $border;
-  border-bottom: $border;
-  margin-top: calc(#{$marg}/ 2);
-  @include media(">=desktop") {
-    border-left: $border;
-  }
+.m-index_heading__wrapper {
+  @include index_container-style;
 }
 
-.m-indexHome__wrapper {
-  display: grid;
-  grid-template-columns: $col 1fr;
-  grid-template-areas: ". about";
-
-  @include media(">=desktop") {
-    grid-template-columns: $col 1fr;
-  }
-}
-.a-indexHome__item {
-  border-left: $border;
-  grid-area: about;
+.a-index_heading__item {
+  margin-left: $col;
   padding: $pad-T-B $pad-L-R;
 }
-
-/**
- * = 02 - INDEX PROJECTS
- * ------------------------------------------------------------------------- */
-
-.o-indexProjects__container {
-  margin-top: 33px;
-  @include media(">=desktop") {
-    margin-top: 0;
-  }
-  .m-infos__heading_wrapper {
-    border-top: none;
-    > .a-infos__heading_item {
-      border-left: $border;
-    }
-  }
-}
-
-.a-indexProjects_name__item,
-.a-indexProjects_category__item {
-  padding: $pad-T-B $pad-L-R;
-}
-.a-indexProjects_name__item {
-  border-right: $border;
+#heading--border_left {
   border-left: $border;
-  grid-area: name-client;
-}
-.a-indexProjects_category__item {
-  grid-area: category;
 }

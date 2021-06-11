@@ -1,0 +1,6 @@
+._slideHover {
+  &:hover {
+    color: $second;
+    box-shadow: inset 400px 0 0 0 $first;
+  }
+}

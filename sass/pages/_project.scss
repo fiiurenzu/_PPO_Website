@@ -1,0 +1,151 @@
+/**
+ * = 01 - PROJECT PAGE LEFT
+ * ------------------------------------------------------------------------- */
+.m-pageSplit_projectLeft__wrapper {
+  order: 2;
+  @include media(">=desktop") {
+    flex-direction: row;
+    width: 50%;
+    //padding-left: $pad-L-R; //!TODO A SUPP//
+    order: 1;
+  }
+}
+
+/**
+* = 02 - PROJECT PAGE RIGHT
+* ------------------------------------------------------------------------- */
+.m-pageSplit_projectRight__wrapper {
+  order: 1;
+  @include media(">=desktop") {
+    order: 2;
+    position: fixed;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+    padding-right: $pad-L-R;
+    border-left: $border;
+  }
+  > .m-index_heading__wrapper {
+    margin-top: 33px;
+    border-top: none;
+    @include media(">=desktop") {
+      margin-top: 0;
+    }
+    > .a-index_heading__item {
+      border-left: $border;
+    }
+  }
+}
+
+/**
+* = 02 - TITLE CONTAINER
+* Grille de mise en page cover : titre, city, year, (si besoin mots CLEFS)
+* ------------------------------------------------------------------------- */
+.m-title_project__container {
+  display: grid;
+  grid-template-columns: $col 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    ". title"
+    ". city"
+    ". year"
+    ". ."
+    "arrow intro  ";
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  @include cadre-container;
+  @include media(">=tablet") {
+    grid-template-columns: $col repeat(2, 1fr);
+    grid-template-areas:
+      ". title title"
+      ". city year";
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+.a-project_informationsTitle__item {
+  grid-area: title;
+}
+.a-project_informationsCity__item {
+  grid-area: city;
+  padding-left: $pad-L-R;
+}
+.a-project_informationsYear__item {
+  grid-area: year;
+}
+
+/**
+* = 02 - TEXTE CONTAINER
+* Liens externes
+* ------------------------------------------------------------------------- */
+.m-text_project__container {
+  position: relative;
+  @include cadre-container;
+  padding-top: $pad-T-B;
+  padding-right: $pad-L-R;
+  @include media(">=desktop") {
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+    scroll-snap-type: y mandatory;
+  }
+}
+/* = LIENS EXTERNES */
+.a-link_project {
+  @include padding-links-copyright; //!todo VOIR SI ON GARDE LA MIXIN
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* = PARAGRAPHE TEXTE */
+.m-text_project__wrapper {
+  position: relative;
+  max-height: 35vh;
+  overflow: scroll;
+  -ms-overflow-style: none; // OVERFLOW POUR IE & EDGE
+  scrollbar-width: none; // DISABLE SCROLLBAR FIREFOX
+}
+.m-text_project__wrapper::-webkit-scrollbar {
+  display: none; //DISABLE SCROLLBAR CHROMIUM
+}
+.a-text_project__item {
+  padding-top: 1.3rem; // PADDING PARAGRAPHES SUIVANTS//
+}
+#word-noWrap {
+  white-space: nowrap;
+}
+
+/**
+* = 03 - TEXTE CONTAINER
+* Liens externes
+* ------------------------------------------------------------------------- */
+#border-top {
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 3rem;
+  height: 1px;
+  border-bottom: 2px solid $first;
+  background-color: $second;
+}
+.copyright-image {
+  @include padding-links-copyright($padding-top: 0);
+  display: flex;
+  flex-direction: row;
+  :nth-child(1) {
+    margin-right: 3rem;
+  }
+}
+
+/**
+* = 04 - ACCORIDON DETAILS
+* ------------------------------------------------------------------------- */
+.o-details_accordion__container {
+  display: block;
+  padding: 0 $pad-L-R;
+  @include media(">tablet") {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+  }
+}
+
+//!todo VOIR SI PASSER DETAILS SUR COLONNE DE DROITE//

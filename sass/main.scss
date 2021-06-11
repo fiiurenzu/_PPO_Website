@@ -1,29 +1,26 @@
 // UTILS //
 @import "./utils/variables.scss";
 @import "./utils/breakpoints.scss";
+@import "./utils/mixins";
 
 // BASE //
 @import "./base/_font";
-@import "./base/mixins";
 @import "./base/base.scss";
 @import "./base/typography";
-@import "./base/imagesVideo--project";
 
 // COMPONENTS //
-@import "./components/_infos-container-home";
+@import "./components/imagesVideo--project";
 @import "./components/button-previous-next";
-@import "./components/_infoBulle";
+@import "./components/_info-bulle";
 @import "./components/_accordion";
-@import "./components/_slideUnderline";
+@import "./components/_slide-underline";
 
 // LAYOUT //
 @import "./layout/navbar.scss";
-@import "./layout/_contributionExhibition";
-@import "./layout/_cover";
-@import "./layout/_projectContainer";
-@import "./layout/index";
-@import "./layout/_detailsServices";
+@import "./layout/_index";
 @import "./layout/footer";
 
 // PAGES //
 @import "./pages/pageLayout";
+@import "./pages/_home";
+@import "./pages/_project";

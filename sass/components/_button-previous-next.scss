@@ -1,5 +1,7 @@
-// BUTTON PREVIOUS NEXT //
-.o-navigationButtons {
+/**
+ * = 01 - BOUTON DE NAV PREVIOUS NEXT
+ * ------------------------------------------------------------------------- */
+.o-navigation_buttons {
   @include media(">=desktop") {
     width: 50%;
     background-color: $second;
@@ -8,31 +10,22 @@
     padding-right: $pad-L-R;
   }
 }
-
-.m-navigationButtons {
-  display: grid;
-  grid-template-columns: $col repeat(2, 1fr);
-  grid-template-areas: ". name-client category";
-  border-top: $border;
+.m-navigation_buttons {
+  @include index_container-style;
+  @include media(">=desktop") {
+    border-bottom: none;
+  }
+  :first-child {
+    margin-left: $col;
+    border-left: $border;
+  }
+  :last-child {
+    border-right: none;
+  }
 }
-
-.a-navigationButtons {
+.a-navigation_buttons {
   @include button-slide-hover-right();
   padding: $pad-T-B $pad-L-R;
   border-right: $border;
-}
-._slideHover {
-  &:hover {
-    color: $second;
-    box-shadow: inset 400px 0 0 0 $first;
-  }
-}
-
-#previous {
-  border-right: $border;
-  grid-area: name-client;
-}
-#next {
-  grid-area: category;
-  border: none;
+  flex-grow: 1;
 }
