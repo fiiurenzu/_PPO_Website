@@ -1,6 +1,5 @@
-// SPACING //
-$col-phone: 5rem;
-$col-desk: 5rem;
+// COLONNES GRID //
+$col: 5rem;
 
 // COLORS //
 $first: black;
@@ -25,15 +24,12 @@ $sans-serif: helvetica;
 $text1: 1.6rem;
 $text2: 1.4rem;
 $text3: 1.3rem;
-$title-mobile: 4rem;
-$title: 5rem;
+$title-small: 4rem;
+$title-big: 5rem;
 $emoji: 1.5rem;
 
 // *** LINE HEIGHT *** //
 // *** MOBILE *** //
-$line-height--index--mobile: 3.5rem;
-
-// *** LINE HEIGHT *** //
-// *** DESKTOP *** //
-$line-height--index--desktop: 1.6rem;
-$line-height--text--desktop: 2rem;
+$line-height-small: 1.6rem;
+$line-height-medium: 2rem;
+$line-height-large: 3.5rem;

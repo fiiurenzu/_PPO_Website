@@ -20,11 +20,11 @@
 
 .m-indexHome__wrapper {
   display: grid;
-  grid-template-columns: $col-phone 1fr;
+  grid-template-columns: $col 1fr;
   grid-template-areas: ". about";
 
   @include media(">=desktop") {
-    grid-template-columns: $col-desk 1fr;
+    grid-template-columns: $col 1fr;
   }
 }
 .a-indexHome__item {

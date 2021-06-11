@@ -16,7 +16,7 @@
   border-top: $border;
   border-bottom: $border;
   display: grid;
-  grid-template-columns: $col-desk repeat(4, auto);
+  grid-template-columns: $col repeat(4, auto);
 }
 
 .a-footer__item {
@@ -40,7 +40,7 @@
 .m-footer__wrapper--mobile {
   border-bottom: $border;
   display: grid;
-  grid-template-columns: $col-desk repeat(4, auto);
+  grid-template-columns: $col repeat(4, auto);
 }
 
 .a-footer__item--mobile {
