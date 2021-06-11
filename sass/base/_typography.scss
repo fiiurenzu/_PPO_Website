@@ -55,24 +55,20 @@ h4 {
 
 /* = 02.3 - CONTAINER PROJECT : TITLE */
 .a-project_informationsTitle__item {
-  font-size: $title-mobile;
-  line-height: $line-height--index--mobile;
+  font-size: $title-small;
   padding-top: $pad-T-B;
   text-transform: uppercase;
-  @include media("=>desktop") {
-    font-size: $title;
-    line-height: $line-height--index--desktop;
+  @include media(">=tablet") {
+    font-size: $title-big;
   }
 }
-
 /* = 02.4 - CONTAINER PROJECT : DATE & CITY */
 .a-project_informationsCity__item,
 .a-project_informationsYear__item,
 .a-image__description__item {
   font-family: "sangneuf", "Courier New", Courier, monospace;
-  line-height: $line-height--index--desktop;
+  line-height: $line-height-small;
 }
-
 /* = 02.5 - CONTAINER PROJECT : MOTS CLEFS */
 ._projectIntro {
   @include typography-content();
@@ -84,14 +80,14 @@ h4 {
  * ------------------------------------------------------------------------- */
 /* = 03.1 - ABOUT */
 .a-infos__text_item {
-  line-height: $line-height--text--desktop;
+  line-height: $line-height-medium;
 }
 
 /* = 03.4 - CONTRIBUTIONS & EXHIBITIONS */
 .m-contribution_content__wrapper,
 .a-exhibitionTab__wrapper {
   font-size: $text3;
-  line-height: $line-height--index--desktop;
+  line-height: $line-height-small;
 }
 /**
  * = 04 - PROJECT
@@ -103,18 +99,15 @@ h4 {
   font-size: $text3;
   font-weight: bold;
 }
-
 /* = 04.2 - TEXTES */
 .m-text__wrapper {
   @include typography-content();
 }
-
 /* = 04.3 - LIENS EXTERNES */
 .a-linkProject,
 .copyright-image {
   font-size: $text2;
 }
-
 /* = 04.3 - LISTE DERULANTE - SERVICES */
 .list__services {
   font-size: $text2;

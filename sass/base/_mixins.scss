@@ -1,5 +1,5 @@
 @mixin typography-content {
-  line-height: $line-height--text--desktop;
+  line-height: $line-height-medium;
   font-size: $text1;
 }
 
@@ -33,6 +33,16 @@
   color: $first;
   box-shadow: inset 0 0 0 0 $first;
   transition: all ease-in-out 400ms;
+}
+
+/**
+ * = 03 - PADDING & BORDER POUR CADRE DE CONTAINER
+ * ------------------------------------------------------------------------- */
+
+@mixin cadre-container {
+  padding-left: $pad-L-R;
+  padding-right: $pad-L-R;
+  border-bottom: $border;
 }
 
 /**
