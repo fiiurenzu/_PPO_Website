@@ -24,7 +24,7 @@
   }
 }
 .a-navigation_buttons {
-  @include button-slide-hover-right();
+  @include button-slide-right();
   padding: $pad-T-B $pad-L-R;
   border-right: $border;
   flex-grow: 1;

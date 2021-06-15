@@ -33,12 +33,11 @@
 .a-infos__text_item {
   padding: $pad-L-R;
 }
-// TOUS LES LIENS DANS LES TEXTES DES CONTAINERS INFOS AURONT UNE ANIMATION HOVER //
+// TOUS LES LIENS DANS LES TEXTES DES CONTAINERS INFOS ONT UNE ANIMATION HOVER //
 .a-infos__text_item > a {
-  @include button-slide-hover-right;
+  @include button-slide-right;
   &:hover {
-    color: $second;
-    box-shadow: inset 400px 0 0 0 $first;
+    @include button-slide-right--hover;
   }
 }
 
@@ -94,18 +93,25 @@
 * ------------------------------------------------------------------------- */
 .o-contributionsExhibitions__container {
   display: block;
+  margin-left: $col;
+  @include media("<=tablet") {
+    padding-right: $pad-L-R;
+  }
   @include media(">tablet") {
     display: flex;
     flex-direction: row;
-    margin-left: $col;
   }
   :last-child {
-    padding-right: $pad-L-R;
+    @include media(">=desktop") {
+      padding-right: $pad-L-R;
+    }
   }
 }
 .m-contributionExhibition__wrapper {
   padding-left: $pad-L-R;
-  width: 50%;
+  @include media(">=desktop") {
+    width: 50%;
+  }
 }
 
 #title-service {

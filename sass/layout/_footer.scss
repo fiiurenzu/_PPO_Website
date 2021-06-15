@@ -9,6 +9,7 @@
   // QUAND SCREEN DEVIENT FORMAT MOBILE ALORS LE FOOTER DESKTOP HIDDEN//
   @include media("<=1023px") {
     display: none;
+    padding-right: 0;
   }
 }
 .m-footer__wrapper {

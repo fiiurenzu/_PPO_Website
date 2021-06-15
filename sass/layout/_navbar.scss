@@ -36,7 +36,7 @@
   }
 
   .a-navbar__item {
-    @include button-slide-hover-right();
+    @include button-slide-right();
     padding: $pad-T-B $pad-L-R;
   }
 }
@@ -50,8 +50,7 @@
  * ------------------------------------------------------------------------- */
 ._slideHover {
   &:hover {
-    color: $second;
-    box-shadow: inset 400px 0 0 0 $first;
+    @include button-slide-right--hover;
   }
   &:after {
     font-size: $text1;

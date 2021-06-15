@@ -43,14 +43,12 @@
 * ------------------------------------------------------------------------- */
 .m-title_project__container {
   display: grid;
-  grid-template-columns: $col 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
-    ". title"
-    ". city"
-    ". year"
-    ". ."
-    "arrow intro  ";
+    "title"
+    "city"
+    "year";
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   @include cadre-container;
@@ -68,7 +66,9 @@
 }
 .a-project_informationsCity__item {
   grid-area: city;
-  padding-left: $pad-L-R;
+  @include media(">=desktop") {
+    padding-left: $pad-L-R;
+  }
 }
 .a-project_informationsYear__item {
   grid-area: year;
@@ -89,13 +89,7 @@
     scroll-snap-type: y mandatory;
   }
 }
-/* = LIENS EXTERNES */
-.a-link_project {
-  @include padding-links-copyright; //!todo VOIR SI ON GARDE LA MIXIN
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+
 /* = PARAGRAPHE TEXTE */
 .m-text_project__wrapper {
   position: relative;
