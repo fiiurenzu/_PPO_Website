@@ -66,9 +66,6 @@
 }
 .a-project_informationsCity__item {
   grid-area: city;
-  @include media(">=desktop") {
-    padding-left: $pad-L-R;
-  }
 }
 .a-project_informationsYear__item {
   grid-area: year;
