@@ -1,0 +1,20 @@
+/* = LIENS EXTERNES */
+.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+  @include media(">=desktop") {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+div.scrollmenu a {
+  @include button-slide-right;
+  display: inline;
+  margin-right: $pad-L-R;
+}
+
+div.scrollmenu a:hover {
+  @include button-slide-right--hover;
+}
