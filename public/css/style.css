@@ -158,7 +158,7 @@ h4 {
 }
 
 /* = 04.3 - LIENS EXTERNES */
-.a-link_project,
+.scrollmenu,
 .copyright-image {
   font-size: 1.4rem;
 }
@@ -201,6 +201,16 @@ h4 {
 
 img {
   width: 100%;
+}
+
+/**
+* = 02 - TITLE CONTAINER
+* Grille de mise en page cover : titre, city, year, (si besoin mots CLEFS)
+* ------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .m-pageSplit_projectLeft__wrapper :first-child {
+    border-top: 1px solid black;
+  }
 }
 
 /**
@@ -376,6 +386,16 @@ img {
 }
 
 /**
+ * = SLIDE HOVER TO THE RIGHT
+ *
+ * @include animation d'hover via box-shadow
+ * ------------------------------------------------------------------------- */
+._slideHover:hover {
+  color: white;
+  box-shadow: inset 500px 0 0 0 black;
+}
+
+/**
  * = UNDERLINE & ANIMATION UNDERLINE HOVER
  *
  * @include pour l'underline en background image
@@ -402,6 +422,76 @@ img {
   color: white;
 }
 
+/* = LIENS EXTERNES */
+.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+@media (min-width: 1024px) {
+  .scrollmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+div.scrollmenu a {
+  color: black;
+  box-shadow: inset 0 0 0 0 black;
+  transition: all ease-in-out 400ms;
+  display: inline;
+  margin-right: 10px;
+}
+
+div.scrollmenu a:hover {
+  color: white;
+  box-shadow: inset 500px 0 0 0 black;
+}
+
+/**
+* = 01 - NOM CLIENT EOTNA
+* contraction du nom entercourse of the new age en eotna
+* ------------------------------------------------------------------------- */
+#eotna-mobile {
+  display: block;
+}
+@media (min-width: 768px) {
+  #eotna-mobile {
+    display: none;
+  }
+}
+
+#eotna-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  #eotna-desktop {
+    display: block;
+  }
+}
+
+/**
+* = 02 - CATEGORIE REFRESH
+* changement de la catégorie refresh
+* ------------------------------------------------------------------------- */
+#refresh-mobile {
+  display: block;
+}
+@media (min-width: 768px) {
+  #refresh-mobile {
+    display: none;
+  }
+}
+
+#refresh-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  #refresh-desktop {
+    display: block;
+  }
+}
+
 /**
  * = NAVBAR 
  *
@@ -417,7 +507,7 @@ img {
   top: 0;
   width: 100%;
   background-color: white;
-  padding-top: calc(10px / 2);
+  padding-top: calc(10px/ 2);
   z-index: 9999;
 }
 @media (min-width: 1024px) {
@@ -484,11 +574,12 @@ img {
   position: fixed;
   bottom: 0;
   padding-right: 10px;
-  margin-bottom: calc(10px / 2);
+  margin-bottom: calc(10px/ 2);
 }
 @media (max-width: 1023px) {
   .o-footer__container {
     display: none;
+    padding-right: 0;
   }
 }
 
@@ -603,7 +694,7 @@ img {
 }
 .a-infos__text_item > a:hover {
   color: white;
-  box-shadow: inset 400px 0 0 0 black;
+  box-shadow: inset 500px 0 0 0 black;
 }
 
 /**
@@ -637,17 +728,17 @@ img {
 
 #ppoAdress {
   grid-area: adress;
-  padding: calc(5px * 2) 10px;
+  padding: calc(5px* 2) 10px;
 }
 
 #inquiries {
   grid-area: inquiries;
-  padding-bottom: calc(5px * 2);
+  padding-bottom: calc(5px* 2);
 }
 
 #application {
   grid-area: application;
-  padding-bottom: calc(5px * 2);
+  padding-bottom: calc(5px* 2);
 }
 
 #hidden {
@@ -660,21 +751,32 @@ img {
 * ------------------------------------------------------------------------- */
 .o-contributionsExhibitions__container {
   display: block;
+  margin-left: 5rem;
+}
+@media (max-width: 768px) {
+  .o-contributionsExhibitions__container {
+    padding-right: 10px;
+  }
 }
 @media (min-width: 769px) {
   .o-contributionsExhibitions__container {
     display: flex;
     flex-direction: row;
-    margin-left: 5rem;
   }
 }
-.o-contributionsExhibitions__container :last-child {
-  padding-right: 10px;
+@media (min-width: 1024px) {
+  .o-contributionsExhibitions__container :last-child {
+    padding-right: 10px;
+  }
 }
 
 .m-contributionExhibition__wrapper {
   padding-left: 10px;
-  width: 50%;
+}
+@media (min-width: 1024px) {
+  .m-contributionExhibition__wrapper {
+    width: 50%;
+  }
 }
 
 #title-service {
@@ -782,12 +884,13 @@ img {
 * ------------------------------------------------------------------------- */
 .m-title_project__container {
   display: grid;
-  grid-template-columns: 5rem 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: ". title" ". city" ". year" ". ." "arrow intro  ";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "title" "city" "year";
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-left: 10px;
+  padding-right: 10px;
   border-bottom: 1px solid black;
 }
 @media (min-width: 768px) {
@@ -805,7 +908,6 @@ img {
 
 .a-project_informationsCity__item {
   grid-area: city;
-  padding-left: 10px;
 }
 
 .a-project_informationsYear__item {
@@ -819,6 +921,7 @@ img {
 .m-text_project__container {
   position: relative;
   padding-left: 10px;
+  padding-right: 10px;
   border-bottom: 1px solid black;
   padding-top: 5px;
   padding-right: 10px;
@@ -829,15 +932,6 @@ img {
     padding-bottom: 0.5rem;
     scroll-snap-type: y mandatory;
   }
-}
-
-/* = LIENS EXTERNES */
-.a-link_project {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 /* = PARAGRAPHE TEXTE */
