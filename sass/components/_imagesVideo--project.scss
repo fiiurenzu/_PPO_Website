@@ -31,7 +31,7 @@ img {
 * ------------------------------------------------------------------------- */
 .m-pageSplit_projectLeft__wrapper {
   :first-child {
-    @include media("<=tablet") {
+    @include media("<desktop") {
       border-top: $border;
     }
   }

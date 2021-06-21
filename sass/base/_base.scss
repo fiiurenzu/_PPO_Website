@@ -1,27 +1,136 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
+/**
+ * = 01 - SCROLL HTML
+ * ------------------------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
 
+/**
+ * = 02 - MARGINS PADDINGS & BORDERS 
+ * ------------------------------------------------------------------------- */
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
 ul,
-ol {
-  list-style: none;
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-a {
+/**
+ * = 03 - LINKS
+ * ------------------------------------------------------------------------- */
+a,
+a:visited {
+  color: inherit;
   text-decoration: none;
-  color: $first;
   box-sizing: border-box;
 }
 
+/**
+ * = 04 - LAYOUTS
+ * ------------------------------------------------------------------------- */
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**
+ * = 04 - SPECIFIC ELEMENTS
+ * ------------------------------------------------------------------------- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
 img {
+  border-style: none;
   box-sizing: border-box;
   display: block;
 }

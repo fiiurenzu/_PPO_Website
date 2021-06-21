@@ -1,33 +1,12 @@
-/** ========================================================================
-* = CHARTE TYPOGRAPHIQUE
-*
-* 01 - BASE : HTML BODY 
-* 02 - TYPO ENSEMBLE DES PAGES
-* 02.1 - NAVBAR
-* 02.2 - INDEX
-* 02.3 - COVER 
-* 02.3.1 - TITLE
-* 02.3.1 - DATE & CITY
-* 02.3.1 - MOTS CLEFS
-* -----
-* 03 - HOME 
-* -----
-* 04 - PROJECT
-* 04.1 - BUTTONS ANCHORS
-* 04.2 - TEXTE (cf.body)
-* 04.3 - LISTE DÉROULANTE DETAILS SERVICES
-* 05 - FOOTER
-* 
-* ========================================================================= */
-
 /**
- * = 01 - BASE : HTML BODY
+ * = 01 - NORMALIZE & RESET DES STYLES 
  * 
  * ------------------------------------------------------------------------- */
 
 html {
   font-size: 62.5%;
 }
+
 body {
   font-size: $text1;
   font-family: $sans-serif;
@@ -41,42 +20,17 @@ body {
     background: $first;
   }
 }
+h2,
+h3 {
+  font-size: $text1;
+  font-weight: 400;
+}
 h4 {
   font-weight: 400;
 }
 
 /**
- * = 02 - TYPO COMMUNE : NAVBAR, INDEX, CONTAINER COVER PROJECT (HOME + PROJECT)
- * 
- * ------------------------------------------------------------------------- */
-/* = 02.1 - NAVBAR */
-
-/* = 02.2 - INDEX */
-
-/* = 02.3 - CONTAINER PROJECT : TITLE */
-.a-project_informationsTitle__item {
-  font-size: $title-small;
-  padding-top: $pad-T-B;
-  text-transform: uppercase;
-  @include media(">=1025") {
-    font-size: $title-big;
-  }
-}
-/* = 02.4 - CONTAINER PROJECT : DATE & CITY */
-.a-project_informationsCity__item,
-.a-project_informationsYear__item,
-.a-image__description__item {
-  font-family: "sangneuf", "Courier New", Courier, monospace;
-  line-height: $line-height-small;
-}
-/* = 02.5 - CONTAINER PROJECT : MOTS CLEFS */
-._projectIntro {
-  @include typography-content();
-}
-
-/**
  * = 03 - HOME
- * 
  * ------------------------------------------------------------------------- */
 /* = 03.1 - ABOUT */
 .a-infos__text_item {
@@ -89,33 +43,46 @@ h4 {
   font-size: $text3;
   line-height: $line-height-small;
 }
+
 /**
- * = 04 - PROJECT
- * 
+ * = 03 - PROJECT 
  * ------------------------------------------------------------------------- */
 
-/* = 04.1 - BOUTTONS ANCHORS */
-.m-buttonText__wrapper {
-  font-size: $text3;
-  font-weight: bold;
+/* = 03.1 - CONTAINER PROJECT : TITLE */
+.a-project_informationsTitle__item {
+  font-size: $title-small;
+  padding-top: $pad-T-B;
+  text-transform: uppercase;
+  @include media(">=1025") {
+    font-size: $title-big;
+  }
 }
-/* = 04.2 - TEXTES */
-.a-text_project__item {
-  @include typography-content();
+/* = 03.2 - CONTAINER PROJECT : DATE & CITY */
+.a-project_informationsCity__item,
+.a-project_informationsYear__item,
+.a-image__description__item {
+  font-family: "sangneuf", "Courier New", Courier, monospace; //TODO: remplacer par nouvelle version
+  line-height: $line-height-small;
 }
-/* = 04.3 - LIENS EXTERNES */
+/* = 03.3 - LIENS EXTERNES SCROLLABLE + COPYRIGHT IMAGES */
 .scrollmenu,
 .copyright-image {
   font-size: $text2;
 }
-/* = 04.3 - LISTE DERULANTE - SERVICES */
+
+/* = 03.4 - TEXTES */
+.a-text_project__item {
+  line-height: $line-height-medium;
+  font-size: $text1;
+}
+
+/* = 03.5 - LISTE DERULANTE - SERVICES */
 .list__services {
   font-size: $text2;
 }
 
 /**
- * = 05 - FOOTER
- * 
+ * = 04 - FOOTER
  * ------------------------------------------------------------------------- */
 .o-footer__container {
   font-size: $text3;

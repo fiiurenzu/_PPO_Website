@@ -18,57 +18,144 @@
   src: url(/public/fonts/SangNeufSansMono-Regular.woff2);
   font-family: "sangneuf";
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
+/**
+ * = 01 - SCROLL HTML
+ * ------------------------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
 
+/**
+ * = 02 - MARGINS PADDINGS & BORDERS 
+ * ------------------------------------------------------------------------- */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
 ul,
-ol {
-  list-style: none;
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-a {
+/**
+ * = 03 - LINKS
+ * ------------------------------------------------------------------------- */
+a,
+a:visited {
+  color: inherit;
   text-decoration: none;
-  color: black;
   box-sizing: border-box;
 }
 
+/**
+ * = 04 - LAYOUTS
+ * ------------------------------------------------------------------------- */
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**
+ * = 04 - SPECIFIC ELEMENTS
+ * ------------------------------------------------------------------------- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
 img {
+  border-style: none;
   box-sizing: border-box;
   display: block;
 }
 
-/** ========================================================================
-* = CHARTE TYPOGRAPHIQUE
-*
-* 01 - BASE : HTML BODY 
-* 02 - TYPO ENSEMBLE DES PAGES
-* 02.1 - NAVBAR
-* 02.2 - INDEX
-* 02.3 - COVER 
-* 02.3.1 - TITLE
-* 02.3.1 - DATE & CITY
-* 02.3.1 - MOTS CLEFS
-* -----
-* 03 - HOME 
-* -----
-* 04 - PROJECT
-* 04.1 - BUTTONS ANCHORS
-* 04.2 - TEXTE (cf.body)
-* 04.3 - LISTE DÉROULANTE DETAILS SERVICES
-* 05 - FOOTER
-* 
-* ========================================================================= */
 /**
- * = 01 - BASE : HTML BODY
+ * = 01 - NORMALIZE & RESET DES STYLES 
  * 
  * ------------------------------------------------------------------------- */
 html {
@@ -89,45 +176,18 @@ body ::-moz-selection {
   background: black;
 }
 
+h2,
+h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 h4 {
   font-weight: 400;
 }
 
 /**
- * = 02 - TYPO COMMUNE : NAVBAR, INDEX, CONTAINER COVER PROJECT (HOME + PROJECT)
- * 
- * ------------------------------------------------------------------------- */
-/* = 02.1 - NAVBAR */
-/* = 02.2 - INDEX */
-/* = 02.3 - CONTAINER PROJECT : TITLE */
-.a-project_informationsTitle__item {
-  font-size: 4rem;
-  padding-top: 5px;
-  text-transform: uppercase;
-}
-@media (min-width: 1025) {
-  .a-project_informationsTitle__item {
-    font-size: 5rem;
-  }
-}
-
-/* = 02.4 - CONTAINER PROJECT : DATE & CITY */
-.a-project_informationsCity__item,
-.a-project_informationsYear__item,
-.a-image__description__item {
-  font-family: "sangneuf", "Courier New", Courier, monospace;
-  line-height: 1.6rem;
-}
-
-/* = 02.5 - CONTAINER PROJECT : MOTS CLEFS */
-._projectIntro {
-  line-height: 2rem;
-  font-size: 1.6rem;
-}
-
-/**
  * = 03 - HOME
- * 
  * ------------------------------------------------------------------------- */
 /* = 03.1 - ABOUT */
 .a-infos__text_item {
@@ -142,35 +202,47 @@ h4 {
 }
 
 /**
- * = 04 - PROJECT
- * 
+ * = 03 - PROJECT 
  * ------------------------------------------------------------------------- */
-/* = 04.1 - BOUTTONS ANCHORS */
-.m-buttonText__wrapper {
-  font-size: 1.3rem;
-  font-weight: bold;
+/* = 03.1 - CONTAINER PROJECT : TITLE */
+.a-project_informationsTitle__item {
+  font-size: 4rem;
+  padding-top: 5px;
+  text-transform: uppercase;
+}
+@media (min-width: 1025) {
+  .a-project_informationsTitle__item {
+    font-size: 5rem;
+  }
 }
 
-/* = 04.2 - TEXTES */
-.a-text_project__item {
-  line-height: 2rem;
-  font-size: 1.6rem;
+/* = 03.2 - CONTAINER PROJECT : DATE & CITY */
+.a-project_informationsCity__item,
+.a-project_informationsYear__item,
+.a-image__description__item {
+  font-family: "sangneuf", "Courier New", Courier, monospace;
+  line-height: 1.6rem;
 }
 
-/* = 04.3 - LIENS EXTERNES */
+/* = 03.3 - LIENS EXTERNES SCROLLABLE + COPYRIGHT IMAGES */
 .scrollmenu,
 .copyright-image {
   font-size: 1.4rem;
 }
 
-/* = 04.3 - LISTE DERULANTE - SERVICES */
+/* = 03.4 - TEXTES */
+.a-text_project__item {
+  line-height: 2rem;
+  font-size: 1.6rem;
+}
+
+/* = 03.5 - LISTE DERULANTE - SERVICES */
 .list__services {
   font-size: 1.4rem;
 }
 
 /**
- * = 05 - FOOTER
- * 
+ * = 04 - FOOTER
  * ------------------------------------------------------------------------- */
 .o-footer__container {
   font-size: 1.3rem;
@@ -207,7 +279,7 @@ img {
 * = 02 - TITLE CONTAINER
 * Grille de mise en page cover : titre, city, year, (si besoin mots CLEFS)
 * ------------------------------------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .m-pageSplit_projectLeft__wrapper :first-child {
     border-top: 1px solid black;
   }
