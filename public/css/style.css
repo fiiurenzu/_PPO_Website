@@ -469,7 +469,7 @@ img {
  *
  * @include animation d'hover via box-shadow
  * ------------------------------------------------------------------------- */
-._slideHover:hover, ._slideHover:active {
+._slideHover:hover, ._slideHover:focus {
   color: white;
   box-shadow: inset 500px 0 0 0 black;
 }
@@ -496,7 +496,7 @@ img {
   -o-transition: all 300ms ease-in-out;
   transition-delay: 90ms;
 }
-.slide__underline:hover, .slide__underline:active {
+.slide__underline:hover, .slide__underline:focus {
   background-size: 100% 100%;
   color: white;
 }
