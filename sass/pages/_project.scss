@@ -78,7 +78,7 @@
 .m-text_project__container {
   position: relative;
   @include cadre-container;
-  padding-top: $pad-T-B;
+  padding-top: $pad-L-R;
   padding-right: $pad-L-R;
   @include media(">=desktop") {
     padding-right: 0;
@@ -90,17 +90,21 @@
 /* = PARAGRAPHE TEXTE */
 .m-text_project__wrapper {
   position: relative;
-  max-height: 35vh;
+  max-height: 30vh;
   overflow: scroll;
   -ms-overflow-style: none; // OVERFLOW POUR IE & EDGE
   scrollbar-width: none; // DISABLE SCROLLBAR FIREFOX
+  :first-child {
+    padding-top: 0;
+  }
+  p {
+    padding-top: 1.3rem;
+  }
 }
 .m-text_project__wrapper::-webkit-scrollbar {
   display: none; //DISABLE SCROLLBAR CHROMIUM
 }
-.a-text_project__item {
-  padding-top: 1.3rem; // PADDING PARAGRAPHES SUIVANTS//
-}
+
 #word-noWrap {
   white-space: nowrap;
 }
