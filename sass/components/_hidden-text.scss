@@ -1,31 +1,14 @@
 /**
-* = 01 - NOM CLIENT EOTNA
-* contraction du nom entercourse of the new age en eotna
+* = 01 - NOM CLIENT 
+*
 * ------------------------------------------------------------------------- */
-#eotna-mobile {
+#mobile {
   display: block;
   @include media(">=tablet") {
     display: none;
   }
 }
-#eotna-desktop {
-  display: none;
-  @include media(">=tablet") {
-    display: block;
-  }
-}
-
-/**
-* = 02 - CATEGORIE REFRESH
-* changement de la catégorie refresh
-* ------------------------------------------------------------------------- */
-#refresh-mobile {
-  display: block;
-  @include media(">=tablet") {
-    display: none;
-  }
-}
-#refresh-desktop {
+#desktop {
   display: none;
   @include media(">=tablet") {
     display: block;
