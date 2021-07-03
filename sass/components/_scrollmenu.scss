@@ -1,6 +1,8 @@
 /* = LIENS EXTERNES */
 .scrollmenu {
   overflow: auto;
+  -ms-overflow-style: none; // OVERFLOW POUR IE & EDGE
+  scrollbar-width: none; // DISABLE SCROLLBAR FIREFOX
   white-space: nowrap;
   @include media(">=desktop") {
     display: flex;
@@ -17,4 +19,11 @@ div.scrollmenu a {
 
 div.scrollmenu a:hover {
   @include button-slide-right--hover;
+}
+
+#list_services {
+  padding-bottom: 0.8rem;
+}
+#external_links {
+  padding-top: 0.8rem;
 }
