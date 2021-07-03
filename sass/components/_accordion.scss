@@ -38,6 +38,8 @@
   max-height: 0px;
   transition: max-height 250ms ease-in-out;
   overflow: scroll;
+  -ms-overflow-style: none; // OVERFLOW POUR IE & EDGE
+  scrollbar-width: none; // DISABLE SCROLLBAR FIREFOX
 }
 
 .service {
