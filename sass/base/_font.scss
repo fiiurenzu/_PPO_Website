@@ -4,4 +4,5 @@
   src: url(/public/fonts/SangNeufSansMono-Regular.woff);
   src: url(/public/fonts/SangNeufSansMono-Regular.woff2);
   font-family: "sangneuf";
+  font-display: swap; // To avoid showing invisible text while custom fonts load
 }
