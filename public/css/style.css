@@ -17,6 +17,7 @@
   src: url(/public/fonts/SangNeufSansMono-Regular.woff);
   src: url(/public/fonts/SangNeufSansMono-Regular.woff2);
   font-family: "sangneuf";
+  font-display: swap;
 }
 /**
  * = 01 - SCROLL HTML
@@ -468,7 +469,7 @@ img {
  *
  * @include animation d'hover via box-shadow
  * ------------------------------------------------------------------------- */
-._slideHover:hover {
+._slideHover:hover, ._slideHover:active {
   color: white;
   box-shadow: inset 500px 0 0 0 black;
 }
@@ -495,7 +496,7 @@ img {
   -o-transition: all 300ms ease-in-out;
   transition-delay: 90ms;
 }
-.slide__underline:hover {
+.slide__underline:hover, .slide__underline:active {
   background-size: 100% 100%;
   color: white;
 }
