@@ -118,7 +118,7 @@
   display: inline;
   line-height: $line-height-medium;
 }
-#number-service {
+.number-service {
   @include underline;
 }
 

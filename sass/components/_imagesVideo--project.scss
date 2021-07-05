@@ -24,15 +24,3 @@
 img {
   width: 100%;
 }
-
-/**
-* = 02 - TITLE CONTAINER
-* Grille de mise en page cover : titre, city, year, (si besoin mots CLEFS)
-* ------------------------------------------------------------------------- */
-.m-pageSplit_projectLeft__wrapper {
-  :first-child {
-    @include media("<desktop") {
-      border-top: $border;
-    }
-  }
-}

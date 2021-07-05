@@ -281,16 +281,6 @@ img {
 }
 
 /**
-* = 02 - TITLE CONTAINER
-* Grille de mise en page cover : titre, city, year, (si besoin mots CLEFS)
-* ------------------------------------------------------------------------- */
-@media (max-width: 1023px) {
-  .m-pageSplit_projectLeft__wrapper :first-child {
-    border-top: 1px solid black;
-  }
-}
-
-/**
  * = 01 - BOUTON DE NAV PREVIOUS NEXT
  * ------------------------------------------------------------------------- */
 @media (min-width: 1024px) {
@@ -639,7 +629,7 @@ div.scrollmenu a:hover {
   padding: 5px 10px;
 }
 
-#heading--border_left {
+.heading--border_left {
   border-left: 1px solid black;
 }
 
@@ -859,7 +849,7 @@ div.scrollmenu a:hover {
   line-height: 2rem;
 }
 
-#number-service {
+.number-service {
   text-decoration: none;
   background-image: linear-gradient(black, black);
   background-size: 100% 1px;
