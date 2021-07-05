@@ -766,13 +766,13 @@ div.scrollmenu a:hover {
 * = 04 - CONTACT
 * ------------------------------------------------------------------------- */
 @media (min-width: 1024px) {
-  #contactPhone {
+  .contactPhone {
     display: none;
   }
 }
 
 @media (min-width: 320px) and (max-width: 1228px) {
-  #contactDesktop {
+  .contactDesktop {
     display: none;
   }
 }

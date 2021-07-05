@@ -45,12 +45,12 @@
 * = 04 - CONTACT
 * ------------------------------------------------------------------------- */
 // VERISION IPHONE : ADRESSE MAIL REMPLACEE PAR CONTACT US //
-#contactPhone {
+.contactPhone {
   @include media(">=desktop") {
     display: none;
   }
 }
-#contactDesktop {
+.contactDesktop {
   @include media(">=phone", "<=1228px") {
     display: none;
   }
