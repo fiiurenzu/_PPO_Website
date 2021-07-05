@@ -10,7 +10,7 @@ for (var i = 0; i < accContrib.length; i++) {
       if (window.innerHeight < 900) {
         panel.style.maxHeight = "15%";
       } else {
-        panel.style.maxHeight = "27%";
+        panel.style.maxHeight = "60%";
       }
     } else {
       panel.style.maxHeight = "0px";
@@ -30,7 +30,7 @@ for (var i = 0; i < accExhib.length; i++) {
       if (window.innerHeight < 900) {
         panel.style.maxHeight = "15%";
       } else {
-        panel.style.maxHeight = "27%";
+        panel.style.maxHeight = "100%";
       }
     } else {
       panel.style.maxHeight = "0px";
@@ -50,7 +50,7 @@ for (var i = 0; i < accServices.length; i++) {
       if (window.innerHeight < 900) {
         panel.style.maxHeight = "15%";
       } else {
-        panel.style.maxHeight = "15%";
+        panel.style.maxHeight = "250px";
       }
     } else {
       panel.style.maxHeight = "0px";
