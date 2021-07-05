@@ -30,7 +30,7 @@ for (var i = 0; i < accExhib.length; i++) {
       if (window.innerHeight < 900) {
         panel.style.maxHeight = "15%";
       } else {
-        panel.style.maxHeight = "100%";
+        panel.style.maxHeight = "60%";
       }
     } else {
       panel.style.maxHeight = "0px";
