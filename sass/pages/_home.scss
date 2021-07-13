@@ -151,11 +151,13 @@
 * ------------------------------------------------------------------------- */
 .o-coverImage__container {
   border-left: none;
+  position: relative;
   @include media(">=desktop") {
     border-left: $border;
     border-bottom: $border;
   }
 }
+
 .a-coverImage__item {
   width: 100%;
   height: auto;
