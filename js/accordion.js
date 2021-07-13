@@ -8,9 +8,9 @@ for (var i = 0; i < accContrib.length; i++) {
     var isActive = document.querySelector(".accordion--contribution").classList.contains("active");
     if (isActive) {
       if (window.innerHeight < 900) {
-        panel.style.maxHeight = "15%";
+        panel.style.maxHeight = "150px";
       } else {
-        panel.style.maxHeight = "60%";
+        panel.style.maxHeight = "450px";
       }
     } else {
       panel.style.maxHeight = "0px";
@@ -28,9 +28,9 @@ for (var i = 0; i < accExhib.length; i++) {
     var isActive = document.querySelector(".accordion--exhibition").classList.contains("active");
     if (isActive) {
       if (window.innerHeight < 900) {
-        panel.style.maxHeight = "15%";
+        panel.style.maxHeight = "150px";
       } else {
-        panel.style.maxHeight = "60%";
+        panel.style.maxHeight = "450px";
       }
     } else {
       panel.style.maxHeight = "0px";
@@ -48,7 +48,7 @@ for (var i = 0; i < accServices.length; i++) {
     var isActive = document.querySelector(".accordion--services").classList.contains("active");
     if (isActive) {
       if (window.innerHeight < 900) {
-        panel.style.maxHeight = "15%";
+        panel.style.maxHeight = "100px";
       } else {
         panel.style.maxHeight = "250px";
       }
