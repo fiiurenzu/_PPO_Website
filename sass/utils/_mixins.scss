@@ -40,10 +40,21 @@
 }
 
 /**
- * = 03 - LINKS & COPYRIGHT PROJECT 
+ * = 04 - LINKS & COPYRIGHT PROJECT 
  * ------------------------------------------------------------------------- */
 
 @mixin padding-links-copyright($padding-top: 0.5rem, $padding-bottom: 0.5rem) {
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
+}
+
+/**
+ * = 05 - COVER BACKGROUND OCLOR
+ * ------------------------------------------------------------------------- */
+
+@mixin background-color-cover($color: black) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 35%, $color 65%) right;
+  background-size: 300%;
+  transition: 0.5s ease-in-out;
+  color: rgba(0, 0, 0, 0);
 }
