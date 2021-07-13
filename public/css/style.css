@@ -9,7 +9,10 @@
  * = 03 - PADDING & BORDER POUR CADRE DE CONTAINER
  * ------------------------------------------------------------------------- */
 /**
- * = 03 - LINKS & COPYRIGHT PROJECT 
+ * = 04 - LINKS & COPYRIGHT PROJECT 
+ * ------------------------------------------------------------------------- */
+/**
+ * = 05 - COVER BACKGROUND OCLOR
  * ------------------------------------------------------------------------- */
 @font-face {
   src: url(/public/fonts/SangNeufSansMono-Regular.eot);
@@ -321,6 +324,50 @@ img {
   flex-grow: 1;
 }
 
+.image__overlay {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 35%, black 65%) right;
+  background-size: 300%;
+  transition: 0.5s ease-in-out;
+  color: rgba(0, 0, 0, 0);
+}
+.image__overlay:hover,
+.image__overlay :focus,
+.image__overlay :active {
+  background-position: left;
+  color: white;
+}
+
+.overlay__wrapper {
+  height: 100%;
+  margin-left: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 10fr 0.5fr;
+  grid-template-areas: "title subtitle" ". ." "date localisation";
+}
+
+.title__overlay {
+  grid-area: title;
+}
+
+.subtitle__overlay {
+  grid-area: subtitle;
+}
+
+.date__overlay {
+  grid-area: date;
+}
+
+.localisation__overlay {
+  grid-area: localisation;
+}
+
 .infoBulle {
   position: relative;
   /*les .infoBulle deviennent référents*/
@@ -547,14 +594,6 @@ div.scrollmenu a:hover {
   #desktop {
     display: block;
   }
-}
-
-.m-coverImage__wrapper {
-  width: 100%;
-  height: 100%;
-}
-.m-coverImage__wrapper:hover {
-  color: black;
 }
 
 /**
@@ -886,6 +925,7 @@ div.scrollmenu a:hover {
 * ------------------------------------------------------------------------- */
 .o-coverImage__container {
   border-left: none;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .o-coverImage__container {
