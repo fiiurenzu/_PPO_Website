@@ -52,8 +52,7 @@ var hoverAnimation = document.getElementById("hoverApplication");
 hoverAnimation.addEventListener("click", function () {
   this.classList.toggle("slidejs");
   setTimeout(function () {
-    console.log("toto");
     window.location.href = "mailto:application@panamapapersoffice.com?subject=Application";
-    console.log(window.location.href);
+    this.classList.remove("slidejs");
   }, 1000);
 });
