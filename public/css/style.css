@@ -508,9 +508,17 @@ img {
   box-shadow: inset 0 0 0 0 black;
   transition: all ease-in-out 400ms;
 }
-._slideHover:hover, ._slideHover:active {
-  color: white;
-  box-shadow: inset 500px 0 0 0 black;
+@media (max-width: 768px) {
+  ._slideHover:active {
+    color: white;
+    box-shadow: inset 500px 0 0 0 black;
+  }
+}
+@media (min-width: 769px) {
+  ._slideHover:hover {
+    color: white;
+    box-shadow: inset 500px 0 0 0 black;
+  }
 }
 
 .slidejs {

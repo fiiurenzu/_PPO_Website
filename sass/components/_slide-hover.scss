@@ -5,9 +5,15 @@
  * ------------------------------------------------------------------------- */
 ._slideHover {
   @include button-slide-right; //ETAT DU SLIDE AVT HOVER
-  &:hover,
-  &:active {
-    @include button-slide-right--hover; // ETAT PENDANT HOVER
+  @include media("<=tablet") {
+    &:active {
+      @include button-slide-right--hover; // ETAT PENDANT HOVER
+    }
+  }
+  @include media(">tablet") {
+    &:hover {
+      @include button-slide-right--hover; // ETAT PENDANT HOVER
+    }
   }
 }
 
