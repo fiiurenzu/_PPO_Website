@@ -5,7 +5,8 @@
  * ------------------------------------------------------------------------- */
 ._slideHover {
   @include button-slide-right; //ETAT DU SLIDE AVT HOVER
-  &:hover {
+  &:hover,
+  &:active {
     @include button-slide-right--hover; // ETAT PENDANT HOVER
   }
 }

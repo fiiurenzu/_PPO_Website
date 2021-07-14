@@ -316,9 +316,6 @@ img {
 }
 
 .a-navigation_buttons {
-  color: black;
-  box-shadow: inset 0 0 0 0 black;
-  transition: all ease-in-out 400ms;
   padding: 5px 10px;
   border-right: 1px solid black;
   flex-grow: 1;
@@ -511,7 +508,7 @@ img {
   box-shadow: inset 0 0 0 0 black;
   transition: all ease-in-out 400ms;
 }
-._slideHover:hover {
+._slideHover:hover, ._slideHover:active {
   color: white;
   box-shadow: inset 500px 0 0 0 black;
 }
