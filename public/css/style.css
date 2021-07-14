@@ -538,6 +538,11 @@ img {
   color: white;
 }
 
+.slidejs {
+  color: white;
+  box-shadow: inset 500px 0 0 0 black;
+}
+
 /* = LIENS EXTERNES */
 .scrollmenu {
   overflow: auto;

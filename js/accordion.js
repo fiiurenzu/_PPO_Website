@@ -7,11 +7,7 @@ for (var i = 0; i < accContrib.length; i++) {
     var panel = this.nextElementSibling;
     var isActive = document.querySelector(".accordion--contribution").classList.contains("active");
     if (isActive) {
-      if (window.innerHeight < 900) {
-        panel.style.maxHeight = "150px";
-      } else {
-        panel.style.maxHeight = "450px";
-      }
+      panel.style.maxHeight = "450px";
     } else {
       panel.style.maxHeight = "0px";
     }
@@ -27,11 +23,7 @@ for (var i = 0; i < accExhib.length; i++) {
     var panel = this.nextElementSibling;
     var isActive = document.querySelector(".accordion--exhibition").classList.contains("active");
     if (isActive) {
-      if (window.innerHeight < 900) {
-        panel.style.maxHeight = "150px";
-      } else {
-        panel.style.maxHeight = "450px";
-      }
+      panel.style.maxHeight = "450px";
     } else {
       panel.style.maxHeight = "0px";
     }
@@ -47,13 +39,21 @@ for (var i = 0; i < accServices.length; i++) {
     var panel = this.nextElementSibling;
     var isActive = document.querySelector(".accordion--services").classList.contains("active");
     if (isActive) {
-      if (window.innerHeight < 900) {
-        panel.style.maxHeight = "100px";
-      } else {
-        panel.style.maxHeight = "250px";
-      }
+      panel.style.maxHeight = "100%";
     } else {
       panel.style.maxHeight = "0px";
     }
   });
 }
+
+// HOver js
+var hoverAnimation = document.getElementById("hoverApplication");
+
+hoverAnimation.addEventListener("click", function () {
+  this.classList.toggle("slidejs");
+  setTimeout(function () {
+    console.log("toto");
+    window.location.href = "mailto:application@panamapapersoffice.com?subject=Application";
+    console.log(window.location.href);
+  }, 1000);
+});
