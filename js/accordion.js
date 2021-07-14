@@ -7,7 +7,11 @@ for (var i = 0; i < accContrib.length; i++) {
     var panel = this.nextElementSibling;
     var isActive = document.querySelector(".accordion--contribution").classList.contains("active");
     if (isActive) {
-      panel.style.maxHeight = "450px";
+      if (window.innerHeight <= 700) {
+        panel.style.maxHeight = "150px";
+      } else {
+        panel.style.maxHeight = "450px";
+      }
     } else {
       panel.style.maxHeight = "0px";
     }
@@ -23,7 +27,11 @@ for (var i = 0; i < accExhib.length; i++) {
     var panel = this.nextElementSibling;
     var isActive = document.querySelector(".accordion--exhibition").classList.contains("active");
     if (isActive) {
-      panel.style.maxHeight = "450px";
+      if (window.innerHeight <= 700) {
+        panel.style.maxHeight = "150px";
+      } else {
+        panel.style.maxHeight = "450px";
+      }
     } else {
       panel.style.maxHeight = "0px";
     }
@@ -39,7 +47,11 @@ for (var i = 0; i < accServices.length; i++) {
     var panel = this.nextElementSibling;
     var isActive = document.querySelector(".accordion--services").classList.contains("active");
     if (isActive) {
-      panel.style.maxHeight = "100%";
+      if (window.innerHeight <= 700) {
+        panel.style.maxHeight = "100px";
+      } else {
+        panel.style.maxHeight = "270px";
+      }
     } else {
       panel.style.maxHeight = "0px";
     }

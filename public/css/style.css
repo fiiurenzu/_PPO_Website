@@ -333,9 +333,13 @@ img {
   transition: 0.5s ease-in-out;
   color: rgba(0, 0, 0, 0);
 }
-.image__overlay:hover,
-.image__overlay :focus,
-.image__overlay :active {
+@media (max-width: 768px) {
+  .image__overlay:active {
+    background-position: left;
+    color: white;
+  }
+}
+.image__overlay:hover {
   background-position: left;
   color: white;
 }
@@ -599,7 +603,7 @@ div.scrollmenu a:hover {
   top: 0;
   width: 100%;
   background-color: white;
-  padding-top: calc(10px/ 2);
+  padding-top: 5px;
   z-index: 9999;
 }
 @media (min-width: 1024px) {
@@ -666,7 +670,7 @@ div.scrollmenu a:hover {
   position: fixed;
   bottom: 0;
   padding-right: 10px;
-  margin-bottom: calc(10px/ 2);
+  padding-bottom: 5px;
 }
 @media (max-width: 1023px) {
   .o-footer__container {
@@ -713,10 +717,14 @@ div.scrollmenu a:hover {
   display: flex;
   flex-direction: row;
 }
+.m-footer__wrapper--mobile > a {
+  border-right: 1px solid black;
+}
 
 .a-footer__item--mobile {
   border-right: 1px solid black;
   padding: 5px 10px;
+  text-align: center;
 }
 .a-footer__item--mobile:first-child {
   width: 5rem;
@@ -834,6 +842,11 @@ div.scrollmenu a:hover {
 .o-contributionsExhibitions__container {
   display: block;
   margin-left: 5rem;
+  /*:last-child {
+    @include media(">=desktop") {
+      padding-right: $pad-L-R;
+    }
+  }*/
 }
 @media (max-width: 768px) {
   .o-contributionsExhibitions__container {
@@ -844,11 +857,6 @@ div.scrollmenu a:hover {
   .o-contributionsExhibitions__container {
     display: flex;
     flex-direction: row;
-  }
-}
-@media (min-width: 1024px) {
-  .o-contributionsExhibitions__container :last-child {
-    padding-right: 10px;
   }
 }
 

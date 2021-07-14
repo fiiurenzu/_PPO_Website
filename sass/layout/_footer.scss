@@ -5,7 +5,7 @@
   position: fixed;
   bottom: 0;
   padding-right: $pad-L-R;
-  margin-bottom: calc(#{$marg}/ 2);
+  padding-bottom: $pad-T-B;
   // QUAND SCREEN DEVIENT FORMAT MOBILE ALORS LE FOOTER DESKTOP HIDDEN//
   @include media("<=1023px") {
     display: none;
@@ -40,11 +40,15 @@
 }
 .m-footer__wrapper--mobile {
   @include index_container-style;
+  > a {
+    border-right: $border;
+  }
 }
 
 .a-footer__item--mobile {
   border-right: $border;
   padding: $pad-T-B $pad-L-R;
+  text-align: center;
   &:first-child {
     width: $col;
   }

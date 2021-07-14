@@ -15,7 +15,7 @@
   top: 0;
   width: 100%;
   background-color: $second;
-  padding-top: calc(#{$marg}/ 2);
+  padding-top: $pad-T-B;
   // decalage de 5px en top
   //cache blanc pour masquer le passage du contenu en dessous
   z-index: 9999;

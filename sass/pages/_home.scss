@@ -94,11 +94,11 @@
     display: flex;
     flex-direction: row;
   }
-  :last-child {
+  /*:last-child {
     @include media(">=desktop") {
       padding-right: $pad-L-R;
     }
-  }
+  }*/
 }
 .m-contributionExhibition__wrapper {
   padding-left: $pad-L-R;
