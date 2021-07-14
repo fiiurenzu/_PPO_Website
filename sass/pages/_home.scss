@@ -33,13 +33,6 @@
 .a-infos__text_item {
   padding: $pad-L-R;
 }
-// TOUS LES LIENS DANS LES TEXTES DES CONTAINERS INFOS ONT UNE ANIMATION HOVER //
-.a-infos__text_item > a {
-  @include button-slide-right;
-  &:hover {
-    @include button-slide-right--hover;
-  }
-}
 
 /**
 * = 04 - CONTACT
@@ -118,8 +111,9 @@
   display: inline;
   line-height: $line-height-medium;
 }
-.number-service {
-  @include underline;
+.o-contributionsExhibitions__container a {
+  //slectionne et applique un underline a tous les liens
+  text-decoration: underline;
 }
 
 /**

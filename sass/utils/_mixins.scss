@@ -9,16 +9,8 @@
 }
 
 /**
- * = 02 - HOVER UNDERLINE 
+ * = 02 - HOVER SLIDE RIGHT 
  * ------------------------------------------------------------------------- */
-@mixin underline {
-  text-decoration: none;
-  background-image: linear-gradient($first, $first);
-  background-size: 100% 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-}
-
 @mixin button-slide-right {
   color: $first;
   box-shadow: inset 0 0 0 0 $first;

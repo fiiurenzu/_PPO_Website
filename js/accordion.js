@@ -45,14 +45,3 @@ for (var i = 0; i < accServices.length; i++) {
     }
   });
 }
-
-// HOver js
-var hoverAnimation = document.getElementById("hoverApplication");
-
-hoverAnimation.addEventListener("click", function () {
-  this.classList.toggle("slidejs");
-  setTimeout(function () {
-    window.location.href = "mailto:application@panamapapersoffice.com?subject=Application";
-    this.classList.remove("slidejs");
-  }, 1000);
-});
